@@ -1,7 +1,6 @@
 import os
 import json
-import tkinter as tk
-from tkinter import ttk, filedialog, messagebox
+from PyQt5 import QtWidgets, QtGui, QtCore
 
 # Constants for JSON database
 DATABASE_FILE = "songs.json"
@@ -33,95 +32,108 @@ def generate_song_id():
             return candidate_id
     raise ValueError("No available IDs left.")
 
-# Add songs from a folder to the database
-def add_songs_from_folder(folder_path):
+# Add a single song to the database
+def add_song_to_database(file_path):
     songs = load_songs_from_database()
     existing_paths = {song["path"] for song in songs}
 
-    for filename in os.listdir(folder_path):
-        file_path = os.path.join(folder_path, filename)
-        if os.path.isfile(file_path) and file_path not in existing_paths:
-            new_song = {
-                "id": generate_song_id(),
-                "name": filename,
-                "path": file_path,
-                "series": "",
-                "weight": 0
-            }
-            songs.append(new_song)
-    save_songs_to_database(songs)
+    if file_path not in existing_paths:
+        new_song = {
+            "id": generate_song_id(),
+            "name": os.path.basename(file_path),
+            "path": file_path,
+            "series": "",
+            "weight": 5
+        }
+        songs.append(new_song)
+        save_songs_to_database(songs)
 
 # UI code
-class PlaylistManagerUI(tk.Tk):
+class PlaylistManagerUI(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
-        self.title("Playlist Manager")
-        self.geometry("800x600")
-        self.notebook = ttk.Notebook(self)
+        self.setWindowTitle("Playlist Manager")
+        self.setGeometry(100, 100, 800, 600)
+
+        self.tabs = QtWidgets.QTabWidget()
+        self.setCentralWidget(self.tabs)
 
         # Tabs
-        self.tab_registered = ttk.Frame(self.notebook)
-        self.tab_unregistered = ttk.Frame(self.notebook)
+        self.tab_registered = QtWidgets.QWidget()
+        self.tab_unregistered = QtWidgets.QWidget()
 
-        self.notebook.add(self.tab_registered, text="Registered Songs")
-        self.notebook.add(self.tab_unregistered, text="Unregistered Songs")
-        self.notebook.pack(fill="both", expand=True)
+        self.tabs.addTab(self.tab_registered, "Registered Songs")
+        self.tabs.addTab(self.tab_unregistered, "Unregistered Songs")
 
         # Setup tabs
         self.setup_registered_tab()
         self.setup_unregistered_tab()
 
     def setup_registered_tab(self):
-        columns = ("id", "name", "path", "series", "weight")
-        self.tree_registered = ttk.Treeview(self.tab_registered, columns=columns, show="headings")
-        for col in columns:
-            self.tree_registered.heading(col, text=col.capitalize())
-            self.tree_registered.column(col, width=150)
-        self.tree_registered.pack(fill="both", expand=True)
+        layout = QtWidgets.QVBoxLayout()
+
+        self.table_registered = QtWidgets.QTableWidget()
+        self.table_registered.setColumnCount(5)
+        self.table_registered.setHorizontalHeaderLabels(["ID", "Name", "Path", "Series", "Weight"])
+        self.table_registered.horizontalHeader().setSectionResizeMode(QtWidgets.QHeaderView.Stretch)
+        layout.addWidget(self.table_registered)
+
+        self.tab_registered.setLayout(layout)
         self.load_registered_songs()
 
     def load_registered_songs(self):
-        for item in self.tree_registered.get_children():
-            self.tree_registered.delete(item)
+        self.table_registered.setRowCount(0)
         songs = load_songs_from_database()
-        for song in songs:
-            self.tree_registered.insert("", "end", values=(song["id"], song["name"], song["path"], song["series"], song["weight"]))
+        for row, song in enumerate(songs):
+            self.table_registered.insertRow(row)
+            self.table_registered.setItem(row, 0, QtWidgets.QTableWidgetItem(song["id"]))
+            self.table_registered.setItem(row, 1, QtWidgets.QTableWidgetItem(song["name"]))
+            self.table_registered.setItem(row, 2, QtWidgets.QTableWidgetItem(song["path"]))
+            self.table_registered.setItem(row, 3, QtWidgets.QTableWidgetItem(song["series"]))
+            self.table_registered.setItem(row, 4, QtWidgets.QTableWidgetItem(str(song["weight"])))
 
     def setup_unregistered_tab(self):
-        self.label_folder = ttk.Label(self.tab_unregistered, text="Select a folder to scan for songs:")
-        self.label_folder.pack(pady=5)
+        layout = QtWidgets.QVBoxLayout()
 
-        self.button_browse = ttk.Button(self.tab_unregistered, text="Browse", command=self.browse_folder)
-        self.button_browse.pack(pady=5)
+        self.label_folder = QtWidgets.QLabel("Select a folder to scan for songs:")
+        layout.addWidget(self.label_folder)
 
-        self.list_unregistered = tk.Listbox(self.tab_unregistered)
-        self.list_unregistered.pack(fill="both", expand=True)
+        self.button_browse = QtWidgets.QPushButton("Browse")
+        self.button_browse.clicked.connect(self.browse_folder)
+        layout.addWidget(self.button_browse)
 
-        self.button_add = ttk.Button(self.tab_unregistered, text="Add Selected", command=self.add_selected_songs)
-        self.button_add.pack(pady=5)
+        self.list_unregistered = QtWidgets.QListWidget()
+        layout.addWidget(self.list_unregistered)
+
+        self.button_add = QtWidgets.QPushButton("Add Selected")
+        self.button_add.clicked.connect(self.add_selected_songs)
+        layout.addWidget(self.button_add)
+
+        self.tab_unregistered.setLayout(layout)
 
     def browse_folder(self):
-        folder_path = filedialog.askdirectory()
+        folder_path = QtWidgets.QFileDialog.getExistingDirectory(self, "Select Folder")
         if folder_path:
-            self.list_unregistered.delete(0, tk.END)
+            self.list_unregistered.clear()
             for filename in os.listdir(folder_path):
                 file_path = os.path.join(folder_path, filename)
                 if os.path.isfile(file_path):
-                    self.list_unregistered.insert(tk.END, file_path)
+                    self.list_unregistered.addItem(file_path)
 
     def add_selected_songs(self):
-        selected_songs = self.list_unregistered.curselection()
-        for index in selected_songs:
-            file_path = self.list_unregistered.get(index)
-            add_songs_from_folder(os.path.dirname(file_path))
+        for item in self.list_unregistered.selectedItems():
+            file_path = item.text()
+            add_song_to_database(file_path)
         self.load_registered_songs()
-        messagebox.showinfo("Success", "Selected songs have been added.")
+        QtWidgets.QMessageBox.information(self, "Success", "Selected songs have been added.")
 
 # Main function
 def main():
     initialize_database()
-    app = PlaylistManagerUI()
-    app.mainloop()
+    app = QtWidgets.QApplication([])
+    window = PlaylistManagerUI()
+    window.show()
+    app.exec_()
 
 if __name__ == "__main__":
     main()
