@@ -32,12 +32,17 @@ def generate_song_id():
             return candidate_id
     raise ValueError("No available IDs left.")
 
+# Check if a song is already in the database
+def is_song_in_database(file_path):
+    songs = load_songs_from_database()
+    for song in songs:
+        if song["path"] == file_path:
+            return song
+    return None
+
 # Add a single song to the database
 def add_song_to_database(file_path):
-    songs = load_songs_from_database()
-    existing_paths = {song["path"] for song in songs}
-
-    if file_path not in existing_paths:
+    if not is_song_in_database(file_path):
         new_song = {
             "id": generate_song_id(),
             "name": os.path.basename(file_path),
@@ -45,6 +50,7 @@ def add_song_to_database(file_path):
             "series": "",
             "weight": 5
         }
+        songs = load_songs_from_database()
         songs.append(new_song)
         save_songs_to_database(songs)
 
@@ -103,6 +109,7 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
         layout.addWidget(self.button_browse)
 
         self.list_unregistered = QtWidgets.QListWidget()
+        self.list_unregistered.setSelectionMode(QtWidgets.QAbstractItemView.MultiSelection)
         layout.addWidget(self.list_unregistered)
 
         self.button_add = QtWidgets.QPushButton("Add Selected")
@@ -118,13 +125,20 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
             for filename in os.listdir(folder_path):
                 file_path = os.path.join(folder_path, filename)
                 if os.path.isfile(file_path):
-                    self.list_unregistered.addItem(file_path)
+                    song = is_song_in_database(file_path)
+                    if song:
+                        self.list_unregistered.addItem(f"[Registered: {song['id']}] {file_path}")
+                    else:
+                        next_id = generate_song_id()
+                        self.list_unregistered.addItem(f"[Unregistered: {next_id}] {file_path}")
 
     def add_selected_songs(self):
         for item in self.list_unregistered.selectedItems():
-            file_path = item.text()
-            add_song_to_database(file_path)
+            file_path = item.text().split('] ')[-1]
+            if "Unregistered" in item.text():
+                add_song_to_database(file_path)
         self.load_registered_songs()
+        self.browse_folder()
         QtWidgets.QMessageBox.information(self, "Success", "Selected songs have been added.")
 
 # Main function
