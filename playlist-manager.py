@@ -433,12 +433,48 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
         if reply == QtWidgets.QMessageBox.Yes:
             songs = load_songs_from_database()
             for row in selected_rows:
-                song_id = self.table_registered.item(row, 0).text()
+                song_id = self.table_registered.item(row, 1).text()  # Changed from column 0 to 1 to get correct ID
                 songs = [song for song in songs if song["id"] != song_id]
+            
+            # After removal, reorder remaining songs in the same folder
+            if self.current_folder:
+                folder_songs = [song for song in songs if os.path.dirname(song["path"]) == self.current_folder]
+                folder_songs.sort(key=lambda x: extract_order_number(x["name"]))
+                
+                # Reassign order numbers
+                for i, song in enumerate(folder_songs, 1):
+                    old_name = song["name"]
+                    if ORDER_PATTERN.match(old_name):
+                        base_name = ORDER_PATTERN.match(old_name).group(2)
+                    else:
+                        base_name = old_name
+                        
+                    new_name = f"{i:03d} {base_name}"
+                    old_path = song["path"]
+                    new_path = os.path.join(os.path.dirname(old_path), new_name)
+                    
+                    # Update file name
+                    try:
+                        os.rename(old_path, new_path)
+                        song["name"] = new_name
+                        song["path"] = new_path
+                        song["order"] = i
+                        
+                        # Update title metadata
+                        try:
+                            audio = EasyID3(new_path)
+                        except ID3NoHeaderError:
+                            audio = EasyID3()
+                            audio.save(new_path)
+                        
+                        audio['title'] = os.path.splitext(new_name)[0]
+                        audio.save()
+                    except Exception as e:
+                        print(f"Error updating file after removal: {str(e)}")
             
             save_songs_to_database(songs)
             self.refresh_all_views()
-            self.statusBar().showMessage("Selected songs removed")
+            self.statusBar().showMessage("Selected songs removed and order updated")
 
     def add_selected_songs(self):
         selected_items = self.list_unregistered.selectedItems()
@@ -608,22 +644,49 @@ def add_song_to_database(file_path):
         if not any(song["path"] == file_path for song in songs):
             new_id = generate_song_id()
             
-            # Get current max order number
+            # Get current max order number for the folder
+            current_folder = os.path.dirname(file_path)
             current_max_order = 0
             for song in songs:
-                if os.path.dirname(song["path"]) == os.path.dirname(file_path):
-                    order_num = extract_order_number(song["name"])  # Now using the standalone function
+                if os.path.dirname(song["path"]) == current_folder:
+                    order_num = extract_order_number(song["name"])
                     current_max_order = max(current_max_order, order_num)
             
-            # First try to add the ID to metadata
-            if add_id_to_metadata(file_path, new_id):
+            new_order = current_max_order + 1
+            original_name = os.path.basename(file_path)
+            # Remove any existing order number pattern if exists
+            if ORDER_PATTERN.match(original_name):
+                original_name = ORDER_PATTERN.match(original_name).group(2)
+            new_name = f"{new_order:03d} {original_name}"
+            new_path = os.path.join(current_folder, new_name)
+            
+            # Rename the file first
+            try:
+                os.rename(file_path, new_path)
+            except Exception as e:
+                print(f"Error renaming file: {str(e)}")
+                return False
+            
+            # Update the metadata (both ID and title)
+            if add_id_to_metadata(new_path, new_id):
+                try:
+                    # Update title metadata
+                    audio = EasyID3(new_path)
+                except ID3NoHeaderError:
+                    audio = EasyID3()
+                    audio.save(new_path)
+                
+                # Set the title to match the new filename (without extension)
+                audio['title'] = os.path.splitext(new_name)[0]
+                audio.save()
+                
                 new_song = {
                     "id": new_id,
-                    "name": os.path.basename(file_path),
-                    "path": file_path,
+                    "name": new_name,
+                    "path": new_path,
                     "series": "",
                     "weight": 5,
-                    "order": current_max_order + 1
+                    "order": new_order
                 }
                 songs.append(new_song)
                 save_songs_to_database(songs)

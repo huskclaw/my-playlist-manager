@@ -2,7 +2,7 @@
     {
         "id": "ID0000",
         "name": "001 Majo no Tabitabi - Op Full.Mp3",
-        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\001 Majo no Tabitabi - Op Full.Mp3.Mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\001 Majo no Tabitabi - Op Full.Mp3",
         "series": "Majo no Tabitabi",
         "weight": 5,
         "order": 1
@@ -10,7 +10,7 @@
     {
         "id": "ID0001",
         "name": "002 Gochiusa - Everyday Decoration.Mp3",
-        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\002 Gochiusa - Everyday Decoration.Mp3.Mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\002 Gochiusa - Everyday Decoration.Mp3",
         "series": "",
         "weight": 5,
         "order": 2
@@ -18,7 +18,7 @@
     {
         "id": "ID0002",
         "name": "003 Gakkou Gurashi - Afterglow.Mp3",
-        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\003 Gakkou Gurashi - Afterglow.Mp3.Mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\003 Gakkou Gurashi - Afterglow.Mp3",
         "series": "",
         "weight": 5,
         "order": 3
@@ -26,7 +26,7 @@
     {
         "id": "ID0003",
         "name": "004 New Game - Ame No Chihoshi Zora.Mp3",
-        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\004 New Game - Ame No Chihoshi Zora.Mp3.Mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\004 New Game - Ame No Chihoshi Zora.Mp3",
         "series": "",
         "weight": 5,
         "order": 4
@@ -34,15 +34,15 @@
     {
         "id": "ID0004",
         "name": "005 Rail Romanesque - Bon Voyage.Mp3",
-        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\005 Rail Romanesque - Bon Voyage.Mp3.Mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\005 Rail Romanesque - Bon Voyage.Mp3",
         "series": "",
         "weight": 5,
         "order": 5
     },
     {
         "id": "ID0005",
-        "name": "Gochiusa - Moon Counting Song.Mp3",
-        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\Gochiusa - Moon Counting Song.Mp3",
+        "name": "006 Gochiusa - Moon Counting Song.Mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\006 Gochiusa - Moon Counting Song.Mp3",
         "series": "",
         "weight": 5,
         "order": 6
