@@ -182,8 +182,8 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
         self.setWindowTitle("Playlist Manager")
         self.setGeometry(100, 100, 1000, 700)
         self.current_folder = None
-        self.order_locked = False  # New attribute for order locking
-        self.hide_numbers = False  # New attribute for number hiding
+        self.order_locked = False
+        self.hide_numbers = False
         
         # Create main widget and layout
         main_widget = QtWidgets.QWidget()
@@ -197,10 +197,14 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
         self.folder_path.setReadOnly(True)
         self.browse_button = QtWidgets.QPushButton("Browse")
         self.browse_button.clicked.connect(self.browse_folder)
+        # Add refresh button
+        self.refresh_button = QtWidgets.QPushButton("Refresh")
+        self.refresh_button.clicked.connect(self.refresh_all_views)
         
         folder_layout.addWidget(self.folder_label)
         folder_layout.addWidget(self.folder_path)
         folder_layout.addWidget(self.browse_button)
+        folder_layout.addWidget(self.refresh_button)
         main_layout.addLayout(folder_layout)
         
         # Tabs
@@ -238,17 +242,33 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
         
         layout.addLayout(filter_layout)
         
-        # Setup table
+        # Setup table with modified column behavior
         self.table_registered = QtWidgets.QTableWidget()
-        self.table_registered.setColumnCount(6)  # Added Order column
+        self.table_registered.setColumnCount(6)
         self.table_registered.setHorizontalHeaderLabels(["Order", "ID", "Name", "Path", "Series", "Weight"])
-        self.table_registered.horizontalHeader().setSectionResizeMode(QtWidgets.QHeaderView.Stretch)
+        
+        # Set individual column resize modes and default widths
+        self.table_registered.horizontalHeader().setSectionResizeMode(0, QtWidgets.QHeaderView.Interactive)  # Order
+        self.table_registered.horizontalHeader().setSectionResizeMode(1, QtWidgets.QHeaderView.Interactive)  # ID
+        self.table_registered.horizontalHeader().setSectionResizeMode(2, QtWidgets.QHeaderView.Interactive)  # Name
+        self.table_registered.horizontalHeader().setSectionResizeMode(3, QtWidgets.QHeaderView.Interactive)  # Path
+        self.table_registered.horizontalHeader().setSectionResizeMode(4, QtWidgets.QHeaderView.Interactive)  # Series
+        self.table_registered.horizontalHeader().setSectionResizeMode(5, QtWidgets.QHeaderView.Interactive)  # Weight
+        
+        # Set default column widths
+        self.table_registered.setColumnWidth(0, 60)   # Order
+        self.table_registered.setColumnWidth(1, 80)   # ID
+        self.table_registered.setColumnWidth(2, 300)  # Name
+        self.table_registered.setColumnWidth(3, 300)  # Path
+        self.table_registered.setColumnWidth(4, 150)  # Series
+        self.table_registered.setColumnWidth(5, 60)   # Weight
+        
         self.table_registered.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
         self.table_registered.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
         self.table_registered.setSortingEnabled(True)
         layout.addWidget(self.table_registered)
         
-        # Add buttons for editing
+        # [Rest of the setup_registered_tab remains the same]
         button_layout = QtWidgets.QHBoxLayout()
         self.edit_button = QtWidgets.QPushButton("Edit Selected")
         self.edit_button.clicked.connect(self.edit_selected_songs)
@@ -256,7 +276,7 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
         self.remove_button.clicked.connect(self.remove_selected_songs)
         self.reorder_button = QtWidgets.QPushButton("Change Order")
         self.reorder_button.clicked.connect(self.change_order)
-        self.reorder_button.setEnabled(False)  # Disabled by default
+        self.reorder_button.setEnabled(False)
         
         button_layout.addWidget(self.edit_button)
         button_layout.addWidget(self.remove_button)
