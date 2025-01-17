@@ -2,6 +2,7 @@ import os
 import json
 from PyQt5 import QtWidgets, QtGui, QtCore
 from mutagen.id3 import ID3, COMM, ID3NoHeaderError
+from mutagen.easyid3 import EasyID3
 
 # Constants for JSON database
 DATABASE_FILE = "songs.json"
@@ -47,6 +48,83 @@ def get_id_from_metadata(file_path):
     except Exception as e:
         print(f"Error reading metadata from {file_path}: {str(e)}")
     return None
+
+class EditDialog(QtWidgets.QDialog):
+    def __init__(self, songs, single_mode=False, parent=None):
+        super().__init__(parent)
+        self.songs = songs
+        self.single_mode = single_mode
+        self.setup_ui()
+
+    def setup_ui(self):
+        self.setWindowTitle("Edit Song Details")
+        layout = QtWidgets.QVBoxLayout(self)
+
+        # File name and title editing (only for single song mode)
+        if self.single_mode:
+            # Filename group
+            filename_group = QtWidgets.QGroupBox("File Name")
+            filename_layout = QtWidgets.QVBoxLayout()
+            self.filename_edit = QtWidgets.QLineEdit(os.path.basename(self.songs[0]["path"]))
+            filename_layout.addWidget(self.filename_edit)
+            filename_group.setLayout(filename_layout)
+            layout.addWidget(filename_group)
+
+            # Title group
+            title_group = QtWidgets.QGroupBox("Title Metadata")
+            title_layout = QtWidgets.QVBoxLayout()
+            self.title_edit = QtWidgets.QLineEdit()
+            try:
+                audio = EasyID3(self.songs[0]["path"])
+                self.title_edit.setText(audio.get('title', [''])[0])
+            except:
+                self.title_edit.setText(os.path.splitext(os.path.basename(self.songs[0]["path"]))[0])
+            title_layout.addWidget(self.title_edit)
+            title_group.setLayout(title_layout)
+            layout.addWidget(title_group)
+
+        # Series editing (for all modes)
+        series_group = QtWidgets.QGroupBox("Series")
+        series_layout = QtWidgets.QVBoxLayout()
+        self.series_edit = QtWidgets.QLineEdit(self.songs[0]["series"])
+        series_layout.addWidget(self.series_edit)
+        series_group.setLayout(series_layout)
+        layout.addWidget(series_group)
+
+        # Weight editing (for all modes)
+        weight_group = QtWidgets.QGroupBox("Weight")
+        weight_layout = QtWidgets.QVBoxLayout()
+        self.weight_spin = QtWidgets.QSpinBox()
+        self.weight_spin.setRange(1, 10)
+        self.weight_spin.setValue(self.songs[0]["weight"])
+        weight_layout.addWidget(self.weight_spin)
+        weight_group.setLayout(weight_layout)
+        layout.addWidget(weight_group)
+
+        # Buttons
+        button_box = QtWidgets.QDialogButtonBox(
+            QtWidgets.QDialogButtonBox.Ok | QtWidgets.QDialogButtonBox.Cancel
+        )
+        button_box.accepted.connect(self.accept)
+        button_box.rejected.connect(self.reject)
+        layout.addWidget(button_box)
+
+        if not self.single_mode:
+            msg = QtWidgets.QLabel(f"Editing {len(self.songs)} songs")
+            msg.setStyleSheet("color: gray; font-style: italic;")
+            layout.insertWidget(0, msg)
+
+    def get_values(self):
+        result = {
+            "series": self.series_edit.text(),
+            "weight": self.weight_spin.value()
+        }
+        if self.single_mode:
+            result.update({
+                "filename": self.filename_edit.text(),
+                "title": self.title_edit.text()
+            })
+        return result
 
 class PlaylistManagerUI(QtWidgets.QMainWindow):
     def __init__(self):
@@ -201,12 +279,80 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
             self.table_registered.setRowHidden(row, hidden)
 
     def edit_selected_songs(self):
-        selected_rows = set(item.row() for item in self.table_registered.selectedItems())
+        selected_rows = sorted(set(item.row() for item in self.table_registered.selectedItems()))
         if not selected_rows:
             return
-            
-        # Implementation for editing would go here
-        QtWidgets.QMessageBox.information(self, "Info", "Edit functionality to be implemented")
+
+        # Get selected songs data
+        songs_to_edit = []
+        for row in selected_rows:
+            song_id = self.table_registered.item(row, 0).text()
+            songs = load_songs_from_database()
+            song = next((s for s in songs if s["id"] == song_id), None)
+            if song:
+                songs_to_edit.append(song)
+
+        if not songs_to_edit:
+            return
+
+        # Determine if we're in single or multi mode
+        single_mode = len(songs_to_edit) == 1
+        if len(songs_to_edit) > 1 and single_mode:
+            QtWidgets.QMessageBox.warning(
+                self, "Warning",
+                "File name and title can only be edited for a single song at a time. Please select only one song."
+            )
+            return
+
+        # Show edit dialog
+        dialog = EditDialog(songs_to_edit, single_mode, self)
+        if dialog.exec_() == QtWidgets.QDialog.Accepted:
+            values = dialog.get_values()
+            self.apply_edits(songs_to_edit, values)
+
+    def apply_edits(self, songs_to_edit, values):
+        all_songs = load_songs_from_database()
+        
+        try:
+            for song in songs_to_edit:
+                # Update database values
+                db_song = next(s for s in all_songs if s["id"] == song["id"])
+                db_song["series"] = values["series"]
+                db_song["weight"] = values["weight"]
+
+                # Handle single-song edits (filename and title)
+                if len(songs_to_edit) == 1:
+                    old_path = song["path"]
+                    new_filename = values["filename"]
+                    new_path = os.path.join(os.path.dirname(old_path), new_filename)
+
+                    # Rename the file if name changed
+                    if new_filename != os.path.basename(old_path):
+                        os.rename(old_path, new_path)
+                        db_song["path"] = new_path
+                        db_song["name"] = new_filename
+
+                    # Update title metadata
+                    try:
+                        audio = EasyID3(new_path)
+                    except ID3NoHeaderError:
+                        audio = EasyID3()
+                        audio.save(new_path)
+                    
+                    audio['title'] = values["title"]
+                    audio.save()
+
+            # Save all changes to database
+            save_songs_to_database(all_songs)
+            self.refresh_all_views()
+            self.statusBar().showMessage("Changes applied successfully")
+
+        except Exception as e:
+            QtWidgets.QMessageBox.critical(
+                self, "Error",
+                f"An error occurred while applying changes: {str(e)}"
+            )
+            self.refresh_all_views()
 
     def remove_selected_songs(self):
         selected_rows = sorted(set(item.row() for item in self.table_registered.selectedItems()), reverse=True)
