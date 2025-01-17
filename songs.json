@@ -19,19 +19,5 @@
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\003 Gakkou Gurashi - Afterglow.Mp3",
         "series": "",
         "weight": 5
-    },
-    {
-        "id": "ID0003",
-        "name": "004 New Game - Ame No Chihoshi Zora.Mp3",
-        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\004 New Game - Ame No Chihoshi Zora.Mp3",
-        "series": "",
-        "weight": 5
-    },
-    {
-        "id": "ID0004",
-        "name": "005 Rail Romanesque - Bon Voyage.Mp3",
-        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\005 Rail Romanesque - Bon Voyage.Mp3",
-        "series": "",
-        "weight": 5
     }
 ]
