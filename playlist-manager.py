@@ -433,9 +433,21 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
         if reply == QtWidgets.QMessageBox.Yes:
             songs = load_songs_from_database()
             for row in selected_rows:
-                song_id = self.table_registered.item(row, 1).text()  # Changed from column 0 to 1 to get correct ID
+                song_id = self.table_registered.item(row, 1).text()
+                # Get the path before removing from database
+                song_to_remove = next((song for song in songs if song["id"] == song_id), None)
+                if song_to_remove:
+                    file_path = song_to_remove["path"]
+                    try:
+                        # Remove COMM tags from the file
+                        audio = ID3(file_path)
+                        audio.delall("COMM")
+                        audio.save()
+                    except Exception as e:
+                        print(f"Error removing metadata from {file_path}: {str(e)}")
+                
                 songs = [song for song in songs if song["id"] != song_id]
-            
+
             # After removal, reorder remaining songs in the same folder
             if self.current_folder:
                 folder_songs = [song for song in songs if os.path.dirname(song["path"]) == self.current_folder]
@@ -634,6 +646,23 @@ def generate_song_id():
             return candidate_id
     raise ValueError("No available IDs left.")
 
+def find_next_available_order(songs, folder_path, current_max_order):
+    """
+    Find the next available order number in a sequence, filling any gaps.
+    Returns the next available number.
+    """
+    # Get all order numbers in the folder
+    folder_songs = [song for song in songs if os.path.dirname(song["path"]) == folder_path]
+    used_numbers = set(extract_order_number(song["name"]) for song in folder_songs)
+    
+    # Start from 1 and find the first available number
+    for i in range(1, current_max_order + 2):  # +2 to also check one number after max
+        if i not in used_numbers:
+            return i
+    
+    # If no gaps found, return next number after max
+    return current_max_order + 1
+
 def add_song_to_database(file_path):
     """
     Add a song to the database and its metadata.
@@ -643,21 +672,45 @@ def add_song_to_database(file_path):
         songs = load_songs_from_database()
         if not any(song["path"] == file_path for song in songs):
             new_id = generate_song_id()
+            current_folder = os.path.dirname(file_path)
             
             # Get current max order number for the folder
-            current_folder = os.path.dirname(file_path)
             current_max_order = 0
             for song in songs:
                 if os.path.dirname(song["path"]) == current_folder:
                     order_num = extract_order_number(song["name"])
                     current_max_order = max(current_max_order, order_num)
             
-            new_order = current_max_order + 1
+            # Get the original name and any existing order number
             original_name = os.path.basename(file_path)
-            # Remove any existing order number pattern if exists
+            original_order = extract_order_number(original_name)
+            
+            # If the original name has an order number, check if it's available
+            if original_order > 0:
+                # Check if this order number is already taken
+                is_order_taken = any(
+                    extract_order_number(song["name"]) == original_order 
+                    for song in songs 
+                    if os.path.dirname(song["path"]) == current_folder
+                )
+                
+                if is_order_taken:
+                    # Find the next available order number
+                    new_order = find_next_available_order(songs, current_folder, current_max_order)
+                else:
+                    new_order = original_order
+            else:
+                # No original order number, just get next available
+                new_order = find_next_available_order(songs, current_folder, current_max_order)
+            
+            # Remove any existing order number pattern and get clean name
             if ORDER_PATTERN.match(original_name):
-                original_name = ORDER_PATTERN.match(original_name).group(2)
-            new_name = f"{new_order:03d} {original_name}"
+                clean_name = ORDER_PATTERN.match(original_name).group(2)
+            else:
+                clean_name = original_name
+            
+            # Create new filename with new order
+            new_name = f"{new_order:03d} {clean_name}"
             new_path = os.path.join(current_folder, new_name)
             
             # Rename the file first
