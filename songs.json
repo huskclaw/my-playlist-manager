@@ -11,7 +11,7 @@
         "id": "ID0001",
         "name": "002 Gochiusa - Everyday Decoration.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\002 Gochiusa - Everyday Decoration.Mp3.Mp3",
-        "series": "",
+        "series": "Gochiusa",
         "weight": 5,
         "order": 2
     },
@@ -38,5 +38,21 @@
         "series": "",
         "weight": 5,
         "order": 4
+    },
+    {
+        "id": "ID0005",
+        "name": "006 Gochiusa - Chocolatine De 3 O'Clock.Mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\006 Gochiusa - Chocolatine De 3 O'Clock.Mp3",
+        "series": "Gochiusa",
+        "weight": 5,
+        "order": 6
+    },
+    {
+        "id": "ID0006",
+        "name": "007 Gochiusa - Moon Counting Song.Mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\007 Gochiusa - Moon Counting Song.Mp3",
+        "series": "Gochiusa",
+        "weight": 5,
+        "order": 7
     }
 ]

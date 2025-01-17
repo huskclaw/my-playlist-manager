@@ -54,40 +54,42 @@ def get_id_from_metadata(file_path):
     return None
 
 class EditDialog(QtWidgets.QDialog):
-    def __init__(self, songs, single_mode=False, parent=None):
+    def __init__(self, songs, parent=None):
         super().__init__(parent)
         self.songs = songs
-        self.single_mode = single_mode
+        self.hide_numbers = False
         self.setup_ui()
 
     def setup_ui(self):
         self.setWindowTitle("Edit Song Details")
         layout = QtWidgets.QVBoxLayout(self)
 
-        # File name and title editing (only for single song mode)
-        if self.single_mode:
+        if len(self.songs) == 1:  # Single song mode
             # Filename group
             filename_group = QtWidgets.QGroupBox("File Name")
             filename_layout = QtWidgets.QVBoxLayout()
+            
+            # Add toggle button for number display
+            self.toggle_button = QtWidgets.QPushButton("Toggle Number Display")
+            self.toggle_button.setCheckable(True)
+            self.toggle_button.clicked.connect(self.toggle_number_display)
+            filename_layout.addWidget(self.toggle_button)
+            
+            # File name edit with preview label
+            self.filename_preview = QtWidgets.QLabel()
+            filename_layout.addWidget(self.filename_preview)
+            
             self.filename_edit = QtWidgets.QLineEdit(os.path.basename(self.songs[0]["path"]))
+            self.filename_edit.textChanged.connect(self.update_preview)
             filename_layout.addWidget(self.filename_edit)
+            
             filename_group.setLayout(filename_layout)
             layout.addWidget(filename_group)
+            
+            # Initial preview update
+            self.update_preview()
 
-            # Title group
-            title_group = QtWidgets.QGroupBox("Title Metadata")
-            title_layout = QtWidgets.QVBoxLayout()
-            self.title_edit = QtWidgets.QLineEdit()
-            try:
-                audio = EasyID3(self.songs[0]["path"])
-                self.title_edit.setText(audio.get('title', [''])[0])
-            except:
-                self.title_edit.setText(os.path.splitext(os.path.basename(self.songs[0]["path"]))[0])
-            title_layout.addWidget(self.title_edit)
-            title_group.setLayout(title_layout)
-            layout.addWidget(title_group)
-
-        # Series editing (for all modes)
+        # Series editing
         series_group = QtWidgets.QGroupBox("Series")
         series_layout = QtWidgets.QVBoxLayout()
         self.series_edit = QtWidgets.QLineEdit(self.songs[0]["series"])
@@ -95,7 +97,7 @@ class EditDialog(QtWidgets.QDialog):
         series_group.setLayout(series_layout)
         layout.addWidget(series_group)
 
-        # Weight editing (for all modes)
+        # Weight editing
         weight_group = QtWidgets.QGroupBox("Weight")
         weight_layout = QtWidgets.QVBoxLayout()
         self.weight_spin = QtWidgets.QSpinBox()
@@ -113,7 +115,7 @@ class EditDialog(QtWidgets.QDialog):
         button_box.rejected.connect(self.reject)
         layout.addWidget(button_box)
 
-        if not self.single_mode:
+        if len(self.songs) > 1:
             msg = QtWidgets.QLabel(f"Editing {len(self.songs)} songs")
             msg.setStyleSheet("color: gray; font-style: italic;")
             layout.insertWidget(0, msg)
@@ -123,12 +125,27 @@ class EditDialog(QtWidgets.QDialog):
             "series": self.series_edit.text(),
             "weight": self.weight_spin.value()
         }
-        if self.single_mode:
-            result.update({
-                "filename": self.filename_edit.text(),
-                "title": self.title_edit.text()
-            })
+        if len(self.songs) == 1:
+            result["filename"] = self.filename_edit.text()
         return result
+    
+    def toggle_number_display(self):
+        self.hide_numbers = self.toggle_button.isChecked()
+        self.update_preview()
+
+    def update_preview(self):
+        if len(self.songs) == 1:
+            current_name = self.filename_edit.text()
+            if self.hide_numbers:
+                match = ORDER_PATTERN.match(current_name)
+                if match:
+                    preview_name = match.group(2)
+                else:
+                    preview_name = current_name
+            else:
+                preview_name = current_name
+            
+            self.filename_preview.setText(f"Preview: {preview_name}")
 
 class OrderDialog(QtWidgets.QDialog):
     def __init__(self, max_order, parent=None):
@@ -166,6 +183,7 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
         self.setGeometry(100, 100, 1000, 700)
         self.current_folder = None
         self.order_locked = False  # New attribute for order locking
+        self.hide_numbers = False  # New attribute for number hiding
         
         # Create main widget and layout
         main_widget = QtWidgets.QWidget()
@@ -247,6 +265,12 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
         
         self.tab_registered.setLayout(layout)
 
+        # Add toggle button for number display in main view
+        self.main_toggle_button = QtWidgets.QPushButton("Toggle Number Display")
+        self.main_toggle_button.setCheckable(True)
+        self.main_toggle_button.clicked.connect(self.toggle_main_number_display)
+        filter_layout.addWidget(self.main_toggle_button)
+
     def toggle_order_lock(self, checked):
         self.order_locked = checked
         self.reorder_button.setEnabled(checked)
@@ -255,6 +279,10 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
         if checked:
             # When locking, ensure items are sorted by their current order
             self.table_registered.sortItems(0)  # Sort by Order column
+
+    def toggle_main_number_display(self):
+        self.hide_numbers = self.main_toggle_button.isChecked()
+        self.refresh_all_views()
 
     def extract_order_number(self, filename):
         """
@@ -303,21 +331,27 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
         self.table_registered.setRowCount(0)
         songs = load_songs_from_database()
         
-        # Filter songs from current folder
         folder_songs = [song for song in songs if os.path.dirname(song["path"]) == self.current_folder]
-        
-        # Sort by stored order number first, then by filename order as backup
         folder_songs.sort(key=lambda x: (x.get("order", 0), self.extract_order_number(x["name"])))
         
         for row, song in enumerate(folder_songs):
             order_num = song.get("order", self.extract_order_number(song["name"]))
             self.table_registered.insertRow(row)
+            
+            # Handle display name based on toggle
+            display_name = song["name"]
+            if self.hide_numbers:
+                match = ORDER_PATTERN.match(display_name)
+                if match:
+                    display_name = match.group(2)
+            
             self.table_registered.setItem(row, 0, QtWidgets.QTableWidgetItem(f"{order_num:03d}"))
             self.table_registered.setItem(row, 1, QtWidgets.QTableWidgetItem(song["id"]))
-            self.table_registered.setItem(row, 2, QtWidgets.QTableWidgetItem(song["name"]))
+            self.table_registered.setItem(row, 2, QtWidgets.QTableWidgetItem(display_name))
             self.table_registered.setItem(row, 3, QtWidgets.QTableWidgetItem(song["path"]))
             self.table_registered.setItem(row, 4, QtWidgets.QTableWidgetItem(song["series"]))
             self.table_registered.setItem(row, 5, QtWidgets.QTableWidgetItem(str(song["weight"])))
+
 
     def load_unregistered_songs(self):
         if not self.current_folder:
@@ -360,17 +394,8 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
         if not songs_to_edit:
             return
 
-        # Determine if we're in single or multi mode
-        single_mode = len(songs_to_edit) == 1
-        if len(songs_to_edit) > 1 and single_mode:
-            QtWidgets.QMessageBox.warning(
-                self, "Warning",
-                "File name and title can only be edited for a single song at a time. Please select only one song."
-            )
-            return
-
-        # Show edit dialog
-        dialog = EditDialog(songs_to_edit, single_mode, self)
+        # Show edit dialog - removed single_mode parameter since it's handled inside EditDialog
+        dialog = EditDialog(songs_to_edit, self)
         if dialog.exec_() == QtWidgets.QDialog.Accepted:
             values = dialog.get_values()
             self.apply_edits(songs_to_edit, values)
@@ -380,34 +405,31 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
         
         try:
             for song in songs_to_edit:
-                # Update database values
                 db_song = next(s for s in all_songs if s["id"] == song["id"])
                 db_song["series"] = values["series"]
                 db_song["weight"] = values["weight"]
 
-                # Handle single-song edits (filename and title)
-                if len(songs_to_edit) == 1:
+                if len(songs_to_edit) == 1 and "filename" in values:
                     old_path = song["path"]
                     new_filename = values["filename"]
                     new_path = os.path.join(os.path.dirname(old_path), new_filename)
 
-                    # Rename the file if name changed
                     if new_filename != os.path.basename(old_path):
                         os.rename(old_path, new_path)
                         db_song["path"] = new_path
                         db_song["name"] = new_filename
 
-                    # Update title metadata
-                    try:
-                        audio = EasyID3(new_path)
-                    except ID3NoHeaderError:
-                        audio = EasyID3()
-                        audio.save(new_path)
-                    
-                    audio['title'] = values["title"]
-                    audio.save()
+                        # Update title metadata to match filename without extension
+                        try:
+                            audio = EasyID3(new_path)
+                        except ID3NoHeaderError:
+                            audio = EasyID3()
+                            audio.save(new_path)
+                        
+                        title_without_ext = os.path.splitext(new_filename)[0]
+                        audio['title'] = title_without_ext
+                        audio.save()
 
-            # Save all changes to database
             save_songs_to_database(all_songs)
             self.refresh_all_views()
             self.statusBar().showMessage("Changes applied successfully")
