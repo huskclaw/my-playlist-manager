@@ -242,18 +242,31 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
         
         layout.addLayout(filter_layout)
         
+        # Create custom item delegate for the Name column
+        class NameDelegate(QtWidgets.QStyledItemDelegate):
+            def __init__(self, parent=None):
+                super().__init__(parent)
+                self.parent_window = parent
+
+            def displayText(self, value, locale):
+                if self.parent_window.hide_numbers:
+                    match = ORDER_PATTERN.match(value)
+                    if match:
+                        return match.group(2)
+                return value
+
         # Setup table with modified column behavior
         self.table_registered = QtWidgets.QTableWidget()
         self.table_registered.setColumnCount(6)
         self.table_registered.setHorizontalHeaderLabels(["Order", "ID", "Name", "Path", "Series", "Weight"])
         
         # Set individual column resize modes and default widths
-        self.table_registered.horizontalHeader().setSectionResizeMode(0, QtWidgets.QHeaderView.Interactive)  # Order
-        self.table_registered.horizontalHeader().setSectionResizeMode(1, QtWidgets.QHeaderView.Interactive)  # ID
-        self.table_registered.horizontalHeader().setSectionResizeMode(2, QtWidgets.QHeaderView.Interactive)  # Name
-        self.table_registered.horizontalHeader().setSectionResizeMode(3, QtWidgets.QHeaderView.Interactive)  # Path
-        self.table_registered.horizontalHeader().setSectionResizeMode(4, QtWidgets.QHeaderView.Interactive)  # Series
-        self.table_registered.horizontalHeader().setSectionResizeMode(5, QtWidgets.QHeaderView.Interactive)  # Weight
+        self.table_registered.horizontalHeader().setSectionResizeMode(0, QtWidgets.QHeaderView.Interactive)
+        self.table_registered.horizontalHeader().setSectionResizeMode(1, QtWidgets.QHeaderView.Interactive)
+        self.table_registered.horizontalHeader().setSectionResizeMode(2, QtWidgets.QHeaderView.Interactive)
+        self.table_registered.horizontalHeader().setSectionResizeMode(3, QtWidgets.QHeaderView.Interactive)
+        self.table_registered.horizontalHeader().setSectionResizeMode(4, QtWidgets.QHeaderView.Interactive)
+        self.table_registered.horizontalHeader().setSectionResizeMode(5, QtWidgets.QHeaderView.Interactive)
         
         # Set default column widths
         self.table_registered.setColumnWidth(0, 60)   # Order
@@ -266,6 +279,9 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
         self.table_registered.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
         self.table_registered.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
         self.table_registered.setSortingEnabled(True)
+        
+        # Connect sorting signal
+        self.table_registered.horizontalHeader().sortIndicatorChanged.connect(self.on_sort_changed)
         layout.addWidget(self.table_registered)
         
         # [Rest of the setup_registered_tab remains the same]
@@ -344,33 +360,92 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
         self.load_registered_songs()
         self.load_unregistered_songs()
 
+    def handle_sort(self, logical_index):
+        if logical_index == 2:  # Name column
+            self.table_registered.sortItems(2, QtCore.Qt.AscendingOrder if self.table_registered.horizontalHeader().sortIndicatorOrder() == QtCore.Qt.DescendingOrder else QtCore.Qt.DescendingOrder)
+            self.refresh_all_views()
+
+    def on_sort_changed(self, logical_index, order):
+        """Handle sorting of columns"""
+        self.load_registered_songs()
+
     def load_registered_songs(self):
         if not self.current_folder:
             return
             
+        current_scroll = self.table_registered.verticalScrollBar().value()
+        
+        # Temporarily disable sorting to prevent recursion
+        self.table_registered.setSortingEnabled(False)
+        
+        # Clear the table
         self.table_registered.setRowCount(0)
         songs = load_songs_from_database()
         
         folder_songs = [song for song in songs if os.path.dirname(song["path"]) == self.current_folder]
-        folder_songs.sort(key=lambda x: (x.get("order", 0), self.extract_order_number(x["name"])))
         
+        # Get current sort column and order
+        header = self.table_registered.horizontalHeader()
+        sort_column = header.sortIndicatorSection()
+        sort_order = header.sortIndicatorOrder()
+        
+        # Sort the songs list based on the current sort column
+        if sort_column == 0:  # Order
+            folder_songs.sort(key=lambda x: int(x.get("order", 0)), reverse=(sort_order == QtCore.Qt.DescendingOrder))
+        elif sort_column == 1:  # ID
+            folder_songs.sort(key=lambda x: x["id"], reverse=(sort_order == QtCore.Qt.DescendingOrder))
+        elif sort_column == 2:  # Name
+            if self.hide_numbers:
+                folder_songs.sort(
+                    key=lambda x: ORDER_PATTERN.match(x["name"]).group(2) if ORDER_PATTERN.match(x["name"]) else x["name"],
+                    reverse=(sort_order == QtCore.Qt.DescendingOrder)
+                )
+            else:
+                folder_songs.sort(key=lambda x: x["name"], reverse=(sort_order == QtCore.Qt.DescendingOrder))
+        elif sort_column == 3:  # Path
+            folder_songs.sort(key=lambda x: x["path"], reverse=(sort_order == QtCore.Qt.DescendingOrder))
+        elif sort_column == 4:  # Series
+            folder_songs.sort(key=lambda x: x["series"], reverse=(sort_order == QtCore.Qt.DescendingOrder))
+        elif sort_column == 5:  # Weight
+            folder_songs.sort(key=lambda x: x["weight"], reverse=(sort_order == QtCore.Qt.DescendingOrder))
+        
+        # Populate the table
         for row, song in enumerate(folder_songs):
-            order_num = song.get("order", self.extract_order_number(song["name"]))
             self.table_registered.insertRow(row)
             
-            # Handle display name based on toggle
+            # Get display name based on toggle state
             display_name = song["name"]
             if self.hide_numbers:
                 match = ORDER_PATTERN.match(display_name)
                 if match:
                     display_name = match.group(2)
             
-            self.table_registered.setItem(row, 0, QtWidgets.QTableWidgetItem(f"{order_num:03d}"))
-            self.table_registered.setItem(row, 1, QtWidgets.QTableWidgetItem(song["id"]))
-            self.table_registered.setItem(row, 2, QtWidgets.QTableWidgetItem(display_name))
-            self.table_registered.setItem(row, 3, QtWidgets.QTableWidgetItem(song["path"]))
-            self.table_registered.setItem(row, 4, QtWidgets.QTableWidgetItem(song["series"]))
-            self.table_registered.setItem(row, 5, QtWidgets.QTableWidgetItem(str(song["weight"])))
+            # Create and set items
+            order_item = QtWidgets.QTableWidgetItem()
+            order_item.setData(QtCore.Qt.DisplayRole, int(song.get("order", 0)))
+            
+            id_item = QtWidgets.QTableWidgetItem(song["id"])
+            name_item = QtWidgets.QTableWidgetItem(display_name)
+            name_item.setData(QtCore.Qt.UserRole, song["name"])  # Store original name
+            path_item = QtWidgets.QTableWidgetItem(song["path"])
+            series_item = QtWidgets.QTableWidgetItem(song["series"])
+            
+            weight_item = QtWidgets.QTableWidgetItem()
+            weight_item.setData(QtCore.Qt.DisplayRole, int(song["weight"]))
+            
+            # Set items
+            self.table_registered.setItem(row, 0, order_item)
+            self.table_registered.setItem(row, 1, id_item)
+            self.table_registered.setItem(row, 2, name_item)
+            self.table_registered.setItem(row, 3, path_item)
+            self.table_registered.setItem(row, 4, series_item)
+            self.table_registered.setItem(row, 5, weight_item)
+        
+        # Re-enable sorting
+        self.table_registered.setSortingEnabled(True)
+        
+        # Restore scroll position
+        self.table_registered.verticalScrollBar().setValue(current_scroll)
 
 
     def load_unregistered_songs(self):

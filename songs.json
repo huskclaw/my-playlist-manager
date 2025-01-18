@@ -3,7 +3,7 @@
         "id": "ID0000",
         "name": "001 Majo no Tabitabi - Op Full.Mp3.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\001 Majo no Tabitabi - Op Full.Mp3.Mp3",
-        "series": "",
+        "series": "Majo no Tabitabi",
         "weight": 5,
         "order": 1
     },
@@ -19,7 +19,7 @@
         "id": "ID0002",
         "name": "003 Gakkou Gurashi - Afterglow.Mp3.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\003 Gakkou Gurashi - Afterglow.Mp3.Mp3",
-        "series": "",
+        "series": "Gakkou Gurashi",
         "weight": 5,
         "order": 3
     },
@@ -35,7 +35,7 @@
         "id": "ID0004",
         "name": "005 Rail Romanesque - Bon Voyage.Mp3.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\005 Rail Romanesque - Bon Voyage.Mp3.Mp3",
-        "series": "",
+        "series": "Rail Romanesque",
         "weight": 5,
         "order": 5
     },
@@ -51,7 +51,7 @@
         "id": "ID0006",
         "name": "007 Houkago Saikoro Op - Present Moment.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\007 Houkago Saikoro Op - Present Moment.Mp3",
-        "series": "",
+        "series": "Houkago Saikoro",
         "weight": 5,
         "order": 7
     },
@@ -83,7 +83,7 @@
         "id": "ID0010",
         "name": "011 Mikakunin - Neat Patroll.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\011 Mikakunin - Neat Patroll.Mp3",
-        "series": "",
+        "series": "Mikakunin",
         "weight": 5,
         "order": 11
     },
@@ -107,7 +107,7 @@
         "id": "ID0013",
         "name": "014 Acchi Kocchi - Op Full.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\014 Acchi Kocchi - Op Full.Mp3",
-        "series": "",
+        "series": "Acchi Kocchi",
         "weight": 5,
         "order": 14
     },
@@ -123,7 +123,7 @@
         "id": "ID0015",
         "name": "016 Centaur No Nayami Op - Oshiete Darwin.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\016 Centaur No Nayami Op - Oshiete Darwin.Mp3",
-        "series": "",
+        "series": "Centaur No Nayami",
         "weight": 5,
         "order": 16
     },
@@ -131,7 +131,7 @@
         "id": "ID0016",
         "name": "017 Sora yori mo Tooi Basho ED - Koko kara, Koko kara.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\017 Sora yori mo Tooi Basho ED - Koko kara, Koko kara.mp3",
-        "series": "",
+        "series": "Sora Yori Mo Tooi Basho",
         "weight": 5,
         "order": 17
     },
@@ -139,7 +139,7 @@
         "id": "ID0017",
         "name": "018 Aharen-San Op - Wa Narenai Kyori.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\018 Aharen-San Op - Wa Narenai Kyori.Mp3",
-        "series": "",
+        "series": "Aharen-san",
         "weight": 5,
         "order": 18
     },
@@ -163,15 +163,15 @@
         "id": "ID0020",
         "name": "021 Urara Meirochou Op - Yumeji Labyrinth.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\021 Urara Meirochou Op - Yumeji Labyrinth.Mp3",
-        "series": "",
+        "series": "Urara Meirochou",
         "weight": 5,
         "order": 21
     },
     {
         "id": "ID0021",
-        "name": "022 Rezero - Wishing.Mp3",
-        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\022 Rezero - Wishing.Mp3",
-        "series": "",
+        "name": "022 ReZero - Wishing.Mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\022 ReZero - Wishing.Mp3",
+        "series": "ReZero",
         "weight": 5,
         "order": 22
     },
@@ -187,15 +187,15 @@
         "id": "ID0023",
         "name": "024 Inu X Boku Ss - Op Full.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\024 Inu X Boku Ss - Op Full.Mp3",
-        "series": "",
+        "series": "Inu X Boku SS",
         "weight": 5,
         "order": 24
     },
     {
         "id": "ID0024",
-        "name": "025 Kan Colle - Fubuki.Mp3",
-        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\025 Kan Colle - Fubuki.Mp3",
-        "series": "",
+        "name": "025 Kantai Collection - Fubuki.Mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\025 Kantai Collection - Fubuki.Mp3",
+        "series": "Kantai Collection",
         "weight": 5,
         "order": 25
     },
@@ -203,7 +203,7 @@
         "id": "ID0025",
         "name": "026 Slow Start Ed - Kaze No Koe Wo Kikinagara.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\026 Slow Start Ed - Kaze No Koe Wo Kikinagara.Mp3",
-        "series": "",
+        "series": "Slow Start",
         "weight": 5,
         "order": 26
     },
@@ -219,7 +219,7 @@
         "id": "ID0027",
         "name": "028 Yuru Camp Op - Seize The Day.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\028 Yuru Camp Op - Seize The Day.Mp3",
-        "series": "",
+        "series": "Yuru Camp",
         "weight": 5,
         "order": 28
     },
@@ -227,7 +227,7 @@
         "id": "ID0028",
         "name": "029 Kobayashi Dragon Maid - O Uchi Kaero.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\029 Kobayashi Dragon Maid - O Uchi Kaero.Mp3",
-        "series": "",
+        "series": "Kobayashi Dragon Maid",
         "weight": 5,
         "order": 29
     },
@@ -251,7 +251,7 @@
         "id": "ID0031",
         "name": "032 Flos - Cover.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\032 Flos - Cover.Mp3",
-        "series": "",
+        "series": "Okayu",
         "weight": 5,
         "order": 32
     },
@@ -291,7 +291,7 @@
         "id": "ID0036",
         "name": "037 Tamako Market - Principle.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\037 Tamako Market - Principle.Mp3",
-        "series": "",
+        "series": "Tamako Market",
         "weight": 5,
         "order": 37
     },
@@ -307,7 +307,7 @@
         "id": "ID0038",
         "name": "039 Yama No Susume S1 Ed - Sutakkato Days.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\039 Yama No Susume S1 Ed - Sutakkato Days.Mp3",
-        "series": "",
+        "series": "Yama No Susume",
         "weight": 5,
         "order": 39
     },
@@ -315,7 +315,7 @@
         "id": "ID0039",
         "name": "040 Yakunara Mug Cup S2 Op - Muchuu No Saki E.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\040 Yakunara Mug Cup S2 Op - Muchuu No Saki E.Mp3",
-        "series": "",
+        "series": "Yakunara Mug Cup",
         "weight": 5,
         "order": 40
     },
@@ -331,7 +331,7 @@
         "id": "ID0041",
         "name": "042 Shinryaku! Ika Musume S2 - Op.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\042 Shinryaku! Ika Musume S2 - Op.Mp3",
-        "series": "",
+        "series": "Shinryaku! Ika Musume",
         "weight": 5,
         "order": 42
     },
@@ -347,7 +347,7 @@
         "id": "ID0043",
         "name": "044 Gj-Bu Ed 4 - Let'S Run!.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\044 Gj-Bu Ed 4 - Let'S Run!.Mp3",
-        "series": "",
+        "series": "Gj-Bu",
         "weight": 5,
         "order": 44
     },
@@ -363,7 +363,7 @@
         "id": "ID0045",
         "name": "046 Mikakunin Op.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\046 Mikakunin Op.Mp3",
-        "series": "",
+        "series": "Mikakunin",
         "weight": 5,
         "order": 46
     },
@@ -371,7 +371,7 @@
         "id": "ID0046",
         "name": "047 Gin No Saji S2 Op - Life.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\047 Gin No Saji S2 Op - Life.Mp3",
-        "series": "",
+        "series": "Gin No Saji",
         "weight": 5,
         "order": 47
     },
@@ -395,7 +395,7 @@
         "id": "ID0049",
         "name": "050 Kaguya-Sama Ed 2 - Kaze Ni Fukarete.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\050 Kaguya-Sama Ed 2 - Kaze Ni Fukarete.Mp3",
-        "series": "",
+        "series": "Kaguya-Sama",
         "weight": 5,
         "order": 50
     },
@@ -419,7 +419,7 @@
         "id": "ID0052",
         "name": "053 Kamisama Ni Natta Hi Ed - Goodbye Seven Seas.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\053 Kamisama Ni Natta Hi Ed - Goodbye Seven Seas.Mp3",
-        "series": "",
+        "series": "Kamisama Ni Natta Hi",
         "weight": 5,
         "order": 53
     },
@@ -435,7 +435,7 @@
         "id": "ID0054",
         "name": "055 Hitoribocchi Ed - Ne Issho Ni Kaero.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\055 Hitoribocchi Ed - Ne Issho Ni Kaero.Mp3",
-        "series": "",
+        "series": "Hitoribocchi",
         "weight": 5,
         "order": 55
     },
@@ -451,7 +451,7 @@
         "id": "ID0056",
         "name": "057 Ryuuo Oshi Ed - Mamoritai Mono No Tame Ni.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\057 Ryuuo Oshi Ed - Mamoritai Mono No Tame Ni.Mp3",
-        "series": "",
+        "series": "Ryuuo Oshi",
         "weight": 5,
         "order": 57
     },
@@ -459,7 +459,7 @@
         "id": "ID0057",
         "name": "058 Tensei Slime Ed 1 - Another Colony.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\058 Tensei Slime Ed 1 - Another Colony.Mp3",
-        "series": "",
+        "series": "Tensei Slime",
         "weight": 5,
         "order": 58
     },
@@ -483,7 +483,7 @@
         "id": "ID0060",
         "name": "061 Hinako Note - Shiawase Iro.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\061 Hinako Note - Shiawase Iro.Mp3",
-        "series": "",
+        "series": "Hinako Note",
         "weight": 5,
         "order": 61
     },
@@ -491,7 +491,7 @@
         "id": "ID0061",
         "name": "062 Kinmoza - Sakurairo Cherish.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\062 Kinmoza - Sakurairo Cherish.Mp3",
-        "series": "",
+        "series": "Kinmoza",
         "weight": 5,
         "order": 62
     },
@@ -507,7 +507,7 @@
         "id": "ID0063",
         "name": "064 Tamako Market - Koi No Uta.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\064 Tamako Market - Koi No Uta.Mp3",
-        "series": "",
+        "series": "Tamako Market",
         "weight": 5,
         "order": 64
     },
@@ -515,7 +515,7 @@
         "id": "ID0064",
         "name": "065 Koisuru Asteroid Op Aruite Ikou.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\065 Koisuru Asteroid Op Aruite Ikou.Mp3",
-        "series": "",
+        "series": "Koisuru Asteroid",
         "weight": 5,
         "order": 65
     },
@@ -547,7 +547,7 @@
         "id": "ID0068",
         "name": "069 Houkago Teibou Nisshi - Beginner'S Luck.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\069 Houkago Teibou Nisshi - Beginner'S Luck.Mp3",
-        "series": "",
+        "series": "Houkago Teibou Nisshi",
         "weight": 5,
         "order": 69
     },
@@ -571,7 +571,7 @@
         "id": "ID0071",
         "name": "072 Lucky Star Op - Motteke! Sailor Fuku!.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\072 Lucky Star Op - Motteke! Sailor Fuku!.Mp3",
-        "series": "",
+        "series": "Lucky Star",
         "weight": 5,
         "order": 72
     },
@@ -595,7 +595,7 @@
         "id": "ID0074",
         "name": "075 Tonakyu Ed - Happy!! Strange Friends.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\075 Tonakyu Ed - Happy!! Strange Friends.Mp3",
-        "series": "",
+        "series": "Tonakyu",
         "weight": 5,
         "order": 75
     },
@@ -635,7 +635,7 @@
         "id": "ID0079",
         "name": "080 A Channel Op - Morning Arch.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\080 A Channel Op - Morning Arch.Mp3",
-        "series": "",
+        "series": "A Channel",
         "weight": 5,
         "order": 80
     },
@@ -643,7 +643,7 @@
         "id": "ID0080",
         "name": "081 Kamisama Ni Natta Hi Op.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\081 Kamisama Ni Natta Hi Op.Mp3",
-        "series": "",
+        "series": "Kamisama Ni Natta Hi",
         "weight": 5,
         "order": 81
     },
@@ -659,7 +659,7 @@
         "id": "ID0082",
         "name": "083 Yuru Camp\u25b3 Ed Full\u300cFuru Biyori\u300dBy Eri Sasaki.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\083 Yuru Camp\u25b3 Ed Full\u300cFuru Biyori\u300dBy Eri Sasaki.Mp3",
-        "series": "",
+        "series": "Yuru Camp",
         "weight": 5,
         "order": 83
     },
@@ -667,7 +667,7 @@
         "id": "ID0083",
         "name": "084 Konohana Kitan Ed 1.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\084 Konohana Kitan Ed 1.Mp3",
-        "series": "",
+        "series": "Konohana Kitan",
         "weight": 5,
         "order": 84
     },
@@ -689,9 +689,9 @@
     },
     {
         "id": "ID0086",
-        "name": "087 Rezero S2 Ed2 - Believe In You.Mp3",
-        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\087 Rezero S2 Ed2 - Believe In You.Mp3",
-        "series": "",
+        "name": "087 ReZero S2 Ed2 - Believe In You.Mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\087 ReZero S2 Ed2 - Believe In You.Mp3",
+        "series": "ReZero",
         "weight": 5,
         "order": 87
     },
@@ -699,7 +699,7 @@
         "id": "ID0087",
         "name": "088 Tamako Market Op - Dramatic Market Ride.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\088 Tamako Market Op - Dramatic Market Ride.Mp3",
-        "series": "",
+        "series": "Tamako Market",
         "weight": 5,
         "order": 88
     },
@@ -715,7 +715,7 @@
         "id": "ID0089",
         "name": "090 Gakkou Gurashi - Sotsugyou Track.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\090 Gakkou Gurashi - Sotsugyou Track.Mp3",
-        "series": "",
+        "series": "Gakkou Gurashi",
         "weight": 5,
         "order": 90
     },
@@ -739,7 +739,7 @@
         "id": "ID0092",
         "name": "093 Kobayashi Dragon Maid S2 Ed - Maids With Dragons.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\093 Kobayashi Dragon Maid S2 Ed - Maids With Dragons.Mp3",
-        "series": "",
+        "series": "Kobayashi Dragon Maid",
         "weight": 5,
         "order": 93
     },
@@ -755,7 +755,7 @@
         "id": "ID0094",
         "name": "095 Gabriel Dropout - Hanten Devil & Angel.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\095 Gabriel Dropout - Hanten Devil & Angel.Mp3",
-        "series": "",
+        "series": "Gabriel Dropout",
         "weight": 5,
         "order": 95
     },
@@ -787,7 +787,7 @@
         "id": "ID0098",
         "name": "099 Sukasuka Op - Dearest Drop.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\099 Sukasuka Op - Dearest Drop.Mp3",
-        "series": "",
+        "series": "Sukasuka",
         "weight": 5,
         "order": 99
     },
@@ -803,7 +803,7 @@
         "id": "ID0100",
         "name": "101 Kinmoza - Happy Pretty Clover.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\101 Kinmoza - Happy Pretty Clover.Mp3",
-        "series": "",
+        "series": "Kinmoza",
         "weight": 5,
         "order": 101
     },
@@ -819,7 +819,7 @@
         "id": "ID0102",
         "name": "103 Slime Taoshite Ed - Viewtiful Days!.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\103 Slime Taoshite Ed - Viewtiful Days!.Mp3",
-        "series": "",
+        "series": "Slime Taoshite",
         "weight": 5,
         "order": 103
     },
@@ -851,7 +851,7 @@
         "id": "ID0106",
         "name": "107 Gakuen Babysitter Op - Endless Happy World.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\107 Gakuen Babysitter Op - Endless Happy World.Mp3",
-        "series": "",
+        "series": "Gakuen Babysitter",
         "weight": 5,
         "order": 107
     },
@@ -867,7 +867,7 @@
         "id": "ID0108",
         "name": "109 Himouto Umaru-Chan - Unchanging Treasure.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\109 Himouto Umaru-Chan - Unchanging Treasure.Mp3",
-        "series": "",
+        "series": "Himouto Umaru-Chan",
         "weight": 5,
         "order": 109
     },
@@ -875,7 +875,7 @@
         "id": "ID0109",
         "name": "110 Mikakunin - Real Feeling.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\110 Mikakunin - Real Feeling.Mp3",
-        "series": "",
+        "series": "Mikakunin",
         "weight": 5,
         "order": 110
     },
@@ -883,7 +883,7 @@
         "id": "ID0110",
         "name": "111 Konosuba S2 Ed - Wanna Go Home.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\111 Konosuba S2 Ed - Wanna Go Home.Mp3",
-        "series": "",
+        "series": "Konosuba",
         "weight": 5,
         "order": 111
     },
@@ -915,7 +915,7 @@
         "id": "ID0114",
         "name": "115 Tensei Slime Op 3 - Storyteller.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\115 Tensei Slime Op 3 - Storyteller.mp3",
-        "series": "",
+        "series": "Tensei Slime",
         "weight": 5,
         "order": 115
     },
@@ -947,7 +947,7 @@
         "id": "ID0118",
         "name": "119 Yakunara Mug Cup Yakumo No Hokago - Mawaru Sekaini.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\119 Yakunara Mug Cup Yakumo No Hokago - Mawaru Sekaini.Mp3",
-        "series": "",
+        "series": "Yakunara Mug Cup",
         "weight": 5,
         "order": 119
     },
@@ -971,7 +971,7 @@
         "id": "ID0121",
         "name": "122 Gj-Bu Ed 1.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\122 Gj-Bu Ed 1.Mp3",
-        "series": "",
+        "series": "Gj-Bu",
         "weight": 5,
         "order": 122
     },
@@ -1003,7 +1003,7 @@
         "id": "ID0125",
         "name": "126 Isekai Shokudou Ed - Chiisana Hitotsubu.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\126 Isekai Shokudou Ed - Chiisana Hitotsubu.Mp3",
-        "series": "",
+        "series": "Isekai Shokudou",
         "weight": 5,
         "order": 126
     },
@@ -1011,7 +1011,7 @@
         "id": "ID0126",
         "name": "127 Hinako Note Op - Gekidan Hitotose.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\127 Hinako Note Op - Gekidan Hitotose.Mp3",
-        "series": "",
+        "series": "Hinako Note",
         "weight": 5,
         "order": 127
     },
@@ -1027,7 +1027,7 @@
         "id": "ID0128",
         "name": "129 Kuma Bear Op Full.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\129 Kuma Bear Op Full.Mp3",
-        "series": "",
+        "series": "Kuma Bear",
         "weight": 5,
         "order": 129
     },
@@ -1043,7 +1043,7 @@
         "id": "ID0130",
         "name": "131 Girls Und Panzer Das Finale Op - Grand Symphony.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\131 Girls Und Panzer Das Finale Op - Grand Symphony.Mp3",
-        "series": "",
+        "series": "Girls Und Panzer",
         "weight": 5,
         "order": 131
     },
@@ -1059,7 +1059,7 @@
         "id": "ID0132",
         "name": "133 Shinryaku! Ika Musume S2 Ed.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\133 Shinryaku! Ika Musume S2 Ed.Mp3",
-        "series": "",
+        "series": "Shinryaku! Ika Musume",
         "weight": 5,
         "order": 133
     },
@@ -1067,7 +1067,7 @@
         "id": "ID0133",
         "name": "134 No Game No Life Op Full.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\134 No Game No Life Op Full.Mp3",
-        "series": "",
+        "series": "No Game No Life",
         "weight": 5,
         "order": 134
     },
@@ -1115,7 +1115,7 @@
         "id": "ID0139",
         "name": "140 Slow Loop Ed - Shuwa Shuwa.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\140 Slow Loop Ed - Shuwa Shuwa.Mp3",
-        "series": "",
+        "series": "Slow Loop",
         "weight": 5,
         "order": 140
     },
@@ -1123,7 +1123,7 @@
         "id": "ID0140",
         "name": "141 Denkigai Op - Kajiri Kake No Ringo.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\141 Denkigai Op - Kajiri Kake No Ringo.Mp3",
-        "series": "",
+        "series": "Denkigai",
         "weight": 5,
         "order": 141
     },
@@ -1147,7 +1147,7 @@
         "id": "ID0143",
         "name": "144 Gakkou Gurashi Ed 1 - Harmonize Clover.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\144 Gakkou Gurashi Ed 1 - Harmonize Clover.Mp3",
-        "series": "",
+        "series": "Gakkou Gurashi",
         "weight": 5,
         "order": 144
     },
@@ -1155,7 +1155,7 @@
         "id": "ID0144",
         "name": "145 Tamako Market - Kankan Makimaki.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\145 Tamako Market - Kankan Makimaki.Mp3",
-        "series": "",
+        "series": "Tamako Market",
         "weight": 5,
         "order": 145
     },
@@ -1171,7 +1171,7 @@
         "id": "ID0146",
         "name": "147 Aot S4 Part 2 Ed - Akuma No Ko.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\147 Aot S4 Part 2 Ed - Akuma No Ko.Mp3",
-        "series": "",
+        "series": "Aot",
         "weight": 5,
         "order": 147
     },
@@ -1179,7 +1179,7 @@
         "id": "ID0147",
         "name": "148 Hitoribocchi - Dont Lose Aru!.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\148 Hitoribocchi - Dont Lose Aru!.Mp3",
-        "series": "",
+        "series": "Hitoribocchi",
         "weight": 5,
         "order": 148
     },
@@ -1203,7 +1203,7 @@
         "id": "ID0150",
         "name": "151 Sora Yori Mo Tooi Basho Op.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\151 Sora Yori Mo Tooi Basho Op.Mp3",
-        "series": "",
+        "series": "Sora Yori Mo Tooi Basho",
         "weight": 5,
         "order": 151
     },
@@ -1219,7 +1219,7 @@
         "id": "ID0152",
         "name": "153 Kobayashi Dragon Maid - Maigo No Kaiju.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\153 Kobayashi Dragon Maid - Maigo No Kaiju.Mp3",
-        "series": "",
+        "series": "Kobayashi Dragon Maid",
         "weight": 5,
         "order": 153
     },
@@ -1235,7 +1235,7 @@
         "id": "ID0154",
         "name": "155 Comic Girls Op Memories Full.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\155 Comic Girls Op Memories Full.Mp3",
-        "series": "",
+        "series": "Comic Girls",
         "weight": 5,
         "order": 155
     },
@@ -1267,7 +1267,7 @@
         "id": "ID0158",
         "name": "159 Centaur No Nayami Ed - Eidelweiss.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\159 Centaur No Nayami Ed - Eidelweiss.Mp3",
-        "series": "",
+        "series": "Centaur No Nayami",
         "weight": 5,
         "order": 159
     },
@@ -1275,7 +1275,7 @@
         "id": "ID0159",
         "name": "160 Konohana Kitan Ending 3.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\160 Konohana Kitan Ending 3.Mp3",
-        "series": "",
+        "series": "Konohana Kitan",
         "weight": 5,
         "order": 160
     },
@@ -1283,7 +1283,7 @@
         "id": "ID0160",
         "name": "161 Aiura Ed - Ichigo Ichie.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\161 Aiura Ed - Ichigo Ichie.Mp3",
-        "series": "",
+        "series": "Aiura",
         "weight": 5,
         "order": 161
     },
@@ -1299,7 +1299,7 @@
         "id": "ID0162",
         "name": "163 Kinmoza - Kiramekiiro Summer Rainbow.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\163 Kinmoza - Kiramekiiro Summer Rainbow.Mp3",
-        "series": "",
+        "series": "Kinmoza",
         "weight": 5,
         "order": 163
     },
@@ -1307,7 +1307,7 @@
         "id": "ID0163",
         "name": "164 Sansha Sanyou Op - Clover Kakumation.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\164 Sansha Sanyou Op - Clover Kakumation.Mp3",
-        "series": "",
+        "series": "Sansha Sanyou",
         "weight": 5,
         "order": 164
     },
@@ -1323,7 +1323,7 @@
         "id": "ID0165",
         "name": "166 Yuru Camp - The Sunshower (Heya Camp).Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\166 Yuru Camp - The Sunshower (Heya Camp).Mp3",
-        "series": "",
+        "series": "Yuru Camp",
         "weight": 5,
         "order": 166
     },
@@ -1331,7 +1331,7 @@
         "id": "ID0166",
         "name": "167 Mikakunin - Ciao Chao \u2661 Dolce.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\167 Mikakunin - Ciao Chao \u2661 Dolce.Mp3",
-        "series": "",
+        "series": "Mikakunin",
         "weight": 5,
         "order": 167
     },
@@ -1347,7 +1347,7 @@
         "id": "ID0168",
         "name": "169 Joshikousei No Mudazukai Op - Wa! Moon! Dass! Cry!.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\169 Joshikousei No Mudazukai Op - Wa! Moon! Dass! Cry!.Mp3",
-        "series": "",
+        "series": "Joshikousei No Mudazukai",
         "weight": 5,
         "order": 169
     },
@@ -1403,7 +1403,7 @@
         "id": "ID0175",
         "name": "176 Sukasuka Ed - From.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\176 Sukasuka Ed - From.Mp3",
-        "series": "",
+        "series": "Sukasuka",
         "weight": 5,
         "order": 176
     },
@@ -1411,7 +1411,7 @@
         "id": "ID0176",
         "name": "177 My Senpai Is Annoying Op - Annoying! San San Week!.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\177 My Senpai Is Annoying Op - Annoying! San San Week!.Mp3",
-        "series": "",
+        "series": "My Senpai Is Annoying",
         "weight": 5,
         "order": 177
     },
@@ -1427,7 +1427,7 @@
         "id": "ID0178",
         "name": "179 Kobayashi Dragon Maid - I Love Your Love, My Love.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\179 Kobayashi Dragon Maid - I Love Your Love, My Love.Mp3",
-        "series": "",
+        "series": "Kobayashi Dragon Maid",
         "weight": 5,
         "order": 179
     },
@@ -1435,7 +1435,7 @@
         "id": "ID0179",
         "name": "180 Gakkou Gurashi - Yummy Yappy Recipe.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\180 Gakkou Gurashi - Yummy Yappy Recipe.Mp3",
-        "series": "",
+        "series": "Gakkou Gurashi",
         "weight": 5,
         "order": 180
     },
@@ -1459,15 +1459,15 @@
         "id": "ID0182",
         "name": "183 Maoujou De Oyasumi Full Op.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\183 Maoujou De Oyasumi Full Op.Mp3",
-        "series": "",
+        "series": "Maoujou De Oyasumi",
         "weight": 5,
         "order": 183
     },
     {
         "id": "ID0183",
-        "name": "184 Rezero Ed 2 Full - Stay Alive.Mp3",
-        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\184 Rezero Ed 2 Full - Stay Alive.Mp3",
-        "series": "",
+        "name": "184 ReZero Ed 2 Full - Stay Alive.Mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\184 ReZero Ed 2 Full - Stay Alive.Mp3",
+        "series": "ReZero",
         "weight": 5,
         "order": 184
     },
@@ -1483,7 +1483,7 @@
         "id": "ID0185",
         "name": "186 Koisuru Asteroid - Kimi To Mita Hoshi.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\186 Koisuru Asteroid - Kimi To Mita Hoshi.Mp3",
-        "series": "",
+        "series": "Koisuru Asteroid",
         "weight": 5,
         "order": 186
     },
@@ -1499,7 +1499,7 @@
         "id": "ID0187",
         "name": "188 Urara Meirochou Ed - Go To Romance.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\188 Urara Meirochou Ed - Go To Romance.Mp3",
-        "series": "",
+        "series": "Urara Meirochou",
         "weight": 5,
         "order": 188
     },
@@ -1555,7 +1555,7 @@
         "id": "ID0194",
         "name": "195 Tensei Slime Op 2 - Megurumono.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\195 Tensei Slime Op 2 - Megurumono.Mp3",
-        "series": "",
+        "series": "Tensei Slime",
         "weight": 5,
         "order": 195
     },
@@ -1579,7 +1579,7 @@
         "id": "ID0197",
         "name": "198 Nichijou - Everyday Town-Mai Pace.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\198 Nichijou - Everyday Town-Mai Pace.Mp3",
-        "series": "",
+        "series": "Nichijou",
         "weight": 5,
         "order": 198
     },
@@ -1595,7 +1595,7 @@
         "id": "ID0199",
         "name": "200 Houkago Teibou Nisshi Op - Sea Horizon.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\200 Houkago Teibou Nisshi Op - Sea Horizon.Mp3",
-        "series": "",
+        "series": "Houkago Teibou Nisshi",
         "weight": 5,
         "order": 200
     },
@@ -1611,7 +1611,7 @@
         "id": "ID0201",
         "name": "202 Dr Stone S2 Op Rakuen.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\202 Dr Stone S2 Op Rakuen.Mp3",
-        "series": "",
+        "series": "Dr Stone",
         "weight": 5,
         "order": 202
     },
@@ -1619,7 +1619,7 @@
         "id": "ID0202",
         "name": "203 Tamako Market - Girlfriend.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\203 Tamako Market - Girlfriend.Mp3",
-        "series": "",
+        "series": "Tamako Market",
         "weight": 5,
         "order": 203
     },
@@ -1643,7 +1643,7 @@
         "id": "ID0205",
         "name": "206 Yakunara Mug Cup Op - Tobira Wo Aketara.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\206 Yakunara Mug Cup Op - Tobira Wo Aketara.Mp3",
-        "series": "",
+        "series": "Yakunara Mug Cup",
         "weight": 5,
         "order": 206
     },
@@ -1683,7 +1683,7 @@
         "id": "ID0210",
         "name": "211 Sora Yori Mo Tooi Basho - Mata Ne.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\211 Sora Yori Mo Tooi Basho - Mata Ne.Mp3",
-        "series": "",
+        "series": "Sora Yori Mo Tooi Basho",
         "weight": 5,
         "order": 211
     },
@@ -1691,7 +1691,7 @@
         "id": "ID0211",
         "name": "212 Gin No Saji S1 Op - Kiss You.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\212 Gin No Saji S1 Op - Kiss You.Mp3",
-        "series": "",
+        "series": "Gin No Saji",
         "weight": 5,
         "order": 212
     },
@@ -1715,7 +1715,7 @@
         "id": "ID0214",
         "name": "215 Slow Start Op - Ne! Ne! Ne!.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\215 Slow Start Op - Ne! Ne! Ne!.Mp3",
-        "series": "",
+        "series": "Slow Start",
         "weight": 5,
         "order": 215
     },
@@ -1747,7 +1747,7 @@
         "id": "ID0218",
         "name": "219 Hitoribocchi Op - Bocchi And Friends.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\219 Hitoribocchi Op - Bocchi And Friends.Mp3",
-        "series": "",
+        "series": "Hitoribocchi",
         "weight": 5,
         "order": 219
     },
@@ -1755,7 +1755,7 @@
         "id": "ID0219",
         "name": "220 Yama No Susume S2 Op - Natsuiro Purezento.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\220 Yama No Susume S2 Op - Natsuiro Purezento.Mp3",
-        "series": "",
+        "series": "Yama No Susume",
         "weight": 5,
         "order": 220
     },
@@ -1771,7 +1771,7 @@
         "id": "ID0221",
         "name": "222 Ryuuo Oshi Op - Korekara.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\222 Ryuuo Oshi Op - Korekara.Mp3",
-        "series": "",
+        "series": "Ryuuo Oshi",
         "weight": 5,
         "order": 222
     },
@@ -1779,7 +1779,7 @@
         "id": "ID0222",
         "name": "223 Konohana Kitan Ending 2.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\223 Konohana Kitan Ending 2.Mp3",
-        "series": "",
+        "series": "Konohana Kitan",
         "weight": 5,
         "order": 223
     },
@@ -1787,7 +1787,7 @@
         "id": "ID0223",
         "name": "224 Sewayaki Kitsune No Senko-San Op - Koyoi Mofumofu.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\224 Sewayaki Kitsune No Senko-San Op - Koyoi Mofumofu.Mp3",
-        "series": "",
+        "series": "Senko-san",
         "weight": 5,
         "order": 224
     },
@@ -1803,7 +1803,7 @@
         "id": "ID0225",
         "name": "226 Rail Romanesque - Singing Wheel.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\226 Rail Romanesque - Singing Wheel.Mp3",
-        "series": "",
+        "series": "Rail Romanesque",
         "weight": 5,
         "order": 226
     },
@@ -1843,7 +1843,7 @@
         "id": "ID0230",
         "name": "231 Gakuen Babysitter Ed - Oshiete Yo.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\231 Gakuen Babysitter Ed - Oshiete Yo.Mp3",
-        "series": "",
+        "series": "Gakuen Babysitter",
         "weight": 5,
         "order": 231
     },
@@ -1859,7 +1859,7 @@
         "id": "ID0232",
         "name": "233 Yuyushiki Op - Seeno!.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\233 Yuyushiki Op - Seeno!.Mp3",
-        "series": "",
+        "series": "Yuyushiki",
         "weight": 5,
         "order": 233
     },
@@ -1899,7 +1899,7 @@
         "id": "ID0237",
         "name": "238 Mitsuboshi Colors Op - Colors Power Ni Omakasero.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\238 Mitsuboshi Colors Op - Colors Power Ni Omakasero.Mp3",
-        "series": "",
+        "series": "Mitsuboshi Colors",
         "weight": 5,
         "order": 238
     },
@@ -1947,7 +1947,7 @@
         "id": "ID0243",
         "name": "244 Acchi Kocchi Ed Full.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\244 Acchi Kocchi Ed Full.Mp3",
-        "series": "",
+        "series": "Acchi Kocchi",
         "weight": 5,
         "order": 244
     },
@@ -1963,7 +1963,7 @@
         "id": "ID0245",
         "name": "246 Konosuba S1 Ed - Chiisana Bakuensha.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\246 Konosuba S1 Ed - Chiisana Bakuensha.Mp3",
-        "series": "",
+        "series": "Konosuba",
         "weight": 5,
         "order": 246
     },
@@ -1979,7 +1979,7 @@
         "id": "ID0247",
         "name": "248 Aharen-san  Ed - Kyori kan.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\248 Aharen-san  Ed - Kyori kan.mp3",
-        "series": "",
+        "series": "Aharen-san",
         "weight": 5,
         "order": 248
     },
@@ -1987,7 +1987,7 @@
         "id": "ID0248",
         "name": "249 Gakkou Gurashi Op - Friend Shitai Gakuen Seikatsubu.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\249 Gakkou Gurashi Op - Friend Shitai Gakuen Seikatsubu.Mp3",
-        "series": "",
+        "series": "Gakkou Gurashi",
         "weight": 5,
         "order": 249
     },
@@ -1995,7 +1995,7 @@
         "id": "ID0249",
         "name": "250 Tensei Slime Ed 3 - Storyseeker.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\250 Tensei Slime Ed 3 - Storyseeker.Mp3",
-        "series": "",
+        "series": "Tensei Slime",
         "weight": 5,
         "order": 250
     },
@@ -2011,7 +2011,7 @@
         "id": "ID0251",
         "name": "252 Rail Romanesque - Wonderful Rail.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\252 Rail Romanesque - Wonderful Rail.Mp3",
-        "series": "",
+        "series": "Rail Romanesque",
         "weight": 5,
         "order": 252
     },
@@ -2019,7 +2019,7 @@
         "id": "ID0252",
         "name": "253 Stella No Mahou Ed.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\253 Stella No Mahou Ed.Mp3",
-        "series": "",
+        "series": "Stella No Mahou",
         "weight": 5,
         "order": 253
     },
@@ -2051,7 +2051,7 @@
         "id": "ID0256",
         "name": "257 Hinako Note Ed Curtain Call!.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\257 Hinako Note Ed Curtain Call!.Mp3",
-        "series": "",
+        "series": "Hinako Note",
         "weight": 5,
         "order": 257
     },
@@ -2059,7 +2059,7 @@
         "id": "ID0257",
         "name": "258 Kinmoza - Promise Of Shirotsumekusa.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\258 Kinmoza - Promise Of Shirotsumekusa.Mp3",
-        "series": "",
+        "series": "Kinmoza",
         "weight": 5,
         "order": 258
     },
@@ -2075,7 +2075,7 @@
         "id": "ID0259",
         "name": "260 Tonakyu Op - Kyuutie Ladies.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\260 Tonakyu Op - Kyuutie Ladies.Mp3",
-        "series": "",
+        "series": "Tonakyu",
         "weight": 5,
         "order": 260
     },
@@ -2107,7 +2107,7 @@
         "id": "ID0263",
         "name": "264 Gabriel Dropout - Original Bible.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\264 Gabriel Dropout - Original Bible.Mp3",
-        "series": "",
+        "series": "Gabriel Dropout",
         "weight": 5,
         "order": 264
     },
@@ -2115,7 +2115,7 @@
         "id": "ID0264",
         "name": "265 Cheat Kusushi No Slow Life Ed - Mainichi Kashimashi Pharmacy.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\265 Cheat Kusushi No Slow Life Ed - Mainichi Kashimashi Pharmacy.Mp3",
-        "series": "",
+        "series": "Cheat Kusushi No Slow Life",
         "weight": 5,
         "order": 265
     },
@@ -2139,7 +2139,7 @@
         "id": "ID0267",
         "name": "268 ReZero S2 Op - Realize.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\268 ReZero S2 Op - Realize.mp3",
-        "series": "",
+        "series": "ReZero",
         "weight": 5,
         "order": 268
     },
@@ -2147,7 +2147,7 @@
         "id": "ID0268",
         "name": "269 Koisuru Asteroid - Ano Hoshi No Muko Ni.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\269 Koisuru Asteroid - Ano Hoshi No Muko Ni.Mp3",
-        "series": "",
+        "series": "Koisuru Asteroid",
         "weight": 5,
         "order": 269
     },
@@ -2171,7 +2171,7 @@
         "id": "ID0271",
         "name": "272 Yakunara Mug Cup Ed - Pale Blue.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\272 Yakunara Mug Cup Ed - Pale Blue.Mp3",
-        "series": "",
+        "series": "Yakunara Mug Cup",
         "weight": 5,
         "order": 272
     },
@@ -2203,7 +2203,7 @@
         "id": "ID0275",
         "name": "276 Gj-Bu Ed 3.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\276 Gj-Bu Ed 3.Mp3",
-        "series": "",
+        "series": "Gj-Bu",
         "weight": 5,
         "order": 276
     },
@@ -2211,7 +2211,7 @@
         "id": "ID0276",
         "name": "277 Mikakunin De Shinkoukei - Houkago Vacation.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\277 Mikakunin De Shinkoukei - Houkago Vacation.Mp3",
-        "series": "",
+        "series": "Mikakunin",
         "weight": 5,
         "order": 277
     },
@@ -2227,7 +2227,7 @@
         "id": "ID0278",
         "name": "279 Yuru Camp Op - Shiny Days.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\279 Yuru Camp Op - Shiny Days.Mp3",
-        "series": "",
+        "series": "Yuru Camp",
         "weight": 5,
         "order": 279
     },
@@ -2235,7 +2235,7 @@
         "id": "ID0279",
         "name": "280 Houkago Saikoro Ed - On The Board.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\280 Houkago Saikoro Ed - On The Board.Mp3",
-        "series": "",
+        "series": "Houkago Saikoro",
         "weight": 5,
         "order": 280
     },
@@ -2259,7 +2259,7 @@
         "id": "ID0282",
         "name": "283 Tensei Slime - Boku No Nakanokimi E.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\283 Tensei Slime - Boku No Nakanokimi E.Mp3",
-        "series": "",
+        "series": "Tensei Slime",
         "weight": 5,
         "order": 283
     },
@@ -2283,7 +2283,7 @@
         "id": "ID0285",
         "name": "286 A Channel Ed - Humming Girl.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\286 A Channel Ed - Humming Girl.Mp3",
-        "series": "",
+        "series": "A Channel",
         "weight": 5,
         "order": 286
     },
@@ -2291,7 +2291,7 @@
         "id": "ID0286",
         "name": "287 Girls Und Panzer - Sore Yuke! Otome No Senshadou!!.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\287 Girls Und Panzer - Sore Yuke! Otome No Senshadou!!.Mp3",
-        "series": "",
+        "series": "Girls Und Panzer",
         "weight": 5,
         "order": 287
     },
@@ -2299,7 +2299,7 @@
         "id": "ID0287",
         "name": "288 Konohana Kitan Ed 4.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\288 Konohana Kitan Ed 4.Mp3",
-        "series": "",
+        "series": "Konohana Kitan",
         "weight": 5,
         "order": 288
     },
@@ -2331,7 +2331,7 @@
         "id": "ID0291",
         "name": "292 Mikakunin - Love \u2661 Specialty.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\292 Mikakunin - Love \u2661 Specialty.Mp3",
-        "series": "",
+        "series": "Mikakunin",
         "weight": 5,
         "order": 292
     },
@@ -2347,7 +2347,7 @@
         "id": "ID0293",
         "name": "294 Slime Taoshite Op - Gudafuwa Every Day.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\294 Slime Taoshite Op - Gudafuwa Every Day.Mp3",
-        "series": "",
+        "series": "Slime Taoshite",
         "weight": 5,
         "order": 294
     },
@@ -2355,7 +2355,7 @@
         "id": "ID0294",
         "name": "295 My Senpai Is Annoying Ed - Niji Ga Kakaru Made No Hanashi.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\295 My Senpai Is Annoying Ed - Niji Ga Kakaru Made No Hanashi.Mp3",
-        "series": "",
+        "series": "My Senpai Is Annoying",
         "weight": 5,
         "order": 295
     },
@@ -2379,7 +2379,7 @@
         "id": "ID0297",
         "name": "298 Gin No Saji S2 Ed - Oto No Naru Hou E.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\298 Gin No Saji S2 Ed - Oto No Naru Hou E.Mp3",
-        "series": "",
+        "series": "Gin No Saji",
         "weight": 5,
         "order": 298
     },
@@ -2387,7 +2387,7 @@
         "id": "ID0298",
         "name": "299 Koisuru Asteroid - Kokoro Atras.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\299 Koisuru Asteroid - Kokoro Atras.Mp3",
-        "series": "",
+        "series": "Koisuru Asteroid",
         "weight": 5,
         "order": 299
     },
@@ -2411,7 +2411,7 @@
         "id": "ID0301",
         "name": "302 Tamako Market - Tomorou.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\302 Tamako Market - Tomorou.Mp3",
-        "series": "",
+        "series": "Tamako Market",
         "weight": 5,
         "order": 302
     },
@@ -2419,7 +2419,7 @@
         "id": "ID0302",
         "name": "303 Kobayashi Dragon Maid - Peaceful Days.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\303 Kobayashi Dragon Maid - Peaceful Days.Mp3",
-        "series": "",
+        "series": "Kobayashi Dragon Maid",
         "weight": 5,
         "order": 303
     },
@@ -2451,7 +2451,7 @@
         "id": "ID0306",
         "name": "307 Nichijou - Yukko Is Really Stupid.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\307 Nichijou - Yukko Is Really Stupid.Mp3",
-        "series": "",
+        "series": "Nichijou",
         "weight": 5,
         "order": 307
     },
@@ -2467,7 +2467,7 @@
         "id": "ID0308",
         "name": "309 Yuyushiki Ed -  Affection.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\309 Yuyushiki Ed -  Affection.Mp3",
-        "series": "",
+        "series": "Yuyushiki",
         "weight": 5,
         "order": 309
     },
@@ -2475,7 +2475,7 @@
         "id": "ID0309",
         "name": "310 Houkago Teibou Nisshi - Run & Gun!.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\310 Houkago Teibou Nisshi - Run & Gun!.Mp3",
-        "series": "",
+        "series": "Houkago Teibou Nisshi",
         "weight": 5,
         "order": 310
     },
@@ -2499,7 +2499,7 @@
         "id": "ID0312",
         "name": "313 Gakkou Gurashi - Sweet Violet.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\313 Gakkou Gurashi - Sweet Violet.Mp3",
-        "series": "",
+        "series": "Gakkou Gurashi",
         "weight": 5,
         "order": 313
     },
@@ -2507,7 +2507,7 @@
         "id": "ID0313",
         "name": "314 Slow Loop Op - Arrow.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\314 Slow Loop Op - Arrow.Mp3",
-        "series": "",
+        "series": "Slow Loop",
         "weight": 5,
         "order": 314
     },
@@ -2515,7 +2515,7 @@
         "id": "ID0314",
         "name": "315 Kaguya-Sama Wa Kokurasetai Ed Sentimental Crisis.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\315 Kaguya-Sama Wa Kokurasetai Ed Sentimental Crisis.Mp3",
-        "series": "",
+        "series": "Kaguya-Sama",
         "weight": 5,
         "order": 315
     },
@@ -2531,7 +2531,7 @@
         "id": "ID0316",
         "name": "317 Aot S4 Part 1 Ed - Shock.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\317 Aot S4 Part 1 Ed - Shock.Mp3",
-        "series": "",
+        "series": "Aot",
         "weight": 5,
         "order": 317
     },
@@ -2539,7 +2539,7 @@
         "id": "ID0317",
         "name": "318 Himouto Umaru-Chan - T S F In Nippon.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\318 Himouto Umaru-Chan - T S F In Nippon.Mp3",
-        "series": "",
+        "series": "Himouto Umaru-Chan",
         "weight": 5,
         "order": 318
     },
@@ -2563,7 +2563,7 @@
         "id": "ID0320",
         "name": "321 Mikakunin Ed - Masshiro World.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\321 Mikakunin Ed - Masshiro World.Mp3",
-        "series": "",
+        "series": "Mikakunin",
         "weight": 5,
         "order": 321
     },
@@ -2603,7 +2603,7 @@
         "id": "ID0325",
         "name": "326 Mitsuboshi Colors Ed - Miracle Colors Honjitsu Mo Ijou Nashi.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\326 Mitsuboshi Colors Ed - Miracle Colors Honjitsu Mo Ijou Nashi.Mp3",
-        "series": "",
+        "series": "Mitsuboshi Colors",
         "weight": 5,
         "order": 326
     },
@@ -2635,7 +2635,7 @@
         "id": "ID0329",
         "name": "330 Tamako Market Ed - Neguse.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\330 Tamako Market Ed - Neguse.Mp3",
-        "series": "",
+        "series": "Tamako Market",
         "weight": 5,
         "order": 330
     },
@@ -2651,7 +2651,7 @@
         "id": "ID0331",
         "name": "332 Koisuru Asteroid - Chippoke Na Negaigoto.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\332 Koisuru Asteroid - Chippoke Na Negaigoto.Mp3",
-        "series": "",
+        "series": "Koisuru Asteroid",
         "weight": 5,
         "order": 332
     },
@@ -2667,7 +2667,7 @@
         "id": "ID0333",
         "name": "334 Aiura Ed - Zutto Ne.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\334 Aiura Ed - Zutto Ne.Mp3",
-        "series": "",
+        "series": "Aiura",
         "weight": 5,
         "order": 334
     },
@@ -2683,7 +2683,7 @@
         "id": "ID0335",
         "name": "336 Mogumogu Yummy!.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\336 Mogumogu Yummy!.Mp3",
-        "series": "",
+        "series": "Okayu",
         "weight": 5,
         "order": 336
     },
@@ -2707,7 +2707,7 @@
         "id": "ID0338",
         "name": "339 Kobayashi Dragon Maid - Wisper Wizuyu.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\339 Kobayashi Dragon Maid - Wisper Wizuyu.Mp3",
-        "series": "",
+        "series": "Kobayashi Dragon Maid",
         "weight": 5,
         "order": 339
     },
@@ -2731,7 +2731,7 @@
         "id": "ID0341",
         "name": "342 Denkigai Ed - Two-Dimension'S Love.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\342 Denkigai Ed - Two-Dimension'S Love.Mp3",
-        "series": "",
+        "series": "Denkigai",
         "weight": 5,
         "order": 342
     },
@@ -2755,7 +2755,7 @@
         "id": "ID0344",
         "name": "345 Tensei Slime Ed 2 - Little Soldier.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\345 Tensei Slime Ed 2 - Little Soldier.Mp3",
-        "series": "",
+        "series": "Tensei Slime",
         "weight": 5,
         "order": 345
     },
@@ -2763,7 +2763,7 @@
         "id": "ID0345",
         "name": "346 Yuru  Camp Ed - Haru No Tonari.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\346 Yuru  Camp Ed - Haru No Tonari.Mp3",
-        "series": "",
+        "series": "Yuru Camp",
         "weight": 5,
         "order": 346
     },
@@ -2779,7 +2779,7 @@
         "id": "ID0347",
         "name": "348 Dr Stone S2 Ed Hatena-Koe.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\348 Dr Stone S2 Ed Hatena-Koe.Mp3",
-        "series": "",
+        "series": "Dr Stone",
         "weight": 5,
         "order": 348
     },
@@ -2787,7 +2787,7 @@
         "id": "ID0348",
         "name": "349 Machizoku Ed - Yoimachi Cantare.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\349 Machizoku Ed - Yoimachi Cantare.Mp3",
-        "series": "",
+        "series": "Machizoku",
         "weight": 5,
         "order": 349
     },
@@ -2795,7 +2795,7 @@
         "id": "ID0349",
         "name": "350 Gin No Saji S1 Ed - Hello Especially.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\350 Gin No Saji S1 Ed - Hello Especially.Mp3",
-        "series": "",
+        "series": "Gin No Saji",
         "weight": 5,
         "order": 350
     },
@@ -2811,7 +2811,7 @@
         "id": "ID0351",
         "name": "352 Joshikousei No Mudazukai Ed - Seishun No Reverb.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\352 Joshikousei No Mudazukai Ed - Seishun No Reverb.Mp3",
-        "series": "",
+        "series": "Joshikousei No Mudazukai",
         "weight": 5,
         "order": 352
     },
@@ -2819,7 +2819,7 @@
         "id": "ID0352",
         "name": "353 Comic Girls Ed - Namida Wa Misenai.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\353 Comic Girls Ed - Namida Wa Misenai.Mp3",
-        "series": "",
+        "series": "Comic Girls",
         "weight": 5,
         "order": 353
     },
@@ -2835,7 +2835,7 @@
         "id": "ID0354",
         "name": "355 Konohana Kitan - 4 O'Clock, The Edge Of The Grass.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\355 Konohana Kitan - 4 O'Clock, The Edge Of The Grass.Mp3",
-        "series": "",
+        "series": "Konohana Kitan",
         "weight": 5,
         "order": 355
     },
@@ -2867,7 +2867,7 @@
         "id": "ID0358",
         "name": "359 Girls Und Panzer - Great Katyusha.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\359 Girls Und Panzer - Great Katyusha.Mp3",
-        "series": "",
+        "series": "Girls Und Panzer",
         "weight": 5,
         "order": 359
     },
@@ -2875,7 +2875,7 @@
         "id": "ID0359",
         "name": "360 Stella No Mahou Op - God Save The Girls.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\360 Stella No Mahou Op - God Save The Girls.Mp3",
-        "series": "",
+        "series": "Stella No Mahou",
         "weight": 5,
         "order": 360
     },
@@ -2891,7 +2891,7 @@
         "id": "ID0361",
         "name": "362 Yakunara Mug Cup S2 Ed - Canary Yellow.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\362 Yakunara Mug Cup S2 Ed - Canary Yellow.Mp3",
-        "series": "",
+        "series": "Yakunara Mug Cup",
         "weight": 5,
         "order": 362
     },
@@ -2923,7 +2923,7 @@
         "id": "ID0365",
         "name": "366 Kinmoza - Sei Shun Iro Mimoza.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\366 Kinmoza - Sei Shun Iro Mimoza.Mp3",
-        "series": "",
+        "series": "Kinmoza",
         "weight": 5,
         "order": 366
     },
@@ -2953,9 +2953,9 @@
     },
     {
         "id": "ID0369",
-        "name": "370 Majono Tabi Ed Full.Mp3",
-        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\370 Majono Tabi Ed Full.Mp3",
-        "series": "",
+        "name": "370 Majo no Tabitabi - Ed Full.Mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\370 Majo no Tabitabi - Ed Full.Mp3",
+        "series": "Majo no Tabitabi",
         "weight": 5,
         "order": 370
     },
@@ -2963,7 +2963,7 @@
         "id": "ID0370",
         "name": "371 Sewayaki Kitsune No Senko-San Ed - Moffumoffu.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\371 Sewayaki Kitsune No Senko-San Ed - Moffumoffu.Mp3",
-        "series": "",
+        "series": "Senko-san",
         "weight": 5,
         "order": 371
     },
@@ -2995,7 +2995,7 @@
         "id": "ID0374",
         "name": "375 Houkago Teibou Nisshi Ed - To The World Of Fishing.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\375 Houkago Teibou Nisshi Ed - To The World Of Fishing.Mp3",
-        "series": "",
+        "series": "Houkago Teibou Nisshi",
         "weight": 5,
         "order": 375
     },
@@ -3019,7 +3019,7 @@
         "id": "ID0377",
         "name": "378 Rail Romanesque - Starlight Rail Hana Kiritani.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\378 Rail Romanesque - Starlight Rail Hana Kiritani.Mp3",
-        "series": "",
+        "series": "Rail Romanesque",
         "weight": 5,
         "order": 378
     },
@@ -3043,7 +3043,7 @@
         "id": "ID0380",
         "name": "381 Kobayashi Dragon Maid - Tsuke Ma Sho.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\381 Kobayashi Dragon Maid - Tsuke Ma Sho.Mp3",
-        "series": "",
+        "series": "Kobayashi Dragon Maid",
         "weight": 5,
         "order": 381
     },
@@ -3051,7 +3051,7 @@
         "id": "ID0381",
         "name": "382 Kuma Bear Ed Full.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\382 Kuma Bear Ed Full.Mp3",
-        "series": "",
+        "series": "Kuma Bear",
         "weight": 5,
         "order": 382
     },
@@ -3067,7 +3067,7 @@
         "id": "ID0383",
         "name": "384 Koisuru Asteroid Ed Yozora.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\384 Koisuru Asteroid Ed Yozora.Mp3",
-        "series": "",
+        "series": "Koisuru Asteroid",
         "weight": 5,
         "order": 384
     },
@@ -3075,7 +3075,7 @@
         "id": "ID0384",
         "name": "385 Tamako Market - I'M Sure, Forever, Thank You.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\385 Tamako Market - I'M Sure, Forever, Thank You.Mp3",
-        "series": "",
+        "series": "Tamako Market",
         "weight": 5,
         "order": 385
     },
@@ -3099,7 +3099,7 @@
         "id": "ID0387",
         "name": "388 Maoujou De Oyasumi Ed Full.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\388 Maoujou De Oyasumi Ed Full.Mp3",
-        "series": "",
+        "series": "Maoujou De Oyasumi",
         "weight": 5,
         "order": 388
     },
@@ -3115,7 +3115,7 @@
         "id": "ID0389",
         "name": "390 Sora Yori Mo Tooi Basho - Haru Ka Tooku.Mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\390 Sora Yori Mo Tooi Basho - Haru Ka Tooku.Mp3",
-        "series": "",
+        "series": "Sora Yori Mo Tooi Basho",
         "weight": 5,
         "order": 390
     }
