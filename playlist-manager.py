@@ -69,12 +69,6 @@ class EditDialog(QtWidgets.QDialog):
             filename_group = QtWidgets.QGroupBox("File Name")
             filename_layout = QtWidgets.QVBoxLayout()
             
-            # Add toggle button for number display
-            self.toggle_button = QtWidgets.QPushButton("Toggle Number Display")
-            self.toggle_button.setCheckable(True)
-            self.toggle_button.clicked.connect(self.toggle_number_display)
-            filename_layout.addWidget(self.toggle_button)
-            
             # File name edit with preview label
             self.filename_preview = QtWidgets.QLabel()
             filename_layout.addWidget(self.filename_preview)
@@ -94,6 +88,13 @@ class EditDialog(QtWidgets.QDialog):
         series_layout = QtWidgets.QVBoxLayout()
         self.series_edit = QtWidgets.QLineEdit(self.songs[0]["series"])
         series_layout.addWidget(self.series_edit)
+        
+        # Add OK button for series
+        if len(self.songs) > 1:
+            series_button = QtWidgets.QPushButton("OK")
+            series_button.clicked.connect(lambda: self.apply_single_edit("series"))
+            series_layout.addWidget(series_button)
+        
         series_group.setLayout(series_layout)
         layout.addWidget(series_group)
 
@@ -101,24 +102,59 @@ class EditDialog(QtWidgets.QDialog):
         weight_group = QtWidgets.QGroupBox("Weight")
         weight_layout = QtWidgets.QVBoxLayout()
         self.weight_spin = QtWidgets.QSpinBox()
-        self.weight_spin.setRange(1, 10)
+        self.weight_spin.setRange(1, 4)  # Modified range to 1-4
         self.weight_spin.setValue(self.songs[0]["weight"])
         weight_layout.addWidget(self.weight_spin)
+        
+        # Add OK button for weight
+        if len(self.songs) > 1:
+            weight_button = QtWidgets.QPushButton("OK")
+            weight_button.clicked.connect(lambda: self.apply_single_edit("weight"))
+            weight_layout.addWidget(weight_button)
+        
         weight_group.setLayout(weight_layout)
         layout.addWidget(weight_group)
 
-        # Buttons
-        button_box = QtWidgets.QDialogButtonBox(
-            QtWidgets.QDialogButtonBox.Ok | QtWidgets.QDialogButtonBox.Cancel
-        )
-        button_box.accepted.connect(self.accept)
-        button_box.rejected.connect(self.reject)
-        layout.addWidget(button_box)
+        # Buttons - only show for single song edit
+        if len(self.songs) == 1:
+            button_box = QtWidgets.QDialogButtonBox(
+                QtWidgets.QDialogButtonBox.Ok | QtWidgets.QDialogButtonBox.Cancel
+            )
+            button_box.accepted.connect(self.accept)
+            button_box.rejected.connect(self.reject)
+            layout.addWidget(button_box)
 
         if len(self.songs) > 1:
             msg = QtWidgets.QLabel(f"Editing {len(self.songs)} songs")
             msg.setStyleSheet("color: gray; font-style: italic;")
             layout.insertWidget(0, msg)
+            
+            # Add Cancel button at the bottom
+            cancel_button = QtWidgets.QPushButton("Cancel")
+            cancel_button.clicked.connect(self.reject)
+            layout.addWidget(cancel_button)
+
+    def apply_single_edit(self, field):
+        """Apply edit for a single field (series or weight) across multiple songs"""
+        all_songs = load_songs_from_database()
+        
+        try:
+            for song in self.songs:
+                db_song = next(s for s in all_songs if s["id"] == song["id"])
+                if field == "series":
+                    db_song["series"] = self.series_edit.text()
+                elif field == "weight":
+                    db_song["weight"] = self.weight_spin.value()
+            
+            save_songs_to_database(all_songs)
+            self.parentWidget().refresh_all_views()
+            self.parentWidget().statusBar().showMessage(f"{field.capitalize()} updated successfully")
+            
+        except Exception as e:
+            QtWidgets.QMessageBox.critical(
+                self, "Error",
+                f"An error occurred while updating {field}: {str(e)}"
+            )
 
     def get_values(self):
         result = {
@@ -136,16 +172,7 @@ class EditDialog(QtWidgets.QDialog):
     def update_preview(self):
         if len(self.songs) == 1:
             current_name = self.filename_edit.text()
-            if self.hide_numbers:
-                match = ORDER_PATTERN.match(current_name)
-                if match:
-                    preview_name = match.group(2)
-                else:
-                    preview_name = current_name
-            else:
-                preview_name = current_name
-            
-            self.filename_preview.setText(f"Preview: {preview_name}")
+            self.filename_preview.setText(f"Preview: {current_name}")
 
 class OrderDialog(QtWidgets.QDialog):
     def __init__(self, max_order, parent=None):
@@ -855,7 +882,7 @@ def add_song_to_database(file_path):
                     "name": new_name,
                     "path": new_path,
                     "series": "",
-                    "weight": 5,
+                    "weight": 2,
                     "order": new_order
                 }
                 songs.append(new_song)
