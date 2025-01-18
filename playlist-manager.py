@@ -1,9 +1,11 @@
 import os
 import json
 import re
+import shutil
 from PyQt5 import QtWidgets, QtGui, QtCore
 from mutagen.id3 import ID3, COMM, ID3NoHeaderError
 from mutagen.easyid3 import EasyID3
+from pathlib import Path
 
 # Constants for JSON database
 DATABASE_FILE = "songs.json"
@@ -203,6 +205,84 @@ class OrderDialog(QtWidgets.QDialog):
     def get_order(self):
         return self.order_spin.value()
 
+class OrderPreviewDialog(QtWidgets.QDialog):
+    def __init__(self, current_order, max_order, parent=None):
+        super().__init__(parent)
+        self.current_order = current_order
+        self.max_order = max_order
+        self.setup_ui()
+
+    def setup_ui(self):
+        self.setWindowTitle("Order Preview")
+        self.setMinimumWidth(800)
+        layout = QtWidgets.QVBoxLayout(self)
+
+        # Explanation label
+        explain_label = QtWidgets.QLabel(
+            "Preview the new order below. You can drag and drop rows to adjust the order."
+        )
+        layout.addWidget(explain_label)
+
+        # Preview table
+        self.table = QtWidgets.QTableWidget()
+        self.table.setColumnCount(6)
+        self.table.setHorizontalHeaderLabels(["Order", "ID", "Name", "Path", "Series", "Weight"])
+        self.table.setDragEnabled(True)
+        self.table.setAcceptDrops(True)
+        self.table.setDropIndicatorShown(True)
+        self.table.setDragDropMode(QtWidgets.QAbstractItemView.InternalMove)
+        self.table.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
+        layout.addWidget(self.table)
+
+        # Populate table
+        self.populate_table()
+
+        # Action buttons layout
+        button_layout = QtWidgets.QHBoxLayout()
+
+        # Apply method group
+        method_group = QtWidgets.QGroupBox("Apply Method")
+        method_layout = QtWidgets.QVBoxLayout()
+        
+        self.current_dir_radio = QtWidgets.QRadioButton("Modify Current Directory")
+        self.current_dir_radio.setChecked(True)
+        self.new_dir_radio = QtWidgets.QRadioButton("Copy to New Directory")
+        
+        method_layout.addWidget(self.current_dir_radio)
+        method_layout.addWidget(self.new_dir_radio)
+        method_group.setLayout(method_layout)
+        button_layout.addWidget(method_group)
+
+        # Action buttons
+        button_box = QtWidgets.QDialogButtonBox()
+        self.apply_button = button_box.addButton("Apply", QtWidgets.QDialogButtonBox.ActionRole)
+        self.cancel_button = button_box.addButton(QtWidgets.QDialogButtonBox.Cancel)
+        
+        self.apply_button.clicked.connect(self.accept)
+        self.cancel_button.clicked.connect(self.reject)
+        
+        button_layout.addWidget(button_box)
+        layout.addLayout(button_layout)
+
+    def populate_table(self):
+        self.table.setRowCount(len(self.current_order))
+        for i, row_data in enumerate(self.current_order):
+            for j, text in enumerate(row_data):
+                item = QtWidgets.QTableWidgetItem(str(text))
+                self.table.setItem(i, j, item)
+
+    def get_new_order(self):
+        new_order = []
+        for row in range(self.table.rowCount()):
+            row_data = []
+            for col in range(self.table.columnCount()):
+                row_data.append(self.table.item(row, col).text())
+            new_order.append(row_data)
+        return new_order
+
+    def get_apply_method(self):
+        return "current" if self.current_dir_radio.isChecked() else "new"
+
 class PlaylistManagerUI(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
@@ -240,9 +320,11 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
         
         self.tab_registered = QtWidgets.QWidget()
         self.tab_unregistered = QtWidgets.QWidget()
+        self.tab_order = OrderTab(self)
         
         self.tabs.addTab(self.tab_registered, "Registered Songs")
         self.tabs.addTab(self.tab_unregistered, "Unregistered Songs")
+        self.tabs.addTab(self.tab_order, "Order Management")
         
         # Setup tabs
         self.setup_registered_tab()
@@ -262,10 +344,10 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
         filter_layout.addWidget(self.filter_input)
         
         # Add order lock toggle button
-        self.order_lock_button = QtWidgets.QPushButton("Lock Order")
-        self.order_lock_button.setCheckable(True)
-        self.order_lock_button.clicked.connect(self.toggle_order_lock)
-        filter_layout.addWidget(self.order_lock_button)
+        # self.order_lock_button = QtWidgets.QPushButton("Lock Order")
+        # self.order_lock_button.setCheckable(True)
+        # self.order_lock_button.clicked.connect(self.toggle_order_lock)
+        # filter_layout.addWidget(self.order_lock_button)
         
         layout.addLayout(filter_layout)
         
@@ -317,13 +399,13 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
         self.edit_button.clicked.connect(self.edit_selected_songs)
         self.remove_button = QtWidgets.QPushButton("Remove Selected")
         self.remove_button.clicked.connect(self.remove_selected_songs)
-        self.reorder_button = QtWidgets.QPushButton("Change Order")
-        self.reorder_button.clicked.connect(self.change_order)
-        self.reorder_button.setEnabled(False)
+        # self.reorder_button = QtWidgets.QPushButton("Change Order")
+        # self.reorder_button.clicked.connect(self.change_order)
+        # self.reorder_button.setEnabled(False)
         
         button_layout.addWidget(self.edit_button)
         button_layout.addWidget(self.remove_button)
-        button_layout.addWidget(self.reorder_button)
+        # button_layout.addWidget(self.reorder_button)
         layout.addLayout(button_layout)
         
         self.tab_registered.setLayout(layout)
@@ -386,6 +468,7 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
     def refresh_all_views(self):
         self.load_registered_songs()
         self.load_unregistered_songs()
+        self.tab_order.refresh_view()
 
     def handle_sort(self, logical_index):
         if logical_index == 2:  # Name column
@@ -662,56 +745,133 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
         self.refresh_all_views()
         self.statusBar().showMessage(f"Added {successful_adds} songs successfully")
 
-    def change_order(self):
-        if not self.order_locked:
-            return
+    # def change_order(self):
+    #     if not self.order_locked:
+    #         return
 
-        selected_rows = sorted(set(item.row() for item in self.table_registered.selectedItems()))
-        if not selected_rows:
-            return
+    #     selected_rows = sorted(set(item.row() for item in self.table_registered.selectedItems()))
+    #     if not selected_rows:
+    #         return
 
-        # Get the maximum possible order number
-        max_order = self.table_registered.rowCount()
+    #     # Get all current rows in order
+    #     current_order = []
+    #     for row in range(self.table_registered.rowCount()):
+    #         row_data = []
+    #         for col in range(self.table_registered.columnCount()):
+    #             row_data.append(self.table_registered.item(row, col).text())
+    #         current_order.append(row_data)
 
-        # Show order dialog
-        dialog = OrderDialog(max_order, self)
-        if dialog.exec_() != QtWidgets.QDialog.Accepted:
-            return
+    #     # Remove selected rows from current order
+    #     selected_rows_data = [current_order[row] for row in selected_rows]
+    #     remaining_rows = [row for i, row in enumerate(current_order) if i not in selected_rows]
 
-        new_order = dialog.get_order() - 1  # Convert to 0-based index
+    #     # Get the maximum possible order number
+    #     max_order = self.table_registered.rowCount()
+
+    #     # Show order dialog
+    #     order_dialog = OrderDialog(max_order, self)
+    #     if order_dialog.exec_() != QtWidgets.QDialog.Accepted:
+    #         return
+
+    #     new_order = order_dialog.get_order() - 1  # Convert to 0-based index
         
-        # Get all current rows in order
-        current_order = []
-        for row in range(self.table_registered.rowCount()):
-            row_data = []
-            for col in range(self.table_registered.columnCount()):
-                row_data.append(self.table_registered.item(row, col).text())
-            current_order.append(row_data)
+    #     # Insert selected rows at new position
+    #     new_order = remaining_rows[:new_order] + selected_rows_data + remaining_rows[new_order:]
 
-        # Remove selected rows from current order
-        selected_rows_data = [current_order[row] for row in selected_rows]
-        remaining_rows = [row for i, row in enumerate(current_order) if i not in selected_rows]
+    #     # Show preview dialog
+    #     preview_dialog = OrderPreviewDialog(new_order, max_order, self)
+    #     if preview_dialog.exec_() != QtWidgets.QDialog.Accepted:
+    #         return
 
-        # Insert selected rows at new position
-        new_order = remaining_rows[:new_order] + selected_rows_data + remaining_rows[new_order:]
+    #     # Get final order and apply method
+    #     final_order = preview_dialog.get_new_order()
+    #     apply_method = preview_dialog.get_apply_method()
 
-        # Update the table and file names
-        self.apply_new_order(new_order)
+    #     if apply_method == "current":
+    #         self.apply_new_order(final_order)
+    #     else:
+    #         self.apply_new_order_to_new_directory(final_order)
 
 
-    def apply_new_order(self, new_order):
-        try:
-            songs = load_songs_from_database()
+    # def apply_new_order(self, new_order):
+    #     try:
+    #         songs = load_songs_from_database()
             
-            # Update each song's order
+    #         # Update each song's order
+    #         for i, row_data in enumerate(new_order):
+    #             song_id = row_data[1]  # ID is in column 1
+                
+    #             # Find the song in the database
+    #             song = next(s for s in songs if s["id"] == song_id)
+                
+    #             # Update the order in database
+    #             song["order"] = i + 1
+                
+    #             # Extract the non-order part of the name
+    #             match = ORDER_PATTERN.match(song["name"])
+    #             if not match:
+    #                 continue
+                    
+    #             base_name = match.group(2)
+    #             new_name = f"{i+1:03d} {base_name}"
+                
+    #             # Update file name
+    #             old_path = song["path"]
+    #             new_path = os.path.join(os.path.dirname(old_path), new_name + os.path.splitext(old_path)[1])
+                
+    #             # Rename the file
+    #             os.rename(old_path, new_path)
+                
+    #             # Update database entry
+    #             song["name"] = new_name
+    #             song["path"] = new_path
+                
+    #             # Update title metadata
+    #             try:
+    #                 audio = EasyID3(new_path)
+    #             except ID3NoHeaderError:
+    #                 audio = EasyID3()
+    #                 audio.save(new_path)
+                
+    #             audio['title'] = new_name.rsplit('.', 1)[0]  # Remove extension if present
+    #             audio.save()
+            
+    #         # Save updated database
+    #         save_songs_to_database(songs)
+            
+    #         # Refresh the view
+    #         self.refresh_all_views()
+    #         self.statusBar().showMessage("Order updated successfully")
+            
+    #     except Exception as e:
+    #         QtWidgets.QMessageBox.critical(
+    #             self, "Error",
+    #             f"An error occurred while updating order: {str(e)}"
+    #         )
+    #         self.refresh_all_views()
+
+    def apply_new_order_to_new_directory(self, new_order):
+        try:
+            # Ask for new directory
+            new_dir = QtWidgets.QFileDialog.getExistingDirectory(
+                self, "Select New Directory", self.current_folder
+            )
+            
+            if not new_dir:
+                return
+
+            songs = load_songs_from_database()
+            new_songs = []
+
+            # Create new directory if it doesn't exist
+            os.makedirs(new_dir, exist_ok=True)
+
+            # Copy and rename files with new order
             for i, row_data in enumerate(new_order):
                 song_id = row_data[1]  # ID is in column 1
                 
                 # Find the song in the database
                 song = next(s for s in songs if s["id"] == song_id)
-                
-                # Update the order in database
-                song["order"] = i + 1
                 
                 # Extract the non-order part of the name
                 match = ORDER_PATTERN.match(song["name"])
@@ -721,40 +881,298 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
                 base_name = match.group(2)
                 new_name = f"{i+1:03d} {base_name}"
                 
-                # Update file name
+                # Copy file to new location
                 old_path = song["path"]
-                new_path = os.path.join(os.path.dirname(old_path), new_name + os.path.splitext(old_path)[1])
+                new_path = os.path.join(new_dir, new_name + os.path.splitext(old_path)[1])
                 
-                # Rename the file
-                os.rename(old_path, new_path)
+                # Copy the file
+                shutil.copy2(old_path, new_path)
                 
-                # Update database entry
-                song["name"] = new_name
-                song["path"] = new_path
+                # Create new song entry for database
+                new_song = song.copy()
+                new_song["name"] = new_name
+                new_song["path"] = new_path
+                new_song["order"] = i + 1
+                new_songs.append(new_song)
                 
-                # Update title metadata
+                # Update title metadata in new file
                 try:
                     audio = EasyID3(new_path)
                 except ID3NoHeaderError:
                     audio = EasyID3()
                     audio.save(new_path)
                 
-                audio['title'] = new_name.rsplit('.', 1)[0]  # Remove extension if present
+                audio['title'] = new_name.rsplit('.', 1)[0]
                 audio.save()
-            
-            # Save updated database
+
+            # Add new songs to database
+            songs.extend(new_songs)
             save_songs_to_database(songs)
             
-            # Refresh the view
+            # Switch to new directory and refresh
+            self.current_folder = new_dir
+            self.folder_path.setText(new_dir)
             self.refresh_all_views()
-            self.statusBar().showMessage("Order updated successfully")
+            self.statusBar().showMessage("Songs copied to new directory with new order")
             
         except Exception as e:
             QtWidgets.QMessageBox.critical(
                 self, "Error",
-                f"An error occurred while updating order: {str(e)}"
+                f"An error occurred while creating new ordered playlist: {str(e)}"
             )
             self.refresh_all_views()
+
+class OrderTab(QtWidgets.QWidget):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.parent = parent
+        self.current_changes = {}  # Store temporary order changes
+        self.setup_ui()
+
+    def setup_ui(self):
+        layout = QtWidgets.QVBoxLayout(self)
+
+        # Top controls
+        controls_layout = QtWidgets.QHBoxLayout()
+        
+        # Change order controls
+        order_layout = QtWidgets.QHBoxLayout()
+        order_label = QtWidgets.QLabel("New Order:")
+        self.order_spin = QtWidgets.QSpinBox()
+        self.order_spin.setMinimum(1)
+        self.set_order_button = QtWidgets.QPushButton("Set Order")
+        self.set_order_button.clicked.connect(self.set_new_order)
+        
+        order_layout.addWidget(order_label)
+        order_layout.addWidget(self.order_spin)
+        order_layout.addWidget(self.set_order_button)
+        controls_layout.addLayout(order_layout)
+        
+        layout.addLayout(controls_layout)
+        
+        # Change order controls
+        # order_layout = QtWidgets.QHBoxLayout()
+        # order_label = QtWidgets.QLabel("New Order:")
+        # self.order_spin = QtWidgets.QSpinBox()
+        # self.order_spin.setMinimum(1)
+        # self.set_order_button = QtWidgets.QPushButton("Set Order")
+        # self.set_order_button.clicked.connect(self.set_new_order)
+        
+        # order_layout.addWidget(order_label)
+        # order_layout.addWidget(self.order_spin)
+        # order_layout.addWidget(self.set_order_button)
+        # controls_layout.addLayout(order_layout)
+        
+        # layout.addLayout(controls_layout)
+
+        # Table for showing songs
+        self.table = QtWidgets.QTableWidget()
+        self.table.setColumnCount(7)  # Added Preview Order column
+        self.table.setHorizontalHeaderLabels([
+            "Current Order", "Preview Order", "ID", "Name", "Path", "Series", "Weight"
+        ])
+        self.table.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
+        self.table.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
+        layout.addWidget(self.table)
+
+        # Bottom controls for applying changes
+        bottom_layout = QtWidgets.QHBoxLayout()
+        
+        # Method selection
+        self.method_group = QtWidgets.QGroupBox("Apply Method")
+        method_layout = QtWidgets.QHBoxLayout()
+        self.current_dir_radio = QtWidgets.QRadioButton("Modify Current Directory")
+        self.new_dir_radio = QtWidgets.QRadioButton("Copy to New Directory")
+        self.current_dir_radio.setChecked(True)
+        
+        method_layout.addWidget(self.current_dir_radio)
+        method_layout.addWidget(self.new_dir_radio)
+        self.method_group.setLayout(method_layout)
+        
+        # Action buttons
+        self.apply_button = QtWidgets.QPushButton("Apply Changes")
+        self.apply_button.clicked.connect(self.apply_changes)
+        self.reset_button = QtWidgets.QPushButton("Reset Changes")
+        self.reset_button.clicked.connect(self.reset_changes)
+        
+        bottom_layout.addWidget(self.method_group)
+        bottom_layout.addStretch()
+        bottom_layout.addWidget(self.reset_button)
+        bottom_layout.addWidget(self.apply_button)
+        
+        layout.addLayout(bottom_layout)
+
+    def refresh_view(self):
+        if not self.parent.current_folder:
+            return
+
+        self.table.setSortingEnabled(False)
+        self.table.clearContents()
+        
+        # Get songs from database
+        songs = [s for s in load_songs_from_database() 
+                if os.path.dirname(s["path"]) == self.parent.current_folder]
+        
+        # Sort by order
+        # reverse = self.sort_combo.currentText() == "Descending"
+        songs.sort(key=lambda x: extract_order_number(x["name"]))
+        
+        # Update table
+        self.table.setRowCount(len(songs))
+        self.order_spin.setMaximum(len(songs))
+        
+        for row, song in enumerate(songs):
+            current_order = extract_order_number(song["name"])
+            preview_order = self.current_changes.get(song["id"], current_order)
+            
+            # Current Order
+            order_item = QtWidgets.QTableWidgetItem()
+            order_item.setData(QtCore.Qt.DisplayRole, current_order)
+            
+            # Preview Order
+            preview_item = QtWidgets.QTableWidgetItem()
+            preview_item.setData(QtCore.Qt.DisplayRole, preview_order)
+            if preview_order != current_order:
+                preview_item.setBackground(QtGui.QColor(255, 255, 200))  # Light yellow
+            
+            # Other columns
+            id_item = QtWidgets.QTableWidgetItem(song["id"])
+            name_item = QtWidgets.QTableWidgetItem(song["name"])
+            path_item = QtWidgets.QTableWidgetItem(song["path"])
+            series_item = QtWidgets.QTableWidgetItem(song["series"])
+            weight_item = QtWidgets.QTableWidgetItem(str(song["weight"]))
+            
+            self.table.setItem(row, 0, order_item)
+            self.table.setItem(row, 1, preview_item)
+            self.table.setItem(row, 2, id_item)
+            self.table.setItem(row, 3, name_item)
+            self.table.setItem(row, 4, path_item)
+            self.table.setItem(row, 5, series_item)
+            self.table.setItem(row, 6, weight_item)
+
+        self.table.setSortingEnabled(True)
+        self.apply_button.setEnabled(bool(self.current_changes))
+        self.reset_button.setEnabled(bool(self.current_changes))
+
+    def set_new_order(self):
+        selected_rows = sorted(set(item.row() for item in self.table.selectedItems()))
+        if not selected_rows:
+            return
+            
+        new_order = self.order_spin.value()
+        songs = load_songs_from_database()
+        folder_songs = [s for s in songs if os.path.dirname(s["path"]) == self.parent.current_folder]
+        
+        # Get all current orders
+        current_orders = {
+            self.table.item(row, 2).text(): extract_order_number(self.table.item(row, 3).text())
+            for row in range(self.table.rowCount())
+        }
+        
+        # Update preview orders for selected songs
+        selected_song_ids = [self.table.item(row, 2).text() for row in selected_rows]
+        for song_id in selected_song_ids:
+            self.current_changes[song_id] = new_order
+            new_order += 1
+        
+        # Update other songs' preview orders
+        max_order = len(folder_songs)
+        current_pos = 1
+        
+        for row in range(self.table.rowCount()):
+            song_id = self.table.item(row, 2).text()
+            if song_id not in selected_song_ids:
+                while current_pos in [self.current_changes.get(sid) for sid in selected_song_ids]:
+                    current_pos += 1
+                if current_pos <= max_order:
+                    self.current_changes[song_id] = current_pos
+                    current_pos += 1
+        
+        # Remove sort controls
+        # if hasattr(self, 'sort_combo'):
+        #     self.sort_combo.setParent(None)
+        if hasattr(self, 'sort_label'):
+            self.sort_label.setParent(None)
+        
+        self.refresh_view()
+
+    def reset_changes(self):
+        self.current_changes.clear()
+        self.refresh_view()
+
+    def apply_changes(self):
+        if not self.current_changes:
+            return
+
+        try:
+            songs = load_songs_from_database()
+            current_dir = self.parent.current_folder
+            target_dir = current_dir
+            
+            # If copying to new directory, get the target directory
+            if self.new_dir_radio.isChecked():
+                target_dir = QtWidgets.QFileDialog.getExistingDirectory(
+                    self, "Select New Directory", current_dir
+                )
+                if not target_dir:
+                    return
+                os.makedirs(target_dir, exist_ok=True)
+
+            # Process each song
+            for song in songs:
+                if song["id"] in self.current_changes and os.path.dirname(song["path"]) == current_dir:
+                    old_path = song["path"]
+                    filename = os.path.basename(old_path)
+                    
+                    # Create the new filename with new order number
+                    match = ORDER_PATTERN.match(filename)
+                    if match:
+                        base_name = match.group(2)
+                        new_name = f"{self.current_changes[song['id']]:03d} {base_name}"
+                        new_path = os.path.join(target_dir, new_name + os.path.splitext(old_path)[1])
+                        
+                        if self.new_dir_radio.isChecked():
+                            # Copy file to new location
+                            shutil.copy2(old_path, new_path)
+                            # Create new song entry
+                            new_song = song.copy()
+                            new_song["path"] = new_path
+                            songs.append(new_song)
+                        else:
+                            # Rename in current directory
+                            os.rename(old_path, new_path)
+                            song["path"] = new_path
+                        
+                        # Update title metadata
+                        try:
+                            audio = EasyID3(new_path)
+                        except ID3NoHeaderError:
+                            audio = EasyID3()
+                            audio.save(new_path)
+                        
+                        title_without_ext = os.path.splitext(new_name)[0]
+                        audio['title'] = title_without_ext
+                        audio.save()
+
+            # Save changes to database
+            save_songs_to_database(songs)
+            
+            # If new directory was created, switch to it
+            if self.new_dir_radio.isChecked():
+                self.parent.current_folder = target_dir
+                self.parent.folder_path.setText(target_dir)
+            
+            # Reset changes and refresh views
+            self.current_changes.clear()
+            self.parent.refresh_all_views()
+            self.parent.statusBar().showMessage("Order changes applied successfully")
+            
+        except Exception as e:
+            QtWidgets.QMessageBox.critical(
+                self, "Error",
+                f"An error occurred while applying changes: {str(e)}"
+            )
+            self.parent.refresh_all_views()
 
 def extract_order_number(filename):
     """
