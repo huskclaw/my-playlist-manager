@@ -1021,6 +1021,18 @@ class OrderTab(QtWidgets.QWidget):
                             # Add ID to the new file's metadata
                             add_id_to_metadata(new_path, new_id)
                             
+                            # Update title metadata for the new file
+                            try:
+                                audio = EasyID3(new_path)
+                            except ID3NoHeaderError:
+                                audio = EasyID3()
+                                audio.save(new_path)
+                            
+                            # Set title with order prefix and without extension
+                            title_with_order = os.path.splitext(new_filename)[0]
+                            audio['title'] = title_with_order
+                            audio.save()
+                            
                             # Update order in the new directory with the new ID
                             update_playlist_order(target_dir, new_id, new_order)
                         else:
@@ -1029,6 +1041,18 @@ class OrderTab(QtWidgets.QWidget):
                             os.rename(old_path, new_path)
                             song["path"] = new_path
                             song["name"] = new_filename
+                            
+                            # Update title metadata
+                            try:
+                                audio = EasyID3(new_path)
+                            except ID3NoHeaderError:
+                                audio = EasyID3()
+                                audio.save(new_path)
+                            
+                            # Set title with order prefix and without extension
+                            title_with_order = os.path.splitext(new_filename)[0]
+                            audio['title'] = title_with_order
+                            audio.save()
                             
                             # Update order in current directory
                             update_playlist_order(current_dir, song["id"], new_order)
