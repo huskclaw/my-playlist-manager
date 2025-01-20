@@ -306,11 +306,16 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
         # Add refresh button
         self.refresh_button = QtWidgets.QPushButton("Refresh")
         self.refresh_button.clicked.connect(self.refresh_all_views)
+        # Add delete playlist button
+        self.delete_button = QtWidgets.QPushButton("Delete Playlist")
+        self.delete_button.clicked.connect(self.delete_playlist)
+        self.delete_button.setStyleSheet("QPushButton { color: red; }")
         
         folder_layout.addWidget(self.folder_label)
         folder_layout.addWidget(self.folder_path)
         folder_layout.addWidget(self.browse_button)
         folder_layout.addWidget(self.refresh_button)
+        folder_layout.addWidget(self.delete_button)
         main_layout.addLayout(folder_layout)
         
         # Tabs
@@ -678,6 +683,61 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
         
         self.refresh_all_views()
         self.statusBar().showMessage(f"Added {successful_adds} songs successfully")
+
+    def delete_playlist(self):
+        """Delete the current playlist folder and its associated data"""
+        if not self.current_folder:
+            self.statusBar().showMessage("No folder selected")
+            return
+            
+        # Show confirmation dialog
+        reply = QtWidgets.QMessageBox.warning(
+            self,
+            'Delete Playlist',
+            f'Are you sure you want to delete this playlist?\n\n'
+            f'This will permanently delete:\n'
+            f'- All files in {self.current_folder}\n'
+            f'- Associated data in songs.json and playlists.json\n\n'
+            'This action cannot be undone!',
+            QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No,
+            QtWidgets.QMessageBox.No
+        )
+        
+        if reply == QtWidgets.QMessageBox.Yes:
+            try:
+                # Delete all files in the folder
+                for root, dirs, files in os.walk(self.current_folder, topdown=False):
+                    for name in files:
+                        os.remove(os.path.join(root, name))
+                    for name in dirs:
+                        os.rmdir(os.path.join(root, name))
+                os.rmdir(self.current_folder)
+                
+                # Remove songs from songs.json
+                songs = load_songs_from_database()
+                songs = [song for song in songs 
+                        if not song["path"].startswith(self.current_folder)]
+                save_songs_to_database(songs)
+                
+                # Remove playlist from playlists.json
+                playlists = load_playlists_from_database()
+                playlists = [playlist for playlist in playlists 
+                           if playlist["folder_path"] != self.current_folder]
+                save_playlists_to_database(playlists)
+                
+                # Clear current folder and refresh UI
+                self.current_folder = None
+                self.folder_path.clear()
+                self.refresh_all_views()
+                self.statusBar().showMessage("Playlist deleted successfully")
+                
+            except Exception as e:
+                QtWidgets.QMessageBox.critical(
+                    self,
+                    "Error",
+                    f"An error occurred while deleting the playlist: {str(e)}"
+                )
+                self.refresh_all_views()
 
 
 class OrderTab(QtWidgets.QWidget):
