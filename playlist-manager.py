@@ -883,7 +883,6 @@ class OrderTab(QtWidgets.QWidget):
         self.current_changes.clear()
         self.refresh_view()
 
-    # In the OrderTab class, modify the apply_changes method:
     def apply_changes(self):
         if not self.current_changes:
             return
@@ -905,16 +904,19 @@ class OrderTab(QtWidgets.QWidget):
             
             songs = load_songs_from_database()
             
-            # Process each song
+            # Process each song in the current directory
             for song in songs:
-                if song["id"] in self.current_changes and os.path.dirname(song["path"]) == current_dir:
+                if os.path.dirname(song["path"]) == current_dir:
                     old_path = song["path"]
-                    new_order = self.current_changes[song["id"]]
                     filename = os.path.basename(old_path)
                     
                     # Extract original filename without order prefix
                     match = ORDER_PATTERN.match(filename)
                     original_name = match.group(2) if match else filename
+                    
+                    # Get the new order, either from changes or keep current order
+                    new_order = self.current_changes.get(song["id"], 
+                        get_playlist_order(current_dir, song["id"]))
                     
                     if new_order == -1:  # Disabled song
                         if self.new_dir_radio.isChecked():
@@ -1032,6 +1034,7 @@ class DisabledTab(QtWidgets.QWidget):
         try:
             songs = load_songs_from_database()
             current_dir = self.parent.current_folder
+            disabled_folder = os.path.join(current_dir, "Disabled")
             
             # Get current max order from active (non-disabled) songs
             current_max_order = 0
@@ -1058,8 +1061,16 @@ class DisabledTab(QtWidgets.QWidget):
                 if song:
                     # Move file back to main folder
                     old_path = song["path"]
-                    new_path = os.path.join(current_dir, os.path.basename(old_path))
-                    shutil.move(old_path, new_path)
+                    filename = os.path.basename(old_path)
+                    new_path = os.path.join(current_dir, filename)
+                    
+                    # Use shutil.move and handle file removal
+                    if os.path.exists(old_path):
+                        shutil.move(old_path, new_path)
+                        # If original file still exists after move, delete it
+                        if os.path.exists(old_path):
+                            os.remove(old_path)
+                    
                     song["path"] = new_path
                     
                     # Assign new order (next number after current max)
