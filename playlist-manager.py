@@ -320,10 +320,12 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
         self.tab_registered = QtWidgets.QWidget()
         self.tab_unregistered = QtWidgets.QWidget()
         self.tab_order = OrderTab(self)
+        self.tab_disabled = DisabledTab(self)  # Add new disabled tab
         
         self.tabs.addTab(self.tab_registered, "Registered Songs")
         self.tabs.addTab(self.tab_unregistered, "Unregistered Songs")
         self.tabs.addTab(self.tab_order, "Order Management")
+        self.tabs.addTab(self.tab_disabled, "Disabled Songs")  # Add new tab
         
         # Setup tabs
         self.setup_registered_tab()
@@ -453,6 +455,7 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
         self.load_registered_songs()
         self.load_unregistered_songs()
         self.tab_order.refresh_view()
+        self.tab_disabled.refresh_view()  # Add refresh for disabled tab
 
     def handle_sort(self, logical_index):
         if logical_index == 2:  # Name column
@@ -685,6 +688,7 @@ class OrderTab(QtWidgets.QWidget):
         self.setup_ui()
 
     def setup_ui(self):
+        # [Previous setup_ui code remains the same]
         layout = QtWidgets.QVBoxLayout(self)
 
         # Top controls
@@ -704,21 +708,11 @@ class OrderTab(QtWidgets.QWidget):
         controls_layout.addLayout(order_layout)
         
         layout.addLayout(controls_layout)
-        
-        # Change order controls
-        # order_layout = QtWidgets.QHBoxLayout()
-        # order_label = QtWidgets.QLabel("New Order:")
-        # self.order_spin = QtWidgets.QSpinBox()
-        # self.order_spin.setMinimum(1)
-        # self.set_order_button = QtWidgets.QPushButton("Set Order")
-        # self.set_order_button.clicked.connect(self.set_new_order)
-        
-        # order_layout.addWidget(order_label)
-        # order_layout.addWidget(self.order_spin)
-        # order_layout.addWidget(self.set_order_button)
-        # controls_layout.addLayout(order_layout)
-        
-        # layout.addLayout(controls_layout)
+
+        # Add disable button next to set order button
+        self.disable_button = QtWidgets.QPushButton("Disable Selected")
+        self.disable_button.clicked.connect(self.disable_selected_songs)
+        controls_layout.addWidget(self.disable_button)
 
         # Table for showing songs
         self.table = QtWidgets.QTableWidget()
@@ -778,23 +772,18 @@ class OrderTab(QtWidgets.QWidget):
             current_order = song.get("order", 0)
             preview_order = self.current_changes.get(song["id"], current_order)
             
-            # Current Order
+            # Create items for all columns
             order_item = QtWidgets.QTableWidgetItem()
             order_item.setData(QtCore.Qt.DisplayRole, current_order)
             
-            # Preview Order
             preview_item = QtWidgets.QTableWidgetItem()
-            preview_item.setData(QtCore.Qt.DisplayRole, preview_order)
-            if preview_order != current_order:
-                preview_item.setBackground(QtGui.QColor(255, 255, 200))
-            
-            # Other columns
             id_item = QtWidgets.QTableWidgetItem(song["id"])
             name_item = QtWidgets.QTableWidgetItem(song["name"])
             path_item = QtWidgets.QTableWidgetItem(song["path"])
             series_item = QtWidgets.QTableWidgetItem(song["series"])
             weight_item = QtWidgets.QTableWidgetItem(str(song["weight"]))
             
+            # Set items in table
             self.table.setItem(row, 0, order_item)
             self.table.setItem(row, 1, preview_item)
             self.table.setItem(row, 2, id_item)
@@ -802,6 +791,18 @@ class OrderTab(QtWidgets.QWidget):
             self.table.setItem(row, 4, path_item)
             self.table.setItem(row, 5, series_item)
             self.table.setItem(row, 6, weight_item)
+
+            # Handle display and styling for preview order
+            if preview_order == -1:  # Disabled status
+                preview_item.setData(QtCore.Qt.DisplayRole, "Disabled")
+                light_gray = QtGui.QColor(245, 245, 245)  # Light gray background
+                for col in range(7):
+                    self.table.item(row, col).setBackground(light_gray)
+            else:
+                preview_item.setData(QtCore.Qt.DisplayRole, preview_order)
+                if preview_order != current_order:
+                    light_yellow = QtGui.QColor(255, 255, 200)  # Light yellow background
+                    preview_item.setBackground(light_yellow)
 
         self.table.setSortingEnabled(True)
         self.apply_button.setEnabled(bool(self.current_changes))
@@ -837,10 +838,52 @@ class OrderTab(QtWidgets.QWidget):
         
         self.refresh_view()
 
+    def enable_selected_songs(self, song_ids, target_order):
+        """Helper method to enable songs with a specific target order"""
+        folder_songs = load_folder_songs(self.parent.current_folder)
+        
+        # Find the maximum current order excluding disabled songs
+        max_order = max((song.get("order", 0) for song in folder_songs 
+                        if self.current_changes.get(song["id"], song.get("order", 0)) != -1), 
+                       default=0)
+        
+        # Update preview orders
+        for song_id in song_ids:
+            self.current_changes[song_id] = target_order if target_order else (max_order + 1)
+            
+        self.refresh_view()
+    
+    def disable_selected_songs(self):
+        selected_rows = sorted(set(item.row() for item in self.table.selectedItems()))
+        if not selected_rows:
+            return
+        
+        # Get selected song IDs and their current orders
+        selected_songs = [(self.table.item(row, 2).text(),  # ID
+                          int(self.table.item(row, 0).text()))  # Current order
+                         for row in selected_rows]
+        
+        # Mark selected songs as disabled in preview
+        for song_id, _ in selected_songs:
+            self.current_changes[song_id] = -1
+        
+        # Reorder remaining songs
+        folder_songs = load_folder_songs(self.parent.current_folder)
+        current_pos = 1
+        
+        for song in folder_songs:
+            if song["id"] not in [s[0] for s in selected_songs]:
+                if current_pos != song.get("order", 0):  # Only update if order changes
+                    self.current_changes[song["id"]] = current_pos
+                current_pos += 1
+        
+        self.refresh_view()
+
     def reset_changes(self):
         self.current_changes.clear()
         self.refresh_view()
 
+    # In the OrderTab class, modify the apply_changes method:
     def apply_changes(self):
         if not self.current_changes:
             return
@@ -848,8 +891,8 @@ class OrderTab(QtWidgets.QWidget):
         try:
             current_dir = self.parent.current_folder
             target_dir = current_dir
+            disabled_folder = os.path.join(current_dir, "Disabled")
             
-            # If copying to new directory, get the target directory
             if self.new_dir_radio.isChecked():
                 target_dir = QtWidgets.QFileDialog.getExistingDirectory(
                     self, "Select New Directory", current_dir
@@ -857,6 +900,8 @@ class OrderTab(QtWidgets.QWidget):
                 if not target_dir:
                     return
                 os.makedirs(target_dir, exist_ok=True)
+            else:
+                os.makedirs(disabled_folder, exist_ok=True)
             
             songs = load_songs_from_database()
             
@@ -865,23 +910,47 @@ class OrderTab(QtWidgets.QWidget):
                 if song["id"] in self.current_changes and os.path.dirname(song["path"]) == current_dir:
                     old_path = song["path"]
                     new_order = self.current_changes[song["id"]]
+                    filename = os.path.basename(old_path)
                     
-                    if self.new_dir_radio.isChecked():
-                        # Copy file to new location
-                        new_path = os.path.join(target_dir, os.path.basename(old_path))
-                        shutil.copy2(old_path, new_path)
-                        
-                        # Create new song entry
-                        new_song = song.copy()
-                        new_song["path"] = new_path
-                        songs.append(new_song)
-                        
-                        # Update order in the new directory
-                        update_playlist_order(target_dir, song["id"], new_order)
+                    # Extract original filename without order prefix
+                    match = ORDER_PATTERN.match(filename)
+                    original_name = match.group(2) if match else filename
+                    
+                    if new_order == -1:  # Disabled song
+                        if self.new_dir_radio.isChecked():
+                            continue  # Skip disabled songs when copying to new directory
+                        else:
+                            # Move to Disabled folder, keeping original filename
+                            new_path = os.path.join(disabled_folder, filename)
+                            shutil.move(old_path, new_path)
+                            song["path"] = new_path
                     else:
-                        # Update order in current directory
-                        update_playlist_order(current_dir, song["id"], new_order)
-
+                        # Create new filename with updated order
+                        new_filename = f"{new_order:03d} {original_name}"
+                        
+                        if self.new_dir_radio.isChecked():
+                            # Copy file to new location with new filename
+                            new_path = os.path.join(target_dir, new_filename)
+                            shutil.copy2(old_path, new_path)
+                            
+                            # Create new song entry
+                            new_song = song.copy()
+                            new_song["path"] = new_path
+                            new_song["name"] = new_filename
+                            songs.append(new_song)
+                            
+                            # Update order in the new directory
+                            update_playlist_order(target_dir, song["id"], new_order)
+                        else:
+                            # Rename file in current directory
+                            new_path = os.path.join(current_dir, new_filename)
+                            os.rename(old_path, new_path)
+                            song["path"] = new_path
+                            song["name"] = new_filename
+                            
+                            # Update order in current directory
+                            update_playlist_order(current_dir, song["id"], new_order)
+            
             # Save changes to database
             save_songs_to_database(songs)
             
@@ -901,6 +970,113 @@ class OrderTab(QtWidgets.QWidget):
                 f"An error occurred while applying changes: {str(e)}"
             )
             self.parent.refresh_all_views()
+
+
+class DisabledTab(QtWidgets.QWidget):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.parent = parent
+        self.setup_ui()
+
+    def setup_ui(self):
+        layout = QtWidgets.QVBoxLayout(self)
+        
+        # Table for showing disabled songs
+        self.table = QtWidgets.QTableWidget()
+        self.table.setColumnCount(6)
+        self.table.setHorizontalHeaderLabels([
+            "ID", "Name", "Path", "Series", "Weight", "Original Order"
+        ])
+        self.table.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
+        self.table.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
+        layout.addWidget(self.table)
+        
+        # Enable button
+        self.enable_button = QtWidgets.QPushButton("Enable Selected")
+        self.enable_button.clicked.connect(self.enable_selected_songs)
+        layout.addWidget(self.enable_button)
+
+    def refresh_view(self):
+        if not self.parent.current_folder:
+            return
+            
+        disabled_folder = os.path.join(self.parent.current_folder, "Disabled")
+        if not os.path.exists(disabled_folder):
+            self.table.setRowCount(0)
+            return
+            
+        # Get disabled songs
+        songs = load_songs_from_database()
+        disabled_songs = [
+            song for song in songs 
+            if os.path.dirname(song["path"]) == disabled_folder
+        ]
+        
+        self.table.setRowCount(len(disabled_songs))
+        for row, song in enumerate(disabled_songs):
+            self.table.setItem(row, 0, QtWidgets.QTableWidgetItem(song["id"]))
+            self.table.setItem(row, 1, QtWidgets.QTableWidgetItem(song["name"]))
+            self.table.setItem(row, 2, QtWidgets.QTableWidgetItem(song["path"]))
+            self.table.setItem(row, 3, QtWidgets.QTableWidgetItem(song["series"]))
+            self.table.setItem(row, 4, QtWidgets.QTableWidgetItem(str(song["weight"])))
+            
+            # Get original order if available
+            original_order = get_playlist_order(disabled_folder, song["id"])
+            self.table.setItem(row, 5, QtWidgets.QTableWidgetItem(str(original_order)))
+
+    def enable_selected_songs(self):
+        selected_rows = sorted(set(item.row() for item in self.table.selectedItems()))
+        if not selected_rows:
+            return
+            
+        try:
+            songs = load_songs_from_database()
+            current_dir = self.parent.current_folder
+            
+            # Get current max order from active (non-disabled) songs
+            current_max_order = 0
+            playlists = load_playlists_from_database()
+            playlist_entry = next(
+                (p for p in playlists if p["folder_path"] == current_dir),
+                None
+            )
+            if playlist_entry:
+                # Only consider orders of songs that are not in the Disabled folder
+                active_song_ids = {s["id"] for s in songs 
+                                if os.path.dirname(s["path"]) == current_dir}
+                current_max_order = max(
+                    (o["order"] for o in playlist_entry["orders"]
+                    if o["id"] in active_song_ids),
+                    default=0
+                )
+            
+            # Process each selected song
+            for row in selected_rows:
+                song_id = self.table.item(row, 0).text()
+                song = next((s for s in songs if s["id"] == song_id), None)
+                
+                if song:
+                    # Move file back to main folder
+                    old_path = song["path"]
+                    new_path = os.path.join(current_dir, os.path.basename(old_path))
+                    shutil.move(old_path, new_path)
+                    song["path"] = new_path
+                    
+                    # Assign new order (next number after current max)
+                    current_max_order += 1
+                    update_playlist_order(current_dir, song_id, current_max_order)
+            
+            save_songs_to_database(songs)
+            self.parent.refresh_all_views()
+            self.parent.statusBar().showMessage("Selected songs enabled successfully")
+            
+        except Exception as e:
+            QtWidgets.QMessageBox.critical(
+                self, "Error",
+                f"An error occurred while enabling songs: {str(e)}"
+            )
+            self.parent.refresh_all_views()
+
 
 def extract_order_number(filename):
     """
