@@ -903,6 +903,7 @@ class OrderTab(QtWidgets.QWidget):
                 os.makedirs(disabled_folder, exist_ok=True)
             
             songs = load_songs_from_database()
+            new_songs = []  # Track new songs to be added
             
             # Process each song in the current directory
             for song in songs:
@@ -935,14 +936,33 @@ class OrderTab(QtWidgets.QWidget):
                             new_path = os.path.join(target_dir, new_filename)
                             shutil.copy2(old_path, new_path)
                             
-                            # Create new song entry
-                            new_song = song.copy()
-                            new_song["path"] = new_path
-                            new_song["name"] = new_filename
-                            songs.append(new_song)
+                            # Generate a new unique ID considering both existing and new songs
+                            used_ids = {s["id"] for s in songs}.union({s["id"] for s in new_songs})
+                            new_id = None
+                            for i in range(10000):
+                                candidate_id = f"{ID_PREFIX}{i:04d}"
+                                if candidate_id not in used_ids:
+                                    new_id = candidate_id
+                                    break
                             
-                            # Update order in the new directory
-                            update_playlist_order(target_dir, song["id"], new_order)
+                            if new_id is None:
+                                raise ValueError("No available IDs left.")
+                            
+                            # Create new song entry
+                            new_song = {
+                                "id": new_id,
+                                "name": new_filename,
+                                "path": new_path,
+                                "series": song["series"],
+                                "weight": song["weight"]
+                            }
+                            new_songs.append(new_song)
+                            
+                            # Add ID to the new file's metadata
+                            add_id_to_metadata(new_path, new_id)
+                            
+                            # Update order in the new directory with the new ID
+                            update_playlist_order(target_dir, new_id, new_order)
                         else:
                             # Rename file in current directory
                             new_path = os.path.join(current_dir, new_filename)
@@ -952,6 +972,10 @@ class OrderTab(QtWidgets.QWidget):
                             
                             # Update order in current directory
                             update_playlist_order(current_dir, song["id"], new_order)
+            
+            # Add all new songs to the database at once
+            if new_songs:
+                songs.extend(new_songs)
             
             # Save changes to database
             save_songs_to_database(songs)
