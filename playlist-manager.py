@@ -8,9 +8,9 @@ from mutagen.easyid3 import EasyID3
 from pathlib import Path
 
 # Constants for JSON database
-DATABASE_FILE = "songs.json"
+SONGS_DATABASE = "songs.json"  # Main database with song metadata
+PLAYLISTS_DATABASE = "playlists.json"  # Database for playlist orders
 ID_PREFIX = "ID"
-SUPPORTED_EXTENSIONS = {'.mp3'}  # Supported file extensions
 
 # New constant for order pattern
 ORDER_PATTERN = re.compile(r'^(\d{3})\s+(.+)$')
@@ -474,9 +474,9 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
         
         # Clear the table
         self.table_registered.setRowCount(0)
-        songs = load_songs_from_database()
         
-        folder_songs = [song for song in songs if os.path.dirname(song["path"]) == self.current_folder]
+        # Load songs with their order information
+        folder_songs = load_folder_songs(self.current_folder)
         
         # Get current sort column and order
         header = self.table_registered.horizontalHeader()
@@ -485,17 +485,11 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
         
         # Sort the songs list based on the current sort column
         if sort_column == 0:  # Order
-            folder_songs.sort(key=lambda x: int(x.get("order", 0)), reverse=(sort_order == QtCore.Qt.DescendingOrder))
+            folder_songs.sort(key=lambda x: x.get("order", 0), reverse=(sort_order == QtCore.Qt.DescendingOrder))
         elif sort_column == 1:  # ID
             folder_songs.sort(key=lambda x: x["id"], reverse=(sort_order == QtCore.Qt.DescendingOrder))
         elif sort_column == 2:  # Name
-            if self.hide_numbers:
-                folder_songs.sort(
-                    key=lambda x: ORDER_PATTERN.match(x["name"]).group(2) if ORDER_PATTERN.match(x["name"]) else x["name"],
-                    reverse=(sort_order == QtCore.Qt.DescendingOrder)
-                )
-            else:
-                folder_songs.sort(key=lambda x: x["name"], reverse=(sort_order == QtCore.Qt.DescendingOrder))
+            folder_songs.sort(key=lambda x: x["name"], reverse=(sort_order == QtCore.Qt.DescendingOrder))
         elif sort_column == 3:  # Path
             folder_songs.sort(key=lambda x: x["path"], reverse=(sort_order == QtCore.Qt.DescendingOrder))
         elif sort_column == 4:  # Series
@@ -507,20 +501,12 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
         for row, song in enumerate(folder_songs):
             self.table_registered.insertRow(row)
             
-            # Get display name based on toggle state
-            display_name = song["name"]
-            if self.hide_numbers:
-                match = ORDER_PATTERN.match(display_name)
-                if match:
-                    display_name = match.group(2)
-            
             # Create and set items
             order_item = QtWidgets.QTableWidgetItem()
             order_item.setData(QtCore.Qt.DisplayRole, int(song.get("order", 0)))
             
             id_item = QtWidgets.QTableWidgetItem(song["id"])
-            name_item = QtWidgets.QTableWidgetItem(display_name)
-            name_item.setData(QtCore.Qt.UserRole, song["name"])  # Store original name
+            name_item = QtWidgets.QTableWidgetItem(song["name"])
             path_item = QtWidgets.QTableWidgetItem(song["path"])
             series_item = QtWidgets.QTableWidgetItem(song["series"])
             
@@ -540,7 +526,6 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
         
         # Restore scroll position
         self.table_registered.verticalScrollBar().setValue(current_scroll)
-
 
     def load_unregistered_songs(self):
         if not self.current_folder:
@@ -578,12 +563,13 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
             songs = load_songs_from_database()
             song = next((s for s in songs if s["id"] == song_id), None)
             if song:
+                # Add order information
+                song["order"] = get_playlist_order(self.current_folder, song_id)
                 songs_to_edit.append(song)
 
         if not songs_to_edit:
             return
 
-        # Show edit dialog - removed single_mode parameter since it's handled inside EditDialog
         dialog = EditDialog(songs_to_edit, self)
         if dialog.exec_() == QtWidgets.QDialog.Accepted:
             values = dialog.get_values()
@@ -642,62 +628,23 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
         )
         
         if reply == QtWidgets.QMessageBox.Yes:
-            songs = load_songs_from_database()
             for row in selected_rows:
                 song_id = self.table_registered.item(row, 1).text()
-                # Get the path before removing from database
-                song_to_remove = next((song for song in songs if song["id"] == song_id), None)
-                if song_to_remove:
-                    file_path = song_to_remove["path"]
-                    try:
-                        # Remove COMM tags from the file
-                        audio = ID3(file_path)
-                        audio.delall("COMM")
-                        audio.save()
-                    except Exception as e:
-                        print(f"Error removing metadata from {file_path}: {str(e)}")
+                file_path = self.table_registered.item(row, 3).text()
                 
-                songs = [song for song in songs if song["id"] != song_id]
+                try:
+                    # Remove COMM tags from the file
+                    audio = ID3(file_path)
+                    audio.delall("COMM")
+                    audio.save()
+                except Exception as e:
+                    print(f"Error removing metadata from {file_path}: {str(e)}")
+                
+                # Remove from both databases
+                remove_song_from_database(song_id, self.current_folder)
 
-            # After removal, reorder remaining songs in the same folder
-            if self.current_folder:
-                folder_songs = [song for song in songs if os.path.dirname(song["path"]) == self.current_folder]
-                folder_songs.sort(key=lambda x: extract_order_number(x["name"]))
-                
-                # Reassign order numbers
-                for i, song in enumerate(folder_songs, 1):
-                    old_name = song["name"]
-                    if ORDER_PATTERN.match(old_name):
-                        base_name = ORDER_PATTERN.match(old_name).group(2)
-                    else:
-                        base_name = old_name
-                        
-                    new_name = f"{i:03d} {base_name}"
-                    old_path = song["path"]
-                    new_path = os.path.join(os.path.dirname(old_path), new_name)
-                    
-                    # Update file name
-                    try:
-                        os.rename(old_path, new_path)
-                        song["name"] = new_name
-                        song["path"] = new_path
-                        song["order"] = i
-                        
-                        # Update title metadata
-                        try:
-                            audio = EasyID3(new_path)
-                        except ID3NoHeaderError:
-                            audio = EasyID3()
-                            audio.save(new_path)
-                        
-                        audio['title'] = os.path.splitext(new_name)[0]
-                        audio.save()
-                    except Exception as e:
-                        print(f"Error updating file after removal: {str(e)}")
-            
-            save_songs_to_database(songs)
             self.refresh_all_views()
-            self.statusBar().showMessage("Selected songs removed and order updated")
+            self.statusBar().showMessage("Selected songs removed successfully")
 
     def add_selected_songs(self):
         selected_items = self.list_unregistered.selectedItems()
@@ -817,19 +764,18 @@ class OrderTab(QtWidgets.QWidget):
         self.table.setSortingEnabled(False)
         self.table.clearContents()
         
-        # Get songs from database
-        songs = [s for s in load_songs_from_database() 
-                if os.path.dirname(s["path"]) == self.parent.current_folder]
+        # Get songs with their order information
+        folder_songs = load_folder_songs(self.parent.current_folder)
         
         # Sort by order
-        songs.sort(key=lambda x: extract_order_number(x["name"]))
+        folder_songs.sort(key=lambda x: x.get("order", 0))
         
         # Update table
-        self.table.setRowCount(len(songs))
-        self.order_spin.setMaximum(len(songs))
+        self.table.setRowCount(len(folder_songs))
+        self.order_spin.setMaximum(len(folder_songs))
         
-        for row, song in enumerate(songs):
-            current_order = extract_order_number(song["name"])
+        for row, song in enumerate(folder_songs):
+            current_order = song.get("order", 0)
             preview_order = self.current_changes.get(song["id"], current_order)
             
             # Current Order
@@ -840,7 +786,7 @@ class OrderTab(QtWidgets.QWidget):
             preview_item = QtWidgets.QTableWidgetItem()
             preview_item.setData(QtCore.Qt.DisplayRole, preview_order)
             if preview_order != current_order:
-                preview_item.setBackground(QtGui.QColor(255, 255, 200))  # Light yellow
+                preview_item.setBackground(QtGui.QColor(255, 255, 200))
             
             # Other columns
             id_item = QtWidgets.QTableWidgetItem(song["id"])
@@ -867,17 +813,12 @@ class OrderTab(QtWidgets.QWidget):
             return
             
         new_order = self.order_spin.value()
-        songs = load_songs_from_database()
-        folder_songs = [s for s in songs if os.path.dirname(s["path"]) == self.parent.current_folder]
+        folder_songs = load_folder_songs(self.parent.current_folder)
         
-        # Get all current orders
-        current_orders = {
-            self.table.item(row, 2).text(): extract_order_number(self.table.item(row, 3).text())
-            for row in range(self.table.rowCount())
-        }
+        # Get selected song IDs
+        selected_song_ids = [self.table.item(row, 2).text() for row in selected_rows]
         
         # Update preview orders for selected songs
-        selected_song_ids = [self.table.item(row, 2).text() for row in selected_rows]
         for song_id in selected_song_ids:
             self.current_changes[song_id] = new_order
             new_order += 1
@@ -886,17 +827,13 @@ class OrderTab(QtWidgets.QWidget):
         max_order = len(folder_songs)
         current_pos = 1
         
-        for row in range(self.table.rowCount()):
-            song_id = self.table.item(row, 2).text()
-            if song_id not in selected_song_ids:
+        for song in folder_songs:
+            if song["id"] not in selected_song_ids:
                 while current_pos in [self.current_changes.get(sid) for sid in selected_song_ids]:
                     current_pos += 1
                 if current_pos <= max_order:
-                    self.current_changes[song_id] = current_pos
+                    self.current_changes[song["id"]] = current_pos
                     current_pos += 1
-        
-        if hasattr(self, 'sort_label'):
-            self.sort_label.setParent(None)
         
         self.refresh_view()
 
@@ -909,7 +846,6 @@ class OrderTab(QtWidgets.QWidget):
             return
 
         try:
-            songs = load_songs_from_database()
             current_dir = self.parent.current_folder
             target_dir = current_dir
             
@@ -921,42 +857,30 @@ class OrderTab(QtWidgets.QWidget):
                 if not target_dir:
                     return
                 os.makedirs(target_dir, exist_ok=True)
-
+            
+            songs = load_songs_from_database()
+            
             # Process each song
             for song in songs:
                 if song["id"] in self.current_changes and os.path.dirname(song["path"]) == current_dir:
                     old_path = song["path"]
-                    filename = os.path.basename(old_path)
+                    new_order = self.current_changes[song["id"]]
                     
-                    # Create the new filename with new order number
-                    match = ORDER_PATTERN.match(filename)
-                    if match:
-                        base_name = match.group(2)
-                        new_name = f"{self.current_changes[song['id']]:03d} {base_name}"
-                        new_path = os.path.join(target_dir, new_name + os.path.splitext(old_path)[1])
+                    if self.new_dir_radio.isChecked():
+                        # Copy file to new location
+                        new_path = os.path.join(target_dir, os.path.basename(old_path))
+                        shutil.copy2(old_path, new_path)
                         
-                        if self.new_dir_radio.isChecked():
-                            # Copy file to new location
-                            shutil.copy2(old_path, new_path)
-                            # Create new song entry
-                            new_song = song.copy()
-                            new_song["path"] = new_path
-                            songs.append(new_song)
-                        else:
-                            # Rename in current directory
-                            os.rename(old_path, new_path)
-                            song["path"] = new_path
+                        # Create new song entry
+                        new_song = song.copy()
+                        new_song["path"] = new_path
+                        songs.append(new_song)
                         
-                        # Update title metadata
-                        try:
-                            audio = EasyID3(new_path)
-                        except ID3NoHeaderError:
-                            audio = EasyID3()
-                            audio.save(new_path)
-                        
-                        title_without_ext = os.path.splitext(new_name)[0]
-                        audio['title'] = title_without_ext
-                        audio.save()
+                        # Update order in the new directory
+                        update_playlist_order(target_dir, song["id"], new_order)
+                    else:
+                        # Update order in current directory
+                        update_playlist_order(current_dir, song["id"], new_order)
 
             # Save changes to database
             save_songs_to_database(songs)
@@ -991,17 +915,77 @@ def extract_order_number(filename):
     return 0
 
 def initialize_database():
-    if not os.path.exists(DATABASE_FILE):
-        with open(DATABASE_FILE, "w") as db_file:
+    """Initialize both database files if they don't exist"""
+    if not os.path.exists(SONGS_DATABASE):
+        with open(SONGS_DATABASE, "w") as db_file:
+            json.dump([], db_file)
+    
+    if not os.path.exists(PLAYLISTS_DATABASE):
+        with open(PLAYLISTS_DATABASE, "w") as db_file:
             json.dump([], db_file)
 
 def load_songs_from_database():
-    with open(DATABASE_FILE, "r") as db_file:
+    """Load song metadata from the main database"""
+    with open(SONGS_DATABASE, "r") as db_file:
         return json.load(db_file)
 
 def save_songs_to_database(songs):
-    with open(DATABASE_FILE, "w") as db_file:
+    """Save song metadata to the main database"""
+    with open(SONGS_DATABASE, "w") as db_file:
         json.dump(songs, db_file, indent=4)
+
+def load_playlists_from_database():
+    """Load playlist order information"""
+    with open(PLAYLISTS_DATABASE, "r") as db_file:
+        return json.load(db_file)
+
+def save_playlists_to_database(playlists):
+    """Save playlist order information"""
+    with open(PLAYLISTS_DATABASE, "w") as db_file:
+        json.dump(playlists, db_file, indent=4)
+
+def get_playlist_order(folder_path, song_id):
+    """Get the order of a song in a specific folder"""
+    playlists = load_playlists_from_database()
+    for playlist in playlists:
+        if playlist["folder_path"] == folder_path:
+            for order_entry in playlist["orders"]:
+                if order_entry["id"] == song_id:
+                    return order_entry["order"]
+    return 0
+
+def update_playlist_order(folder_path, song_id, new_order):
+    """Update or add a song's order in a playlist"""
+    playlists = load_playlists_from_database()
+    
+    # Find or create playlist entry
+    playlist_entry = next(
+        (p for p in playlists if p["folder_path"] == folder_path),
+        None
+    )
+    
+    if playlist_entry is None:
+        playlist_entry = {
+            "folder_path": folder_path,
+            "orders": []
+        }
+        playlists.append(playlist_entry)
+    
+    # Update or add order
+    order_entry = next(
+        (o for o in playlist_entry["orders"] if o["id"] == song_id),
+        None
+    )
+    
+    if order_entry:
+        order_entry["order"] = new_order
+    else:
+        playlist_entry["orders"].append({
+            "id": song_id,
+            "order": new_order
+        })
+    
+    save_playlists_to_database(playlists)
 
 def generate_song_id():
     songs = load_songs_from_database()
@@ -1030,10 +1014,7 @@ def find_next_available_order(songs, folder_path, current_max_order):
     return current_max_order + 1
 
 def add_song_to_database(file_path):
-    """
-    Add a song to the database and its metadata.
-    Returns True if successful, False otherwise.
-    """
+    """Add a song to the database and its metadata."""
     try:
         songs = load_songs_from_database()
         if not any(song["path"] == file_path for song in songs):
@@ -1042,78 +1023,135 @@ def add_song_to_database(file_path):
             
             # Get current max order number for the folder
             current_max_order = 0
-            for song in songs:
-                if os.path.dirname(song["path"]) == current_folder:
-                    order_num = extract_order_number(song["name"])
-                    current_max_order = max(current_max_order, order_num)
+            playlists = load_playlists_from_database()
+            playlist_entry = next(
+                (p for p in playlists if p["folder_path"] == current_folder),
+                None
+            )
             
-            # Get the original name and any existing order number
-            original_name = os.path.basename(file_path)
-            original_order = extract_order_number(original_name)
-            
-            # If the original name has an order number, check if it's available
-            if original_order > 0:
-                # Check if this order number is already taken
-                is_order_taken = any(
-                    extract_order_number(song["name"]) == original_order 
-                    for song in songs 
-                    if os.path.dirname(song["path"]) == current_folder
+            if playlist_entry:
+                current_max_order = max(
+                    (o["order"] for o in playlist_entry["orders"]),
+                    default=0
                 )
-                
-                if is_order_taken:
-                    # Find the next available order number
-                    new_order = find_next_available_order(songs, current_folder, current_max_order)
-                else:
-                    new_order = original_order
-            else:
-                # No original order number, just get next available
-                new_order = find_next_available_order(songs, current_folder, current_max_order)
             
-            # Remove any existing order number pattern and get clean name
-            if ORDER_PATTERN.match(original_name):
-                clean_name = ORDER_PATTERN.match(original_name).group(2)
-            else:
-                clean_name = original_name
+            # Get the original name
+            original_name = os.path.basename(file_path)
             
-            # Create new filename with new order
-            new_name = f"{new_order:03d} {clean_name}"
-            new_path = os.path.join(current_folder, new_name)
+            # Create new song entry
+            new_order = current_max_order + 1
             
-            # Rename the file first
-            try:
-                os.rename(file_path, new_path)
-            except Exception as e:
-                print(f"Error renaming file: {str(e)}")
-                return False
-            
-            # Update the metadata (both ID and title)
-            if add_id_to_metadata(new_path, new_id):
+            # Add ID to metadata
+            if add_id_to_metadata(file_path, new_id):
                 try:
                     # Update title metadata
-                    audio = EasyID3(new_path)
+                    audio = EasyID3(file_path)
                 except ID3NoHeaderError:
                     audio = EasyID3()
-                    audio.save(new_path)
+                    audio.save(file_path)
                 
-                # Set the title to match the new filename (without extension)
-                audio['title'] = os.path.splitext(new_name)[0]
-                audio.save()
-                
+                # Add to songs database
                 new_song = {
                     "id": new_id,
-                    "name": new_name,
-                    "path": new_path,
+                    "name": original_name,
+                    "path": file_path,
                     "series": "",
-                    "weight": 2,
-                    "order": new_order
+                    "weight": 2
                 }
                 songs.append(new_song)
                 save_songs_to_database(songs)
+                
+                # Add to playlists database
+                update_playlist_order(current_folder, new_id, new_order)
                 return True
         return False
     except Exception as e:
         print(f"Error adding song to database: {str(e)}")
         return False
+
+def load_folder_songs(folder_path):
+    """Load songs for a specific folder with their order information"""
+    songs = load_songs_from_database()
+    folder_songs = [
+        song for song in songs 
+        if os.path.dirname(song["path"]) == folder_path
+    ]
+    
+    # Add order information from playlists database
+    playlists = load_playlists_from_database()
+    playlist_entry = next(
+        (p for p in playlists if p["folder_path"] == folder_path),
+        None
+    )
+    
+    if playlist_entry:
+        for song in folder_songs:
+            order_entry = next(
+                (o for o in playlist_entry["orders"] if o["id"] == song["id"]),
+                None
+            )
+            song["order"] = order_entry["order"] if order_entry else 0
+    else:
+        # If no playlist entry exists, assign sequential orders
+        for i, song in enumerate(folder_songs, 1):
+            song["order"] = i
+    
+    return folder_songs
+
+def apply_order_changes(current_folder, changes, target_folder=None):
+    """Apply order changes to a folder"""
+    if not target_folder:
+        target_folder = current_folder
+    
+    playlists = load_playlists_from_database()
+    
+    # Find or create playlist entry for target folder
+    target_playlist = next(
+        (p for p in playlists if p["folder_path"] == target_folder),
+        None
+    )
+    
+    if target_playlist is None:
+        target_playlist = {
+            "folder_path": target_folder,
+            "orders": []
+        }
+        playlists.append(target_playlist)
+    
+    # Update orders
+    for song_id, new_order in changes.items():
+        order_entry = next(
+            (o for o in target_playlist["orders"] if o["id"] == song_id),
+            None
+        )
+        
+        if order_entry:
+            order_entry["order"] = new_order
+        else:
+            target_playlist["orders"].append({
+                "id": song_id,
+                "order": new_order
+            })
+    
+    save_playlists_to_database(playlists)
+
+def remove_song_from_database(song_id, folder_path):
+    """Remove a song from both databases"""
+    # Remove from songs database
+    songs = load_songs_from_database()
+    songs = [song for song in songs if song["id"] != song_id]
+    save_songs_to_database(songs)
+    
+    # Remove from playlists database
+    playlists = load_playlists_from_database()
+    for playlist in playlists:
+        if playlist["folder_path"] == folder_path:
+            playlist["orders"] = [
+                o for o in playlist["orders"] 
+                if o["id"] != song_id
+            ]
+    
+    save_playlists_to_database(playlists)
 
 def main():
     initialize_database()
