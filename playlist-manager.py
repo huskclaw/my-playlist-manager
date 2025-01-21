@@ -2,9 +2,11 @@ import os
 import json
 import re
 import shutil
+import random
 from PyQt5 import QtWidgets, QtGui, QtCore
 from mutagen.id3 import ID3, COMM, ID3NoHeaderError
 from mutagen.easyid3 import EasyID3
+from collections import defaultdict
 
 # Constants for JSON database
 SONGS_DATABASE = "songs.json"  # Main database with song metadata
@@ -752,11 +754,16 @@ class OrderTab(QtWidgets.QWidget):
         self.set_order_button = QtWidgets.QPushButton("Set Order")
         self.set_order_button.clicked.connect(self.set_new_order)
         
+        # Add Randomize button
+        self.randomize_button = QtWidgets.QPushButton("Randomize")
+        self.randomize_button.clicked.connect(self.randomize_songs)
+
         order_layout.addWidget(order_label)
         order_layout.addWidget(self.order_spin)
         order_layout.addWidget(self.set_order_button)
+        order_layout.addWidget(self.randomize_button)  # Add randomize button to layout
         controls_layout.addLayout(order_layout)
-        
+
         # Add enable and disable buttons
         enable_disable_layout = QtWidgets.QHBoxLayout()
         self.enable_button = QtWidgets.QPushButton("Enable Selected")
@@ -902,6 +909,85 @@ class OrderTab(QtWidgets.QWidget):
         self.current_changes.update(disabled_songs)
         
         self.refresh_view()
+
+    def randomize_songs(self):
+        """Handle the randomization of songs in the current folder"""
+        if not self.parent.current_folder:
+            return
+
+        # Get current folder songs
+        folder_songs = load_folder_songs(self.parent.current_folder)
+        
+        # Filter out disabled songs (those with order -1)
+        active_songs = [
+            song for song in folder_songs
+            if self.current_changes.get(song['id'], song.get('order', 0)) != -1
+        ]
+
+        if not active_songs:
+            return
+
+        # Randomize the playlist
+        randomized_songs = self.randomize_playlist(active_songs)
+
+        # Update the current_changes dictionary with new orders
+        for new_order, song in enumerate(randomized_songs, start=1):
+            self.current_changes[song['id']] = new_order
+
+        # Refresh the view to show the new ordering
+        self.refresh_view()
+
+    def randomize_playlist(self, songs):
+        """
+        Randomizes a playlist by first distributing series evenly and then alternating weights.
+
+        :param songs: List of dictionaries, each with 'title', 'series', and 'weight'.
+        :return: List of shuffled songs.
+        """
+        # Group songs by series
+        series_dict = defaultdict(list)
+        for song in songs:
+            series_dict[song['series']].append(song)
+
+        # Separate songs by weights (high and low)
+        high_weight = {series: [] for series in series_dict}
+        low_weight = {series: [] for series in series_dict}
+        for series, song_list in series_dict.items():
+            for song in song_list:
+                if song['weight'] >= 2:
+                    high_weight[series].append(song)
+                else:
+                    low_weight[series].append(song)
+
+        # Shuffle songs within each series
+        for series in series_dict:
+            random.shuffle(high_weight[series])
+            random.shuffle(low_weight[series])
+
+        # Distribute series evenly across playlist slots
+        series_list = list(series_dict.keys())
+        random.shuffle(series_list)
+        playlist_slots = []
+        while len(playlist_slots) < len(songs):
+            for series in series_list:
+                if len(playlist_slots) < len(songs):
+                    playlist_slots.append(series)
+
+        # Assign songs to slots, alternating high and low weights
+        result = []
+        high_turn = True  # Start with high weight
+        for slot in playlist_slots:
+            if high_turn and high_weight[slot]:
+                result.append(high_weight[slot].pop(0))
+            elif not high_turn and low_weight[slot]:
+                result.append(low_weight[slot].pop(0))
+            elif high_weight[slot]:  # Fallback to high if low is empty
+                result.append(high_weight[slot].pop(0))
+            elif low_weight[slot]:  # Fallback to low if high is empty
+                result.append(low_weight[slot].pop(0))
+            high_turn = not high_turn
+
+        return result
 
     def enable_selected_songs(self):
         """Enable selected songs and assign them new order numbers at the end"""
