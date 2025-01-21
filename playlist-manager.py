@@ -767,12 +767,18 @@ class OrderTab(QtWidgets.QWidget):
         order_layout.addWidget(self.set_order_button)
         controls_layout.addLayout(order_layout)
         
-        layout.addLayout(controls_layout)
-
-        # Add disable button next to set order button
+        # Add enable and disable buttons
+        enable_disable_layout = QtWidgets.QHBoxLayout()
+        self.enable_button = QtWidgets.QPushButton("Enable Selected")
+        self.enable_button.clicked.connect(self.enable_selected_songs)
         self.disable_button = QtWidgets.QPushButton("Disable Selected")
         self.disable_button.clicked.connect(self.disable_selected_songs)
-        controls_layout.addWidget(self.disable_button)
+        
+        enable_disable_layout.addWidget(self.enable_button)
+        enable_disable_layout.addWidget(self.disable_button)
+        controls_layout.addLayout(enable_disable_layout)
+        
+        layout.addLayout(controls_layout)
 
         # Table for showing songs
         self.table = QtWidgets.QTableWidget()
@@ -907,19 +913,42 @@ class OrderTab(QtWidgets.QWidget):
         
         self.refresh_view()
 
-    def enable_selected_songs(self, song_ids, target_order):
-        """Helper method to enable songs with a specific target order"""
+    def enable_selected_songs(self):
+        """Enable selected songs and assign them new order numbers at the end"""
+        selected_rows = sorted(set(item.row() for item in self.table.selectedItems()))
+        if not selected_rows:
+            return
+        
+        # Get selected song IDs and their current preview orders
+        selected_songs = [
+            (self.table.item(row, 2).text(),  # ID
+            self.current_changes.get(
+                self.table.item(row, 2).text(),  # Get preview order
+                int(self.table.item(row, 0).text())  # Fallback to current order
+            ))
+            for row in selected_rows
+        ]
+        
+        # Filter out songs that are not disabled (preview order != -1)
+        disabled_songs = [(song_id, order) for song_id, order in selected_songs if order == -1]
+        if not disabled_songs:
+            return  # Exit if no disabled songs were selected
+        
+        # Find the highest current order number (excluding disabled songs)
         folder_songs = load_folder_songs(self.parent.current_folder)
+        current_orders = []
+        for song in folder_songs:
+            preview_order = self.current_changes.get(song["id"], song.get("order", 0))
+            if preview_order != -1:  # Only consider enabled songs
+                current_orders.append(preview_order)
         
-        # Find the maximum current order excluding disabled songs
-        max_order = max((song.get("order", 0) for song in folder_songs 
-                        if self.current_changes.get(song["id"], song.get("order", 0)) != -1), 
-                       default=0)
+        next_order = max(current_orders, default=0) + 1
         
-        # Update preview orders
-        for song_id in song_ids:
-            self.current_changes[song_id] = target_order if target_order else (max_order + 1)
-            
+        # Enable only the disabled songs and assign them consecutive order numbers
+        for song_id, _ in disabled_songs:
+            self.current_changes[song_id] = next_order
+            next_order += 1
+        
         self.refresh_view()
     
     def disable_selected_songs(self):
