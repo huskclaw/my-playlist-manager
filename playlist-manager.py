@@ -939,55 +939,111 @@ class OrderTab(QtWidgets.QWidget):
 
     def randomize_playlist(self, songs):
         """
-        Randomizes a playlist by first distributing series evenly and then alternating weights.
-
-        :param songs: List of dictionaries, each with 'title', 'series', and 'weight'.
-        :return: List of shuffled songs.
+        Randomizes a playlist while maintaining even distribution of series,
+        balancing between large and small series throughout the playlist.
+        
+        :param songs: List of dictionaries, each with 'series' and other metadata
+        :return: List of shuffled songs
         """
-        # Group songs by series
+        # Group songs by series and get series sizes
         series_dict = defaultdict(list)
         for song in songs:
             series_dict[song['series']].append(song)
-
-        # Separate songs by weights (high and low)
-        high_weight = {series: [] for series in series_dict}
-        low_weight = {series: [] for series in series_dict}
-        for series, song_list in series_dict.items():
-            for song in song_list:
-                if song['weight'] >= 2:
-                    high_weight[series].append(song)
-                else:
-                    low_weight[series].append(song)
-
+        
+        # Calculate target distribution for each series
+        total_songs = len(songs)
+        distribution_points = {}
+        for series, series_songs in series_dict.items():
+            # Calculate roughly how many slots we want between each song
+            series_size = len(series_songs)
+            distribution_points[series] = [
+                int((i * total_songs) / series_size) 
+                for i in range(series_size)
+            ]
+            # Add some randomness to the distribution points while maintaining order
+            for i in range(len(distribution_points[series])):
+                shift = random.randint(-2, 2)  # Small random shift
+                distribution_points[series][i] = max(0, min(
+                    total_songs - 1,
+                    distribution_points[series][i] + shift
+                ))
+        
         # Shuffle songs within each series
-        for series in series_dict:
-            random.shuffle(high_weight[series])
-            random.shuffle(low_weight[series])
-
-        # Distribute series evenly across playlist slots
-        series_list = list(series_dict.keys())
-        random.shuffle(series_list)
-        playlist_slots = []
-        while len(playlist_slots) < len(songs):
-            for series in series_list:
-                if len(playlist_slots) < len(songs):
-                    playlist_slots.append(series)
-
-        # Assign songs to slots, alternating high and low weights
-        result = []
-        high_turn = True  # Start with high weight
-        for slot in playlist_slots:
-            if high_turn and high_weight[slot]:
-                result.append(high_weight[slot].pop(0))
-            elif not high_turn and low_weight[slot]:
-                result.append(low_weight[slot].pop(0))
-            elif high_weight[slot]:  # Fallback to high if low is empty
-                result.append(high_weight[slot].pop(0))
-            elif low_weight[slot]:  # Fallback to low if high is empty
-                result.append(low_weight[slot].pop(0))
-            high_turn = not high_turn
-
-        return result
+        for series_songs in series_dict.values():
+            random.shuffle(series_songs)
+        
+        # Initialize result list and tracking variables
+        result = [None] * total_songs  # Pre-allocate list with None
+        used_positions = set()
+        series_index = {series: 0 for series in series_dict.keys()}
+        
+        # First pass: Place songs near their target positions
+        for series in series_dict.keys():
+            songs_to_place = series_dict[series]
+            target_points = distribution_points[series]
+            
+            for i, target in enumerate(target_points):
+                if i >= len(songs_to_place):
+                    break
+                    
+                # Look for the closest available position to the target
+                search_radius = 0
+                while search_radius < total_songs:
+                    for offset in [0, 1, -1]:  # Try target, then adjacent positions
+                        pos = target + (offset * search_radius)
+                        if 0 <= pos < total_songs and pos not in used_positions:
+                            # Check if adjacent positions don't have same series
+                            adjacent_clear = True
+                            for adj in [pos-1, pos+1]:
+                                if (0 <= adj < total_songs and 
+                                    result[adj] is not None and 
+                                    result[adj]['series'] == songs_to_place[i]['series']):
+                                    adjacent_clear = False
+                                    break
+                            
+                            if adjacent_clear:
+                                result[pos] = songs_to_place[i]
+                                used_positions.add(pos)
+                                break
+                    if pos in used_positions:  # If we placed a song, break the radius loop
+                        break
+                    search_radius += 1
+        
+        # Second pass: Fill any remaining gaps
+        remaining_songs = []
+        for series, songs in series_dict.items():
+            remaining_songs.extend(
+                song for song in songs 
+                if song not in result
+            )
+        
+        # Shuffle remaining songs
+        random.shuffle(remaining_songs)
+        
+        # Fill gaps
+        for i in range(total_songs):
+            if result[i] is None and remaining_songs:
+                # Find a remaining song that doesn't create adjacent series
+                for j, song in enumerate(remaining_songs):
+                    adjacent_clear = True
+                    for adj in [i-1, i+1]:
+                        if (0 <= adj < total_songs and 
+                            result[adj] is not None and 
+                            result[adj]['series'] == song['series']):
+                            adjacent_clear = False
+                            break
+                    
+                    if adjacent_clear:
+                        result[i] = song
+                        remaining_songs.pop(j)
+                        break
+        
+        # Final pass: If any positions are still None, fill them with any remaining songs
+        for i in range(total_songs):
+            if result[i] is None and remaining_songs:
+                result[i] = remaining_songs.pop(0)
+        
+        return [song for song in result if song is not None]
 
     def enable_selected_songs(self):
         """Enable selected songs and assign them new order numbers at the end"""
