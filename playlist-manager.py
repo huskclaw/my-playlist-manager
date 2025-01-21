@@ -879,22 +879,31 @@ class OrderTab(QtWidgets.QWidget):
         # Get selected song IDs
         selected_song_ids = [self.table.item(row, 2).text() for row in selected_rows]
         
+        # First, preserve currently disabled songs
+        disabled_songs = {
+            song_id: order for song_id, order in self.current_changes.items()
+            if order == -1 and song_id not in selected_song_ids
+        }
+        
         # Update preview orders for selected songs
         for song_id in selected_song_ids:
             self.current_changes[song_id] = new_order
             new_order += 1
         
-        # Update other songs' preview orders
+        # Update other songs' preview orders, skipping disabled ones
         max_order = len(folder_songs)
         current_pos = 1
         
         for song in folder_songs:
-            if song["id"] not in selected_song_ids:
+            if song["id"] not in selected_song_ids and song["id"] not in disabled_songs:
                 while current_pos in [self.current_changes.get(sid) for sid in selected_song_ids]:
                     current_pos += 1
                 if current_pos <= max_order:
                     self.current_changes[song["id"]] = current_pos
                     current_pos += 1
+        
+        # Restore disabled songs
+        self.current_changes.update(disabled_songs)
         
         self.refresh_view()
 
@@ -975,11 +984,17 @@ class OrderTab(QtWidgets.QWidget):
                     match = ORDER_PATTERN.match(filename)
                     original_name = match.group(2) if match else filename
                     
-                    # Get the new order, either from changes or keep current order
-                    new_order = self.current_changes.get(song["id"], 
-                        get_playlist_order(current_dir, song["id"]))
+                    # Get the new order, checking both current_changes and existing order
+                    current_order = get_playlist_order(current_dir, song["id"])
+                    new_order = self.current_changes.get(song["id"], current_order)
                     
-                    if new_order == -1:  # Disabled song
+                    # Check if the song is disabled in current_changes
+                    is_disabled = new_order == -1 or (
+                        song["id"] not in self.current_changes and 
+                        current_order == -1
+                    )
+                    
+                    if is_disabled:  # Disabled song
                         if self.new_dir_radio.isChecked():
                             continue  # Skip disabled songs when copying to new directory
                         else:
