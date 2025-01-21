@@ -5,7 +5,6 @@ import shutil
 from PyQt5 import QtWidgets, QtGui, QtCore
 from mutagen.id3 import ID3, COMM, ID3NoHeaderError
 from mutagen.easyid3 import EasyID3
-from pathlib import Path
 
 # Constants for JSON database
 SONGS_DATABASE = "songs.json"  # Main database with song metadata
@@ -270,15 +269,6 @@ class OrderPreviewDialog(QtWidgets.QDialog):
             for j, text in enumerate(row_data):
                 item = QtWidgets.QTableWidgetItem(str(text))
                 self.table.setItem(i, j, item)
-
-    def get_new_order(self):
-        new_order = []
-        for row in range(self.table.rowCount()):
-            row_data = []
-            for col in range(self.table.columnCount()):
-                row_data.append(self.table.item(row, col).text())
-            new_order.append(row_data)
-        return new_order
 
     def get_apply_method(self):
         return "current" if self.current_dir_radio.isChecked() else "new"
