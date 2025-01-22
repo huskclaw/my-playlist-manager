@@ -25,14 +25,14 @@
         "name": "004 New Game - Ame No Chihoshi Zora.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\004 New Game - Ame No Chihoshi Zora.mp3",
         "series": "New Game",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0004",
         "name": "005 Rail Romanesque - Bon Voyage.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\005 Rail Romanesque - Bon Voyage.mp3",
         "series": "Rail Romanesque",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0005",
@@ -53,28 +53,28 @@
         "name": "008 Non Non Biyori - Ed 1.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\008 Non Non Biyori - Ed 1.mp3",
         "series": "Non Non Biyori",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0008",
         "name": "009 Gochiusa - Glitter Cafe Time.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\009 Gochiusa - Glitter Cafe Time.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0009",
         "name": "010 K-On - U&I.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\010 K-On - U&I.mp3",
         "series": "K-On",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0010",
         "name": "011 Mikakunin - Neat Patroll.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\011 Mikakunin - Neat Patroll.mp3",
         "series": "Mikakunin",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0011",
@@ -102,56 +102,56 @@
         "name": "015 Gochiusa - Omoide Hanabi.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\015 Gochiusa - Omoide Hanabi.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0015",
         "name": "016 Centaur No Nayami Op - Oshiete Darwin.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\016 Centaur No Nayami Op - Oshiete Darwin.mp3",
         "series": "Centaur No Nayami",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0016",
         "name": "017 Sora yori mo Tooi Basho ED - Koko kara, Koko kara.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\017 Sora yori mo Tooi Basho ED - Koko kara, Koko kara.mp3",
         "series": "Sora Yori Mo Tooi Basho",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0017",
         "name": "018 Aharen-San Op - Wa Narenai Kyori.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\018 Aharen-San Op - Wa Narenai Kyori.mp3",
         "series": "Aharen-san",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0018",
         "name": "019 Gochiusa - Sentimental Pretend.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\019 Gochiusa - Sentimental Pretend.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0019",
         "name": "020 Yuru Yuri - Kira Ippai X Suki-Ippai.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\020 Yuru Yuri - Kira Ippai X Suki-Ippai.mp3",
         "series": "Yuru Yuri",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0020",
         "name": "021 Urara Meirochou Op - Yumeji Labyrinth.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\021 Urara Meirochou Op - Yumeji Labyrinth.mp3",
         "series": "Urara Meirochou",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0021",
         "name": "022 ReZero - Wishing.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\022 ReZero - Wishing.mp3",
         "series": "ReZero",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0022",
@@ -172,14 +172,14 @@
         "name": "025 Kantai Collection - Fubuki.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\025 Kantai Collection - Fubuki.mp3",
         "series": "Kantai Collection",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0025",
         "name": "026 Slow Start Ed - Kaze No Koe Wo Kikinagara.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\026 Slow Start Ed - Kaze No Koe Wo Kikinagara.mp3",
         "series": "Slow Start",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0026",
@@ -193,21 +193,21 @@
         "name": "028 Yuru Camp Op - Seize The Day.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\028 Yuru Camp Op - Seize The Day.mp3",
         "series": "Yuru Camp",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0028",
         "name": "029 Kobayashi Dragon Maid - O Uchi Kaero.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\029 Kobayashi Dragon Maid - O Uchi Kaero.mp3",
         "series": "Kobayashi Dragon Maid",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0029",
         "name": "030 Wataten - Delicious Smile!.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\030 Wataten - Delicious Smile!.mp3",
         "series": "Wataten",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0030",
@@ -228,14 +228,14 @@
         "name": "033 Yuru Yuri - My Sweet Memory.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\033 Yuru Yuri - My Sweet Memory.mp3",
         "series": "Yuru Yuri",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0033",
         "name": "034 Non Non Biyori Ed 3 - Im Back.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\034 Non Non Biyori Ed 3 - Im Back.mp3",
         "series": "Non Non Biyori",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0034",
@@ -263,14 +263,14 @@
         "name": "038 Gochiusa - Chime Time Capsule.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\038 Gochiusa - Chime Time Capsule.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0038",
         "name": "039 Yama No Susume S1 Ed - Sutakkato Days.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\039 Yama No Susume S1 Ed - Sutakkato Days.mp3",
         "series": "Yama No Susume",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0039",
@@ -298,7 +298,7 @@
         "name": "043 Yuru Yuri 10Th Op - Tenyawanya.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\043 Yuru Yuri 10Th Op - Tenyawanya.mp3",
         "series": "Yuru Yuri",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0043",
@@ -319,7 +319,7 @@
         "name": "046 Mikakunin Op.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\046 Mikakunin Op.mp3",
         "series": "Mikakunin",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0046",
@@ -333,14 +333,14 @@
         "name": "048 Gochiusa - I Want To Be Amazing.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\048 Gochiusa - I Want To Be Amazing.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0048",
         "name": "049 Wataten - Uketsugu Kokoro.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\049 Wataten - Uketsugu Kokoro.mp3",
         "series": "Wataten",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0049",
@@ -354,49 +354,49 @@
         "name": "051 Yuru Yuri Nachuyachumi!+ Op - Yuri Shi Yurashushushu.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\051 Yuru Yuri Nachuyachumi!+ Op - Yuri Shi Yurashushushu.mp3",
         "series": "Yuru Yuri",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0051",
         "name": "052 Gochiusa - Have A Sweet Dream.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\052 Gochiusa - Have A Sweet Dream.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0052",
         "name": "053 Kamisama Ni Natta Hi Ed - Goodbye Seven Seas.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\053 Kamisama Ni Natta Hi Ed - Goodbye Seven Seas.mp3",
         "series": "Kamisama Ni Natta Hi",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0053",
         "name": "054 K-On - Tsubasa Wo Kudasai.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\054 K-On - Tsubasa Wo Kudasai.mp3",
         "series": "K-On",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0054",
         "name": "055 Hitoribocchi Ed - Ne Issho Ni Kaero.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\055 Hitoribocchi Ed - Ne Issho Ni Kaero.mp3",
         "series": "Hitoribocchi",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0055",
         "name": "056 Gochiusa - Yume Utsutsu Happy Time.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\056 Gochiusa - Yume Utsutsu Happy Time.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0056",
         "name": "057 Ryuuo Oshi Ed - Mamoritai Mono No Tame Ni.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\057 Ryuuo Oshi Ed - Mamoritai Mono No Tame Ni.mp3",
         "series": "Ryuuo Oshi",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0057",
@@ -410,7 +410,7 @@
         "name": "059 Non Non Biyori - Non Non Shimai.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\059 Non Non Biyori - Non Non Shimai.mp3",
         "series": "Non Non Biyori",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0059",
@@ -431,7 +431,7 @@
         "name": "062 Kinmoza - Sakurairo Cherish.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\062 Kinmoza - Sakurairo Cherish.mp3",
         "series": "Kinmoza",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0062",
@@ -445,14 +445,14 @@
         "name": "064 Tamako Market - Koi No Uta.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\064 Tamako Market - Koi No Uta.mp3",
         "series": "Tamako Market",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0064",
         "name": "065 Koisuru Asteroid Op Aruite Ikou.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\065 Koisuru Asteroid Op Aruite Ikou.mp3",
         "series": "Koisuru Asteroid",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0065",
@@ -466,21 +466,21 @@
         "name": "067 Gochiusa - Sweet  Skip  Step.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\067 Gochiusa - Sweet  Skip  Step.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0067",
         "name": "068 Wataten Ed - Happy Happy Friends.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\068 Wataten Ed - Happy Happy Friends.mp3",
         "series": "Wataten",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0068",
         "name": "069 Houkago Teibou Nisshi - Beginner'S Luck.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\069 Houkago Teibou Nisshi - Beginner'S Luck.mp3",
         "series": "Houkago Teibou Nisshi",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0069",
@@ -508,7 +508,7 @@
         "name": "073 Gochiusa - Welcome! Petit Rabbit.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\073 Gochiusa - Welcome! Petit Rabbit.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0073",
@@ -522,28 +522,28 @@
         "name": "075 Tonakyu Ed - Happy!! Strange Friends.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\075 Tonakyu Ed - Happy!! Strange Friends.mp3",
         "series": "Tonakyu",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0075",
         "name": "076 Gochiusa - Colored Leaves.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\076 Gochiusa - Colored Leaves.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0076",
         "name": "077 Yuru Yuri S2 Ed - 100% Chuugakusei.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\077 Yuru Yuri S2 Ed - 100% Chuugakusei.mp3",
         "series": "Yuru Yuri",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0077",
         "name": "078 New Game Ed 2 - Jumpin Jump Up!.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\078 New Game Ed 2 - Jumpin Jump Up!.mp3",
         "series": "New Game",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0078",
@@ -557,7 +557,7 @@
         "name": "080 A Channel Op - Morning Arch.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\080 A Channel Op - Morning Arch.mp3",
         "series": "A Channel",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0080",
@@ -571,28 +571,28 @@
         "name": "082 Gochiusa - Kaeri-Michi Skip.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\082 Gochiusa - Kaeri-Michi Skip.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0082",
         "name": "083 Yuru Camp\u25b3 Ed Full\u300cFuru Biyori\u300dBy Eri Sasaki.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\083 Yuru Camp\u25b3 Ed Full\u300cFuru Biyori\u300dBy Eri Sasaki.mp3",
         "series": "Yuru Camp",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0083",
         "name": "084 Konohana Kitan Ed 1.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\084 Konohana Kitan Ed 1.mp3",
         "series": "Konohana Kitan",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0084",
         "name": "085 Wataten - Myane!!.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\085 Wataten - Myane!!.mp3",
         "series": "Wataten",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0085",
@@ -606,7 +606,7 @@
         "name": "087 ReZero S2 Ed2 - Believe In You.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\087 ReZero S2 Ed2 - Believe In You.mp3",
         "series": "ReZero",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0087",
@@ -620,7 +620,7 @@
         "name": "089 Gochiusa - Yokan No Pingpong Kikoetara.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\089 Gochiusa - Yokan No Pingpong Kikoetara.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0089",
@@ -634,7 +634,7 @@
         "name": "091 Wataten - Sugar Court Dream.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\091 Wataten - Sugar Court Dream.mp3",
         "series": "Wataten",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0091",
@@ -655,7 +655,7 @@
         "name": "094 Yuru Yuri - Majokko Miraclen.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\094 Yuru Yuri - Majokko Miraclen.mp3",
         "series": "Yuru Yuri",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0094",
@@ -676,28 +676,28 @@
         "name": "097 Ai Uta.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\097 Ai Uta.mp3",
         "series": "Single",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0097",
         "name": "098 New Game - Colorful Fusion.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\098 New Game - Colorful Fusion.mp3",
         "series": "New Game",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0098",
         "name": "099 Sukasuka Op - Dearest Drop.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\099 Sukasuka Op - Dearest Drop.mp3",
         "series": "Sukasuka",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0099",
         "name": "100 Gochiusa - Autumn Color.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\100 Gochiusa - Autumn Color.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0100",
@@ -718,7 +718,7 @@
         "name": "103 Slime Taoshite Ed - Viewtiful Days!.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\103 Slime Taoshite Ed - Viewtiful Days!.mp3",
         "series": "Slime Taoshite",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0103",
@@ -732,7 +732,7 @@
         "name": "105 Yuru Yuri - With Girls Power.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\105 Yuru Yuri - With Girls Power.mp3",
         "series": "Yuru Yuri",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0105",
@@ -753,35 +753,35 @@
         "name": "108 Gochiusa - Dream Hello.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\108 Gochiusa - Dream Hello.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0108",
         "name": "109 Himouto Umaru-Chan - Unchanging Treasure.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\109 Himouto Umaru-Chan - Unchanging Treasure.mp3",
         "series": "Himouto Umaru-Chan",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0109",
         "name": "110 Mikakunin - Real Feeling.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\110 Mikakunin - Real Feeling.mp3",
         "series": "Mikakunin",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0110",
         "name": "111 Konosuba S2 Ed - Wanna Go Home.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\111 Konosuba S2 Ed - Wanna Go Home.mp3",
         "series": "Konosuba",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0111",
         "name": "112 Gochiusa - Everyday Level Up!.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\112 Gochiusa - Everyday Level Up!.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0112",
@@ -795,7 +795,7 @@
         "name": "114 Yuru Yuri - Ai No Delusion.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\114 Yuru Yuri - Ai No Delusion.mp3",
         "series": "Yuru Yuri",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0114",
@@ -816,14 +816,14 @@
         "name": "117 Wataten - Atashi Kawaii Sengen.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\117 Wataten - Atashi Kawaii Sengen.mp3",
         "series": "Wataten",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0117",
         "name": "118 Non Non Biyori - Nyanpasu March.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\118 Non Non Biyori - Nyanpasu March.mp3",
         "series": "Non Non Biyori",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0118",
@@ -837,7 +837,7 @@
         "name": "120 Gochiusa - Sugar Star On The Moonlit Night.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\120 Gochiusa - Sugar Star On The Moonlit Night.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0120",
@@ -851,7 +851,7 @@
         "name": "122 Gj-Bu Ed 1.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\122 Gj-Bu Ed 1.mp3",
         "series": "Gj-Bu",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0122",
@@ -865,35 +865,35 @@
         "name": "124 Gochiusa - Tokimeki Loop Ni Notte.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\124 Gochiusa - Tokimeki Loop Ni Notte.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0124",
         "name": "125 New Game - Little Bitter Duet.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\125 New Game - Little Bitter Duet.mp3",
         "series": "New Game",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0125",
         "name": "126 Isekai Shokudou Ed - Chiisana Hitotsubu.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\126 Isekai Shokudou Ed - Chiisana Hitotsubu.mp3",
         "series": "Isekai Shokudou",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0126",
         "name": "127 Hinako Note Op - Gekidan Hitotose.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\127 Hinako Note Op - Gekidan Hitotose.mp3",
         "series": "Hinako Note",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0127",
         "name": "128 Gochiusa - Bottleship Trip.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\128 Gochiusa - Bottleship Trip.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0128",
@@ -907,21 +907,21 @@
         "name": "130 Non Non Biyori - Asahigaoka Bunko Koka.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\130 Non Non Biyori - Asahigaoka Bunko Koka.mp3",
         "series": "Non Non Biyori",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0130",
         "name": "131 Girls Und Panzer Das Finale Op - Grand Symphony.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\131 Girls Und Panzer Das Finale Op - Grand Symphony.mp3",
         "series": "Girls Und Panzer",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0131",
         "name": "132 Gochiusa - Teku Teku Marching March.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\132 Gochiusa - Teku Teku Marching March.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0132",
@@ -935,21 +935,21 @@
         "name": "134 No Game No Life Op Full.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\134 No Game No Life Op Full.mp3",
         "series": "No Game No Life",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0134",
         "name": "135 Yuru Yuri - Cool Number.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\135 Yuru Yuri - Cool Number.mp3",
         "series": "Yuru Yuri",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0135",
         "name": "136 Gochiusa - Kirakira Ala Mode.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\136 Gochiusa - Kirakira Ala Mode.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0136",
@@ -963,7 +963,7 @@
         "name": "138 New Game - Bug Bug Survival!.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\138 New Game - Bug Bug Survival!.mp3",
         "series": "New Game",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0138",
@@ -977,7 +977,7 @@
         "name": "140 Slow Loop Ed - Shuwa Shuwa.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\140 Slow Loop Ed - Shuwa Shuwa.mp3",
         "series": "Slow Loop",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0140",
@@ -991,7 +991,7 @@
         "name": "142 K-On - Honey Sweet Tea Time.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\142 K-On - Honey Sweet Tea Time.mp3",
         "series": "K-On",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0142",
@@ -1012,7 +1012,7 @@
         "name": "145 Tamako Market - Kankan Makimaki.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\145 Tamako Market - Kankan Makimaki.mp3",
         "series": "Tamako Market",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0145",
@@ -1026,7 +1026,7 @@
         "name": "147 Aot S4 Part 2 Ed - Akuma No Ko.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\147 Aot S4 Part 2 Ed - Akuma No Ko.mp3",
         "series": "Aot",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0147",
@@ -1040,21 +1040,21 @@
         "name": "149 Non Non Biyori Op 1.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\149 Non Non Biyori Op 1.mp3",
         "series": "Non Non Biyori",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0149",
         "name": "150 Gochiusa - Click Here For New Happiness!.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\150 Gochiusa - Click Here For New Happiness!.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0150",
         "name": "151 Sora Yori Mo Tooi Basho Op.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\151 Sora Yori Mo Tooi Basho Op.mp3",
         "series": "Sora Yori Mo Tooi Basho",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0151",
@@ -1096,35 +1096,35 @@
         "name": "157 Wataten - Special Coordinate.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\157 Wataten - Special Coordinate.mp3",
         "series": "Wataten",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0157",
         "name": "158 Gochiusa - Miracle Chronicle.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\158 Gochiusa - Miracle Chronicle.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0158",
         "name": "159 Centaur No Nayami Ed - Eidelweiss.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\159 Centaur No Nayami Ed - Eidelweiss.mp3",
         "series": "Centaur No Nayami",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0159",
         "name": "160 Konohana Kitan Ending 3.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\160 Konohana Kitan Ending 3.mp3",
         "series": "Konohana Kitan",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0160",
         "name": "161 Aiura Ed - Ichigo Ichie.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\161 Aiura Ed - Ichigo Ichie.mp3",
         "series": "Aiura",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0161",
@@ -1138,14 +1138,14 @@
         "name": "163 Kinmoza - Kiramekiiro Summer Rainbow.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\163 Kinmoza - Kiramekiiro Summer Rainbow.mp3",
         "series": "Kinmoza",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0163",
         "name": "164 Sansha Sanyou Op - Clover Kakumation.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\164 Sansha Sanyou Op - Clover Kakumation.mp3",
         "series": "Sansha Sanyou",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0164",
@@ -1173,7 +1173,7 @@
         "name": "168 Gochiusa - Smile Cafe Wizard.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\168 Gochiusa - Smile Cafe Wizard.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0168",
@@ -1187,7 +1187,7 @@
         "name": "170 Yuru Yuri S1 Ed.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\170 Yuru Yuri S1 Ed.mp3",
         "series": "Yuru Yuri",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0170",
@@ -1201,21 +1201,21 @@
         "name": "172 New Game Ed - Now Loading!.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\172 New Game Ed - Now Loading!.mp3",
         "series": "New Game",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0172",
         "name": "173 Non Non Biyori - Summer Colored Landscape.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\173 Non Non Biyori - Summer Colored Landscape.mp3",
         "series": "Non Non Biyori",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0173",
         "name": "174 Gochiusa - Sunshine Days.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\174 Gochiusa - Sunshine Days.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0174",
@@ -1229,21 +1229,21 @@
         "name": "176 Sukasuka Ed - From.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\176 Sukasuka Ed - From.mp3",
         "series": "Sukasuka",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0176",
         "name": "177 My Senpai Is Annoying Op - Annoying! San San Week!.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\177 My Senpai Is Annoying Op - Annoying! San San Week!.mp3",
         "series": "My Senpai Is Annoying",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0177",
         "name": "178 Gochiusa - Happy Holiday.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\178 Gochiusa - Happy Holiday.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0178",
@@ -1257,14 +1257,14 @@
         "name": "180 Gakkou Gurashi - Yummy Yappy Recipe.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\180 Gakkou Gurashi - Yummy Yappy Recipe.mp3",
         "series": "Gakkou Gurashi",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0180",
         "name": "181 Yuru Yuri - Read Mirakurun!.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\181 Yuru Yuri - Read Mirakurun!.mp3",
         "series": "Yuru Yuri",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0181",
@@ -1278,21 +1278,21 @@
         "name": "183 Maoujou De Oyasumi Full Op.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\183 Maoujou De Oyasumi Full Op.mp3",
         "series": "Maoujou De Oyasumi",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0183",
         "name": "184 ReZero Ed 2 Full - Stay Alive.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\184 ReZero Ed 2 Full - Stay Alive.mp3",
         "series": "ReZero",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0184",
         "name": "185 Gochiusa - Treasure Chest Jet Coaster.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\185 Gochiusa - Treasure Chest Jet Coaster.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0185",
@@ -1313,7 +1313,7 @@
         "name": "188 Urara Meirochou Ed - Go To Romance.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\188 Urara Meirochou Ed - Go To Romance.mp3",
         "series": "Urara Meirochou",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0188",
@@ -1327,14 +1327,14 @@
         "name": "190 Yuru Yuri 10Th Ed - Lipi Is A Chime.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\190 Yuru Yuri 10Th Ed - Lipi Is A Chime.mp3",
         "series": "Yuru Yuri",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0190",
         "name": "191 I Want To Be A Girl.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\191 I Want To Be A Girl.mp3",
         "series": "Single",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0191",
@@ -1348,7 +1348,7 @@
         "name": "193 Gochiusa - Present Leisure \u2661.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\193 Gochiusa - Present Leisure \u2661.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0193",
@@ -1362,14 +1362,14 @@
         "name": "195 Tensei Slime Op 2 - Megurumono.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\195 Tensei Slime Op 2 - Megurumono.mp3",
         "series": "Tensei Slime",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0195",
         "name": "196 Non Non Biyori - Issho Ni Kaerou.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\196 Non Non Biyori - Issho Ni Kaerou.mp3",
         "series": "Non Non Biyori",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0196",
@@ -1390,14 +1390,14 @@
         "name": "199 Yuru Yuri S3 Ed - Atchi Yu Ma Seishun!.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\199 Yuru Yuri S3 Ed - Atchi Yu Ma Seishun!.mp3",
         "series": "Yuru Yuri",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0199",
         "name": "200 Houkago Teibou Nisshi Op - Sea Horizon.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\200 Houkago Teibou Nisshi Op - Sea Horizon.mp3",
         "series": "Houkago Teibou Nisshi",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0200",
@@ -1418,7 +1418,7 @@
         "name": "203 Tamako Market - Girlfriend.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\203 Tamako Market - Girlfriend.mp3",
         "series": "Tamako Market",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0203",
@@ -1432,21 +1432,21 @@
         "name": "205 Gochiusa - I'M Fine Tomorrow.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\205 Gochiusa - I'M Fine Tomorrow.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0205",
         "name": "206 Yakunara Mug Cup Op - Tobira Wo Aketara.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\206 Yakunara Mug Cup Op - Tobira Wo Aketara.mp3",
         "series": "Yakunara Mug Cup",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0206",
         "name": "207 Uchiagehanabi.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\207 Uchiagehanabi.mp3",
         "series": "Single",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0207",
@@ -1460,7 +1460,7 @@
         "name": "209 Gochiusa - Let'S Go To Rabbit House.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\209 Gochiusa - Let'S Go To Rabbit House.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0209",
@@ -1474,7 +1474,7 @@
         "name": "211 Sora Yori Mo Tooi Basho - Mata Ne.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\211 Sora Yori Mo Tooi Basho - Mata Ne.mp3",
         "series": "Sora Yori Mo Tooi Basho",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0211",
@@ -1488,21 +1488,21 @@
         "name": "213 Gochiusa S3 Op - Tenkuu Cafeteria.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\213 Gochiusa S3 Op - Tenkuu Cafeteria.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0213",
         "name": "214 K-On Utauyo Miracle.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\214 K-On Utauyo Miracle.mp3",
         "series": "K-On",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0214",
         "name": "215 Slow Start Op - Ne! Ne! Ne!.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\215 Slow Start Op - Ne! Ne! Ne!.mp3",
         "series": "Slow Start",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0215",
@@ -1516,7 +1516,7 @@
         "name": "217 Gochiusa - Little Treasure Hunt.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\217 Gochiusa - Little Treasure Hunt.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0217",
@@ -1530,7 +1530,7 @@
         "name": "219 Hitoribocchi Op - Bocchi And Friends.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\219 Hitoribocchi Op - Bocchi And Friends.mp3",
         "series": "Hitoribocchi",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0219",
@@ -1558,14 +1558,14 @@
         "name": "223 Konohana Kitan Ending 2.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\223 Konohana Kitan Ending 2.mp3",
         "series": "Konohana Kitan",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0223",
         "name": "224 Sewayaki Kitsune No Senko-San Op - Koyoi Mofumofu.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\224 Sewayaki Kitsune No Senko-San Op - Koyoi Mofumofu.mp3",
         "series": "Senko-san",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0224",
@@ -1579,35 +1579,35 @@
         "name": "226 Rail Romanesque - Singing Wheel.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\226 Rail Romanesque - Singing Wheel.mp3",
         "series": "Rail Romanesque",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0226",
         "name": "227 New Game - Connect.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\227 New Game - Connect.mp3",
         "series": "New Game",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0227",
         "name": "228 Gochiusa S1 Ed - Poppin Jump.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\228 Gochiusa S1 Ed - Poppin Jump.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0228",
         "name": "229 Non Non Biyori Ed 2 - Okaeri.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\229 Non Non Biyori Ed 2 - Okaeri.mp3",
         "series": "Non Non Biyori",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0229",
         "name": "230 Yuru Yuri - Minna Daisuki No Uta.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\230 Yuru Yuri - Minna Daisuki No Uta.mp3",
         "series": "Yuru Yuri",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0230",
@@ -1628,7 +1628,7 @@
         "name": "233 Yuyushiki Op - Seeno!.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\233 Yuyushiki Op - Seeno!.mp3",
         "series": "Yuyushiki",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0233",
@@ -1642,42 +1642,42 @@
         "name": "235 Gochiusa - Tiny Christmas Party.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\235 Gochiusa - Tiny Christmas Party.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0235",
         "name": "236 Chiisana Koi No Uta.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\236 Chiisana Koi No Uta.mp3",
         "series": "Single",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0236",
         "name": "237 Non Non Biyori Op 2 - Kodama Kotoda Ma.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\237 Non Non Biyori Op 2 - Kodama Kotoda Ma.mp3",
         "series": "Non Non Biyori",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0237",
         "name": "238 Mitsuboshi Colors Op - Colors Power Ni Omakasero.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\238 Mitsuboshi Colors Op - Colors Power Ni Omakasero.mp3",
         "series": "Mitsuboshi Colors",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0238",
         "name": "239 Gochiusa - Candy Color Days.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\239 Gochiusa - Candy Color Days.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0239",
         "name": "240 K-On - Fuwa-Fuwa Time.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\240 K-On - Fuwa-Fuwa Time.mp3",
         "series": "K-On",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0240",
@@ -1691,35 +1691,35 @@
         "name": "242 Yuru Yuri - Happy Time Never Ends.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\242 Yuru Yuri - Happy Time Never Ends.mp3",
         "series": "Yuru Yuri",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0242",
         "name": "243 Gochiusa - Im Near My Heart.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\243 Gochiusa - Im Near My Heart.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0243",
         "name": "244 Acchi Kocchi Ed Full.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\244 Acchi Kocchi Ed Full.mp3",
         "series": "Acchi Kocchi",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0244",
         "name": "245 New Game Op 2 - Step By Step Up.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\245 New Game Op 2 - Step By Step Up.mp3",
         "series": "New Game",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0245",
         "name": "246 Konosuba S1 Ed - Chiisana Bakuensha.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\246 Konosuba S1 Ed - Chiisana Bakuensha.mp3",
         "series": "Konosuba",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0246",
@@ -1733,21 +1733,21 @@
         "name": "248 Aharen-san  Ed - Kyori kan.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\248 Aharen-san  Ed - Kyori kan.mp3",
         "series": "Aharen-san",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0248",
         "name": "249 Gakkou Gurashi Op - Friend Shitai Gakuen Seikatsubu.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\249 Gakkou Gurashi Op - Friend Shitai Gakuen Seikatsubu.mp3",
         "series": "Gakkou Gurashi",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0249",
         "name": "250 Tensei Slime Ed 3 - Storyseeker.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\250 Tensei Slime Ed 3 - Storyseeker.mp3",
         "series": "Tensei Slime",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0250",
@@ -1761,7 +1761,7 @@
         "name": "252 Rail Romanesque - Wonderful Rail.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\252 Rail Romanesque - Wonderful Rail.mp3",
         "series": "Rail Romanesque",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0252",
@@ -1796,14 +1796,14 @@
         "name": "257 Hinako Note Ed Curtain Call!.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\257 Hinako Note Ed Curtain Call!.mp3",
         "series": "Hinako Note",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0257",
         "name": "258 Kinmoza - Promise Of Shirotsumekusa.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\258 Kinmoza - Promise Of Shirotsumekusa.mp3",
         "series": "Kinmoza",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0258",
@@ -1817,14 +1817,14 @@
         "name": "260 Tonakyu Op - Kyuutie Ladies.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\260 Tonakyu Op - Kyuutie Ladies.mp3",
         "series": "Tonakyu",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0260",
         "name": "261 Non Non Biyori - Hon Waka Humming.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\261 Non Non Biyori - Hon Waka Humming.mp3",
         "series": "Non Non Biyori",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0261",
@@ -1838,7 +1838,7 @@
         "name": "263 Gochiusa - Secret Hospitality.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\263 Gochiusa - Secret Hospitality.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0263",
@@ -1866,14 +1866,14 @@
         "name": "267 Gochiusa - A Spoonful Of Princess Story.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\267 Gochiusa - A Spoonful Of Princess Story.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0267",
         "name": "268 ReZero S2 Op - Realize.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\268 ReZero S2 Op - Realize.mp3",
         "series": "ReZero",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0268",
@@ -1887,21 +1887,21 @@
         "name": "270 Wataten - Sweets Land Paradox.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\270 Wataten - Sweets Land Paradox.mp3",
         "series": "Wataten",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0270",
         "name": "271 Gochiusa - Komorebi Seishunfu-Sunlight Through The Trees.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\271 Gochiusa - Komorebi Seishunfu-Sunlight Through The Trees.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0271",
         "name": "272 Yakunara Mug Cup Ed - Pale Blue.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\272 Yakunara Mug Cup Ed - Pale Blue.mp3",
         "series": "Yakunara Mug Cup",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0272",
@@ -1922,21 +1922,21 @@
         "name": "275 New Game - Kokoro Message.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\275 New Game - Kokoro Message.mp3",
         "series": "New Game",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0275",
         "name": "276 Gj-Bu Ed 3.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\276 Gj-Bu Ed 3.mp3",
         "series": "Gj-Bu",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0276",
         "name": "277 Mikakunin De Shinkoukei - Houkago Vacation.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\277 Mikakunin De Shinkoukei - Houkago Vacation.mp3",
         "series": "Mikakunin",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0277",
@@ -1964,7 +1964,7 @@
         "name": "281 Non Non Biyori - Oyuugi Surun Aware Ponpokobushi.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\281 Non Non Biyori - Oyuugi Surun Aware Ponpokobushi.mp3",
         "series": "Non Non Biyori",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0281",
@@ -1978,70 +1978,70 @@
         "name": "283 Tensei Slime - Boku No Nakanokimi E.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\283 Tensei Slime - Boku No Nakanokimi E.mp3",
         "series": "Tensei Slime",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0283",
         "name": "284 Yuru Yuri - The Maiden In Love Is Yuruyuri.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\284 Yuru Yuri - The Maiden In Love Is Yuruyuri.mp3",
         "series": "Yuru Yuri",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0284",
         "name": "285 Gochiusa - Future Puzzle.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\285 Gochiusa - Future Puzzle.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0285",
         "name": "286 A Channel Ed - Humming Girl.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\286 A Channel Ed - Humming Girl.mp3",
         "series": "A Channel",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0286",
         "name": "287 Girls Und Panzer - Sore Yuke! Otome No Senshadou!!.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\287 Girls Und Panzer - Sore Yuke! Otome No Senshadou!!.mp3",
         "series": "Girls Und Panzer",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0287",
         "name": "288 Konohana Kitan Ed 4.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\288 Konohana Kitan Ed 4.mp3",
         "series": "Konohana Kitan",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0288",
         "name": "289 Gochiusa S1 Op - Daydream Cafe.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\289 Gochiusa S1 Op - Daydream Cafe.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0289",
         "name": "290 K-On Tenshi Ni Fureta Yo!.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\290 K-On Tenshi Ni Fureta Yo!.mp3",
         "series": "K-On",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0290",
         "name": "291 Wataten Op - Kimamana Tenshitachi.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\291 Wataten Op - Kimamana Tenshitachi.mp3",
         "series": "Wataten",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0291",
         "name": "292 Mikakunin - Love \u2661 Specialty.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\292 Mikakunin - Love \u2661 Specialty.mp3",
         "series": "Mikakunin",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0292",
@@ -2055,7 +2055,7 @@
         "name": "294 Slime Taoshite Op - Gudafuwa Every Day.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\294 Slime Taoshite Op - Gudafuwa Every Day.mp3",
         "series": "Slime Taoshite",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0294",
@@ -2076,35 +2076,35 @@
         "name": "297 Yuru Yuri Nachuyachumi Ed - After School Days.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\297 Yuru Yuri Nachuyachumi Ed - After School Days.mp3",
         "series": "Yuru Yuri",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0297",
         "name": "298 Gin No Saji S2 Ed - Oto No Naru Hou E.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\298 Gin No Saji S2 Ed - Oto No Naru Hou E.mp3",
         "series": "Gin No Saji",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0298",
         "name": "299 Koisuru Asteroid - Kokoro Atras.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\299 Koisuru Asteroid - Kokoro Atras.mp3",
         "series": "Koisuru Asteroid",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0299",
         "name": "300 Gochiusa - Winter Gift.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\300 Gochiusa - Winter Gift.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0300",
         "name": "301 Non Non Biyori Op 3 - Tsugihagi Moyou.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\301 Non Non Biyori Op 3 - Tsugihagi Moyou.mp3",
         "series": "Non Non Biyori",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0301",
@@ -2118,70 +2118,70 @@
         "name": "303 Kobayashi Dragon Maid - Peaceful Days.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\303 Kobayashi Dragon Maid - Peaceful Days.mp3",
         "series": "Kobayashi Dragon Maid",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0303",
         "name": "304 Gochiusa S3 Ed - Nakayoshi O Nakayoshi!.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\304 Gochiusa S3 Ed - Nakayoshi O Nakayoshi!.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0304",
         "name": "305 Wataten - Sanjo! Koakuma Angel.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\305 Wataten - Sanjo! Koakuma Angel.mp3",
         "series": "Wataten",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0305",
         "name": "306 Yuru Yuri - Easy And Easy Days.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\306 Yuru Yuri - Easy And Easy Days.mp3",
         "series": "Yuru Yuri",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0306",
         "name": "307 Nichijou - Yukko Is Really Stupid.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\307 Nichijou - Yukko Is Really Stupid.mp3",
         "series": "Nichijou",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0307",
         "name": "308 Gochiusa - Sentence.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\308 Gochiusa - Sentence.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0308",
         "name": "309 Yuyushiki Ed -  Affection.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\309 Yuyushiki Ed -  Affection.mp3",
         "series": "Yuyushiki",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0309",
         "name": "310 Houkago Teibou Nisshi - Run & Gun!.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\310 Houkago Teibou Nisshi - Run & Gun!.mp3",
         "series": "Houkago Teibou Nisshi",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0310",
         "name": "311 New Game - Sweet Everyday.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\311 New Game - Sweet Everyday.mp3",
         "series": "New Game",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0311",
         "name": "312 Gochiusa - Spring Hello!!.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\312 Gochiusa - Spring Hello!!.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0312",
@@ -2216,49 +2216,49 @@
         "name": "317 Aot S4 Part 1 Ed - Shock.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\317 Aot S4 Part 1 Ed - Shock.mp3",
         "series": "Aot",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0317",
         "name": "318 Himouto Umaru-Chan - T S F In Nippon.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\318 Himouto Umaru-Chan - T S F In Nippon.mp3",
         "series": "Himouto Umaru-Chan",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0318",
         "name": "319 Gochiusa - Trouble! Travel!.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\319 Gochiusa - Trouble! Travel!.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0319",
         "name": "320 K-On Gohan Wa Okazu.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\320 K-On Gohan Wa Okazu.mp3",
         "series": "K-On",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0320",
         "name": "321 Mikakunin Ed - Masshiro World.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\321 Mikakunin Ed - Masshiro World.mp3",
         "series": "Mikakunin",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0321",
         "name": "322 Non Non Biyori - Happy Parade.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\322 Non Non Biyori - Happy Parade.mp3",
         "series": "Non Non Biyori",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0322",
         "name": "323 Gochiusa - Tiny Heart.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\323 Gochiusa - Tiny Heart.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0323",
@@ -2279,7 +2279,7 @@
         "name": "326 Mitsuboshi Colors Ed - Miracle Colors Honjitsu Mo Ijou Nashi.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\326 Mitsuboshi Colors Ed - Miracle Colors Honjitsu Mo Ijou Nashi.mp3",
         "series": "Mitsuboshi Colors",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0326",
@@ -2293,7 +2293,7 @@
         "name": "328 Yuru Yuri Nachuyacumi!+ Ed - Ohirune Universe.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\328 Yuru Yuri Nachuyacumi!+ Ed - Ohirune Universe.mp3",
         "series": "Yuru Yuri",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0328",
@@ -2335,7 +2335,7 @@
         "name": "334 Aiura Ed - Zutto Ne.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\334 Aiura Ed - Zutto Ne.mp3",
         "series": "Aiura",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0334",
@@ -2349,21 +2349,21 @@
         "name": "336 Mogumogu Yummy!.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\336 Mogumogu Yummy!.mp3",
         "series": "Okayu",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0336",
         "name": "337 Yuru Yuri - Its Happy Day!.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\337 Yuru Yuri - Its Happy Day!.mp3",
         "series": "Yuru Yuri",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0337",
         "name": "338 Gochiusa - Chess Match Cafe Check Ole.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\338 Gochiusa - Chess Match Cafe Check Ole.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0338",
@@ -2391,21 +2391,21 @@
         "name": "342 Denkigai Ed - Two-Dimension'S Love.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\342 Denkigai Ed - Two-Dimension'S Love.mp3",
         "series": "Denkigai",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0342",
         "name": "343 Yuru Yuri - Akaza Theater.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\343 Yuru Yuri - Akaza Theater.mp3",
         "series": "Yuru Yuri",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0343",
         "name": "344 Gochiusa - Barista Who Became A Rabbit.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\344 Gochiusa - Barista Who Became A Rabbit.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0344",
@@ -2419,28 +2419,28 @@
         "name": "346 Yuru  Camp Ed - Haru No Tonari.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\346 Yuru  Camp Ed - Haru No Tonari.mp3",
         "series": "Yuru Camp",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0346",
         "name": "347 Gochiusa - Hi Hi High.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\347 Gochiusa - Hi Hi High.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0347",
         "name": "348 Dr Stone S2 Ed Hatena-Koe.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\348 Dr Stone S2 Ed Hatena-Koe.mp3",
         "series": "Dr Stone",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0348",
         "name": "349 Machizoku Ed - Yoimachi Cantare.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\349 Machizoku Ed - Yoimachi Cantare.mp3",
         "series": "Machizoku",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0349",
@@ -2461,7 +2461,7 @@
         "name": "352 Joshikousei No Mudazukai Ed - Seishun No Reverb.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\352 Joshikousei No Mudazukai Ed - Seishun No Reverb.mp3",
         "series": "Joshikousei No Mudazukai",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0352",
@@ -2482,14 +2482,14 @@
         "name": "355 Konohana Kitan - 4 O'Clock, The Edge Of The Grass.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\355 Konohana Kitan - 4 O'Clock, The Edge Of The Grass.mp3",
         "series": "Konohana Kitan",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0355",
         "name": "356 Wataten - Dear My Friend.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\356 Wataten - Dear My Friend.mp3",
         "series": "Wataten",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0356",
@@ -2503,21 +2503,21 @@
         "name": "358 Yuru Yuri - I Love You.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\358 Yuru Yuri - I Love You.mp3",
         "series": "Yuru Yuri",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0358",
         "name": "359 Girls Und Panzer - Great Katyusha.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\359 Girls Und Panzer - Great Katyusha.mp3",
         "series": "Girls Und Panzer",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0359",
         "name": "360 Stella No Mahou Op - God Save The Girls.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\360 Stella No Mahou Op - God Save The Girls.mp3",
         "series": "Stella No Mahou",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0360",
@@ -2531,7 +2531,7 @@
         "name": "362 Yakunara Mug Cup S2 Ed - Canary Yellow.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\362 Yakunara Mug Cup S2 Ed - Canary Yellow.mp3",
         "series": "Yakunara Mug Cup",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0362",
@@ -2559,14 +2559,14 @@
         "name": "366 Kinmoza - Sei Shun Iro Mimoza.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\366 Kinmoza - Sei Shun Iro Mimoza.mp3",
         "series": "Kinmoza",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0366",
         "name": "367 Wataten - Yappari Myaanei Number1.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\367 Wataten - Yappari Myaanei Number1.mp3",
         "series": "Wataten",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0367",
@@ -2594,21 +2594,21 @@
         "name": "371 Sewayaki Kitsune No Senko-San Ed - Moffumoffu.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\371 Sewayaki Kitsune No Senko-San Ed - Moffumoffu.mp3",
         "series": "Senko-san",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0371",
         "name": "372 Gochiusa S2 Ed - Tokimeki Poporon.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\372 Gochiusa S2 Ed - Tokimeki Poporon.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0372",
         "name": "373 Non Non Biyori - Pika Pika Nanon.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\373 Non Non Biyori - Pika Pika Nanon.mp3",
         "series": "Non Non Biyori",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0373",
@@ -2622,7 +2622,7 @@
         "name": "375 Houkago Teibou Nisshi Ed - To The World Of Fishing.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\375 Houkago Teibou Nisshi Ed - To The World Of Fishing.mp3",
         "series": "Houkago Teibou Nisshi",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0375",
@@ -2643,14 +2643,14 @@
         "name": "378 Rail Romanesque - Starlight Rail Hana Kiritani.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\378 Rail Romanesque - Starlight Rail Hana Kiritani.mp3",
         "series": "Rail Romanesque",
-        "weight": 2
+        "weight": 4
     },
     {
         "id": "ID0378",
         "name": "379 Gochiusa - Chocolate Rhythm Chocolate Rule.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\379 Gochiusa - Chocolate Rhythm Chocolate Rule.mp3",
         "series": "Gochiusa",
-        "weight": 2
+        "weight": 1
     },
     {
         "id": "ID0379",
@@ -2706,7 +2706,7 @@
         "name": "387 Wataten - Go! Go! Go!.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\387 Wataten - Go! Go! Go!.mp3",
         "series": "Wataten",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0387",
@@ -2727,7 +2727,7 @@
         "name": "390 Sora Yori Mo Tooi Basho - Haru Ka Tooku.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\390 Sora Yori Mo Tooi Basho - Haru Ka Tooku.mp3",
         "series": "Sora Yori Mo Tooi Basho",
-        "weight": 2
+        "weight": 3
     },
     {
         "id": "ID0390",
