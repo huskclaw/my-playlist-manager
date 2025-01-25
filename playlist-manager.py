@@ -941,15 +941,19 @@ class OrderTab(QtWidgets.QWidget):
         """
         Randomizes a playlist while maintaining even distribution of series,
         balancing between large and small series throughout the playlist.
-        
-        :param songs: List of dictionaries, each with 'series' and other metadata
+        Includes weight-based distribution for songs within each band's pile.
+
+        :param songs: List of dictionaries, each with 'series', 'weight', and other metadata
         :return: List of shuffled songs
         """
+        from collections import defaultdict
+        import random
+
         # Group songs by series and get series sizes
         series_dict = defaultdict(list)
         for song in songs:
             series_dict[song['series']].append(song)
-        
+
         # Calculate target distribution for each series
         total_songs = len(songs)
         distribution_points = {}
@@ -967,25 +971,41 @@ class OrderTab(QtWidgets.QWidget):
                     total_songs - 1,
                     distribution_points[series][i] + shift
                 ))
-        
-        # Shuffle songs within each series
-        for series_songs in series_dict.values():
-            random.shuffle(series_songs)
-        
+
+        # Shuffle songs within each series with weight-based distribution
+        for series, series_songs in series_dict.items():
+            # Group songs by weight
+            weight_buckets = defaultdict(list)
+            for song in series_songs:
+                weight_buckets[song['weight']].append(song)
+
+            # Sort weights by descending importance (4 -> 1)
+            sorted_weights = sorted(weight_buckets.keys(), reverse=True)
+
+            # Distribute songs from each weight bucket into the shuffled list
+            shuffled_songs = []
+            while any(weight_buckets.values()):
+                for weight in sorted_weights:
+                    if weight_buckets[weight]:
+                        shuffled_songs.append(weight_buckets[weight].pop(0))
+
+            # Assign back to series_songs with weight evenly distributed
+            series_dict[series] = shuffled_songs
+
         # Initialize result list and tracking variables
         result = [None] * total_songs  # Pre-allocate list with None
         used_positions = set()
         series_index = {series: 0 for series in series_dict.keys()}
-        
+
         # First pass: Place songs near their target positions
         for series in series_dict.keys():
             songs_to_place = series_dict[series]
             target_points = distribution_points[series]
-            
+
             for i, target in enumerate(target_points):
                 if i >= len(songs_to_place):
                     break
-                    
+
                 # Look for the closest available position to the target
                 search_radius = 0
                 while search_radius < total_songs:
@@ -1000,7 +1020,7 @@ class OrderTab(QtWidgets.QWidget):
                                     result[adj]['series'] == songs_to_place[i]['series']):
                                     adjacent_clear = False
                                     break
-                            
+
                             if adjacent_clear:
                                 result[pos] = songs_to_place[i]
                                 used_positions.add(pos)
@@ -1008,7 +1028,7 @@ class OrderTab(QtWidgets.QWidget):
                     if pos in used_positions:  # If we placed a song, break the radius loop
                         break
                     search_radius += 1
-        
+
         # Second pass: Fill any remaining gaps
         remaining_songs = []
         for series, songs in series_dict.items():
@@ -1016,10 +1036,10 @@ class OrderTab(QtWidgets.QWidget):
                 song for song in songs 
                 if song not in result
             )
-        
+
         # Shuffle remaining songs
         random.shuffle(remaining_songs)
-        
+
         # Fill gaps
         for i in range(total_songs):
             if result[i] is None and remaining_songs:
@@ -1032,17 +1052,17 @@ class OrderTab(QtWidgets.QWidget):
                             result[adj]['series'] == song['series']):
                             adjacent_clear = False
                             break
-                    
+
                     if adjacent_clear:
                         result[i] = song
                         remaining_songs.pop(j)
                         break
-        
+
         # Final pass: If any positions are still None, fill them with any remaining songs
         for i in range(total_songs):
             if result[i] is None and remaining_songs:
                 result[i] = remaining_songs.pop(0)
-        
+
         return [song for song in result if song is not None]
 
     def enable_selected_songs(self):
