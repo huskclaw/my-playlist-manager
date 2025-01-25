@@ -946,9 +946,7 @@ class OrderTab(QtWidgets.QWidget):
         :param songs: List of dictionaries, each with 'series', 'weight', and other metadata
         :return: List of shuffled songs
         """
-        from collections import defaultdict
-        import random
-
+        
         # Group songs by series and get series sizes
         series_dict = defaultdict(list)
         for song in songs:
