@@ -466,23 +466,33 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
     def load_registered_songs(self):
         if not self.current_folder:
             return
-            
+
         current_scroll = self.table_registered.verticalScrollBar().value()
-        
+        search_text = self.filter_input.text().lower()  # Changed from search_bar to filter_input
+
         # Temporarily disable sorting to prevent recursion
         self.table_registered.setSortingEnabled(False)
-        
+
         # Clear the table
         self.table_registered.setRowCount(0)
-        
+
         # Load songs with their order information
         folder_songs = load_folder_songs(self.current_folder)
-        
+
+        # Apply search filter if search text exists
+        if search_text:
+            folder_songs = [
+                song for song in folder_songs
+                if search_text in song["name"].lower() or
+                search_text in song["series"].lower() or
+                search_text in song["id"].lower()
+            ]
+
         # Get current sort column and order
         header = self.table_registered.horizontalHeader()
         sort_column = header.sortIndicatorSection()
         sort_order = header.sortIndicatorOrder()
-        
+
         # Sort the songs list based on the current sort column
         if sort_column == 0:  # Order
             folder_songs.sort(key=lambda x: x.get("order", 0), reverse=(sort_order == QtCore.Qt.DescendingOrder))
@@ -496,23 +506,23 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
             folder_songs.sort(key=lambda x: x["series"], reverse=(sort_order == QtCore.Qt.DescendingOrder))
         elif sort_column == 5:  # Weight
             folder_songs.sort(key=lambda x: x["weight"], reverse=(sort_order == QtCore.Qt.DescendingOrder))
-        
+
         # Populate the table
         for row, song in enumerate(folder_songs):
             self.table_registered.insertRow(row)
-            
+
             # Create and set items
             order_item = QtWidgets.QTableWidgetItem()
             order_item.setData(QtCore.Qt.DisplayRole, int(song.get("order", 0)))
-            
+
             id_item = QtWidgets.QTableWidgetItem(song["id"])
             name_item = QtWidgets.QTableWidgetItem(song["name"])
             path_item = QtWidgets.QTableWidgetItem(song["path"])
             series_item = QtWidgets.QTableWidgetItem(song["series"])
-            
+
             weight_item = QtWidgets.QTableWidgetItem()
             weight_item.setData(QtCore.Qt.DisplayRole, int(song["weight"]))
-            
+
             # Set items
             self.table_registered.setItem(row, 0, order_item)
             self.table_registered.setItem(row, 1, id_item)
@@ -520,10 +530,10 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
             self.table_registered.setItem(row, 3, path_item)
             self.table_registered.setItem(row, 4, series_item)
             self.table_registered.setItem(row, 5, weight_item)
-        
+
         # Re-enable sorting
         self.table_registered.setSortingEnabled(True)
-        
+
         # Restore scroll position
         self.table_registered.verticalScrollBar().setValue(current_scroll)
 
@@ -550,6 +560,7 @@ class PlaylistManagerUI(QtWidgets.QMainWindow):
                     hidden = False
                     break
             self.table_registered.setRowHidden(row, hidden)
+        self.load_registered_songs()
 
     def edit_selected_songs(self):
         selected_rows = sorted(set(item.row() for item in self.table_registered.selectedItems()))
