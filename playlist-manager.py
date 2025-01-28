@@ -878,6 +878,7 @@ class OrderTab(QtWidgets.QWidget):
             
         new_order = self.order_spin.value()
         folder_songs = load_folder_songs(self.parent.current_folder)
+        total_songs = len(folder_songs)
         
         # Get selected song IDs
         selected_song_ids = [self.table.item(row, 2).text() for row in selected_rows]
@@ -885,28 +886,53 @@ class OrderTab(QtWidgets.QWidget):
         # First, preserve currently disabled songs
         disabled_songs = {
             song_id: order for song_id, order in self.current_changes.items()
-            if order == -1 and song_id not in selected_song_ids
+            if order == -1
         }
         
-        # Update preview orders for selected songs
-        for song_id in selected_song_ids:
-            self.current_changes[song_id] = new_order
-            new_order += 1
+        # Create a mapping of current orders (considering both actual and preview orders)
+        current_order_mapping = {}
+        for song in folder_songs:
+            song_id = song["id"]
+            if song_id in disabled_songs:
+                continue
+            current_order_mapping[song_id] = self.current_changes.get(song_id, song.get("order", 0))
         
-        # Update other songs' preview orders, skipping disabled ones
-        max_order = len(folder_songs)
+        # Clear previous changes (except disabled songs)
+        self.current_changes.clear()
+        self.current_changes.update(disabled_songs)
+        
+        # Calculate how many positions we need to shift
+        positions_needed = len(selected_song_ids)
+        
+        # Sort songs by their current order for processing
+        sorted_songs = sorted(
+            [(song_id, order) for song_id, order in current_order_mapping.items()],
+            key=lambda x: x[1]
+        )
+        
+        # Create new order assignments
+        new_orders = {}
         current_pos = 1
         
-        for song in folder_songs:
-            if song["id"] not in selected_song_ids and song["id"] not in disabled_songs:
-                while current_pos in [self.current_changes.get(sid) for sid in selected_song_ids]:
-                    current_pos += 1
-                if current_pos <= max_order:
-                    self.current_changes[song["id"]] = current_pos
-                    current_pos += 1
+        # Process all songs in order
+        for song_id, _ in sorted_songs:
+            if song_id in selected_song_ids:
+                continue
+            
+            # Skip the range where selected songs will be placed
+            if current_pos == new_order:
+                current_pos += positions_needed
+                
+            if current_pos <= total_songs:
+                new_orders[song_id] = current_pos
+                current_pos += 1
         
-        # Restore disabled songs
-        self.current_changes.update(disabled_songs)
+        # Place selected songs in their new positions
+        for i, song_id in enumerate(selected_song_ids):
+            new_orders[song_id] = new_order + i
+        
+        # Update current_changes with new orders
+        self.current_changes.update(new_orders)
         
         self.refresh_view()
 
@@ -1149,60 +1175,80 @@ class OrderTab(QtWidgets.QWidget):
                 os.makedirs(target_dir, exist_ok=True)
             else:
                 os.makedirs(disabled_folder, exist_ok=True)
-            
+
+            # Load current state
             songs = load_songs_from_database()
-            new_songs = []  # Track new songs to be added
+            new_songs = []
+            used_ids = {s["id"] for s in songs}
             
-            # Process each song in the current directory
+            # Track all changes for potential rollback
+            file_operations = []  # List of (operation, old_path, new_path) tuples
+            db_changes = []  # List of (song_dict, original_state) tuples
+            new_db_entries = []  # List of new songs to be added
+            
+            # First pass: Validate all file operations are possible
             for song in songs:
                 if os.path.dirname(song["path"]) == current_dir:
                     old_path = song["path"]
                     filename = os.path.basename(old_path)
                     
+                    # Skip if file doesn't exist
+                    if not os.path.exists(old_path):
+                        raise FileNotFoundError(f"Source file not found: {old_path}")
+                    
                     # Extract original filename without order prefix
                     match = ORDER_PATTERN.match(filename)
                     original_name = match.group(2) if match else filename
                     
-                    # Get the new order, checking both current_changes and existing order
+                    # Get the new order
                     current_order = get_playlist_order(current_dir, song["id"])
                     new_order = self.current_changes.get(song["id"], current_order)
                     
-                    # Check if the song is disabled in current_changes
+                    # Check if the song is disabled
                     is_disabled = new_order == -1 or (
                         song["id"] not in self.current_changes and 
                         current_order == -1
                     )
                     
-                    if is_disabled:  # Disabled song
-                        if self.new_dir_radio.isChecked():
-                            continue  # Skip disabled songs when copying to new directory
-                        else:
-                            # Move to Disabled folder, keeping original filename
-                            new_path = os.path.join(disabled_folder, filename)
-                            shutil.move(old_path, new_path)
-                            song["path"] = new_path
-                    else:
-                        # Create new filename with updated order
+                    if is_disabled and not self.new_dir_radio.isChecked():
+                        new_path = os.path.join(disabled_folder, filename)
+                        # Check if target path is writable
+                        if os.path.exists(new_path):
+                            try:
+                                with open(new_path, 'ab'):
+                                    pass
+                            except IOError:
+                                raise IOError(f"Cannot write to target path: {new_path}")
+                        file_operations.append(('move', old_path, new_path))
+                        song["path"] = new_path  # Update path in song dict
+                        db_changes.append((song, song.copy()))
+                    elif not is_disabled:  # Only process enabled songs
                         new_filename = f"{new_order:03d} {original_name}"
                         
                         if self.new_dir_radio.isChecked():
-                            # Copy file to new location with new filename
                             new_path = os.path.join(target_dir, new_filename)
-                            shutil.copy2(old_path, new_path)
+                            # Check if target path is writable
+                            if os.path.exists(new_path):
+                                try:
+                                    with open(new_path, 'ab'):
+                                        pass
+                                except IOError:
+                                    raise IOError(f"Cannot write to target path: {new_path}")
                             
-                            # Generate a new unique ID considering both existing and new songs
-                            used_ids = {s["id"] for s in songs}.union({s["id"] for s in new_songs})
+                            file_operations.append(('copy', old_path, new_path))
+                            
+                            # Generate new unique ID for this song
                             new_id = None
                             for i in range(10000):
                                 candidate_id = f"{ID_PREFIX}{i:04d}"
                                 if candidate_id not in used_ids:
                                     new_id = candidate_id
+                                    used_ids.add(new_id)
                                     break
                             
                             if new_id is None:
                                 raise ValueError("No available IDs left.")
                             
-                            # Create new song entry
                             new_song = {
                                 "id": new_id,
                                 "name": new_filename,
@@ -1210,53 +1256,101 @@ class OrderTab(QtWidgets.QWidget):
                                 "series": song["series"],
                                 "weight": song["weight"]
                             }
-                            new_songs.append(new_song)
-                            
-                            # Add ID to the new file's metadata
-                            add_id_to_metadata(new_path, new_id)
-                            
-                            # Update title metadata for the new file
-                            try:
-                                audio = EasyID3(new_path)
-                            except ID3NoHeaderError:
-                                audio = EasyID3()
-                                audio.save(new_path)
-                            
-                            # Set title with order prefix and without extension
-                            title_with_order = os.path.splitext(new_filename)[0]
-                            audio['title'] = title_with_order
-                            audio.save()
-                            
-                            # Update order in the new directory with the new ID
-                            update_playlist_order(target_dir, new_id, new_order)
+                            new_db_entries.append((new_song, new_order))
                         else:
-                            # Rename file in current directory
                             new_path = os.path.join(current_dir, new_filename)
-                            os.rename(old_path, new_path)
-                            song["path"] = new_path
-                            song["name"] = new_filename
+                            # Check if target path is writable
+                            if os.path.exists(new_path):
+                                try:
+                                    with open(new_path, 'ab'):
+                                        pass
+                                except IOError:
+                                    raise IOError(f"Cannot write to target path: {new_path}")
                             
-                            # Update title metadata
-                            try:
-                                audio = EasyID3(new_path)
-                            except ID3NoHeaderError:
-                                audio = EasyID3()
-                                audio.save(new_path)
-                            
-                            # Set title with order prefix and without extension
-                            title_with_order = os.path.splitext(new_filename)[0]
-                            audio['title'] = title_with_order
-                            audio.save()
-                            
-                            # Update order in current directory
+                            file_operations.append(('rename', old_path, new_path))
+                            song["path"] = new_path  # Update path in song dict
+                            song["name"] = new_filename  # Update name in song dict
+                            db_changes.append((song, song.copy()))
+            
+            # Second pass: Execute all operations
+            try:
+                # Execute file operations
+                for operation, old_path, new_path in file_operations:
+                    if operation == 'move':
+                        shutil.move(old_path, new_path)
+                    elif operation == 'copy':
+                        shutil.copy2(old_path, new_path)
+                    elif operation == 'rename':
+                        os.rename(old_path, new_path)
+                
+                # Update database entries and metadata
+                for song, original in db_changes:
+                    if os.path.exists(song["path"]):  # Only update if file operation succeeded
+                        # Update metadata
+                        try:
+                            audio = EasyID3(song["path"])
+                        except ID3NoHeaderError:
+                            audio = EasyID3()
+                            audio.save(song["path"])
+                        
+                        # Set title without extension and ensure it reflects new order
+                        title_with_order = os.path.splitext(os.path.basename(song["path"]))[0]
+                        audio['title'] = title_with_order
+                        audio.save()
+                        
+                        # Update order in database
+                        if not self.new_dir_radio.isChecked():
+                            new_order = self.current_changes.get(song["id"], get_playlist_order(current_dir, song["id"]))
                             update_playlist_order(current_dir, song["id"], new_order)
-            
-            # Add all new songs to the database at once
-            if new_songs:
-                songs.extend(new_songs)
-            
-            # Save changes to database
-            save_songs_to_database(songs)
+                            
+                            # Find and update the song in the main songs list
+                            for s in songs:
+                                if s["id"] == song["id"]:
+                                    s["path"] = song["path"]
+                                    s["name"] = song["name"]
+                                    break
+                
+                # Add new songs and update their metadata
+                for new_song, new_order in new_db_entries:
+                    add_id_to_metadata(new_song["path"], new_song["id"])
+                    try:
+                        audio = EasyID3(new_song["path"])
+                    except ID3NoHeaderError:
+                        audio = EasyID3()
+                        audio.save(new_song["path"])
+                    
+                    # Set title without extension
+                    title_with_order = os.path.splitext(os.path.basename(new_song["path"]))[0]
+                    audio['title'] = title_with_order
+                    audio.save()
+                    
+                    # Update order for the new song
+                    update_playlist_order(target_dir, new_song["id"], new_order)
+                    new_songs.append(new_song)
+                
+                # Update database
+                if new_songs:
+                    songs.extend(new_songs)
+                save_songs_to_database(songs)
+                
+            except Exception as e:
+                # Rollback file operations
+                for operation, old_path, new_path in reversed(file_operations):
+                    try:
+                        if operation == 'move' or operation == 'rename':
+                            if os.path.exists(new_path) and not os.path.exists(old_path):
+                                os.rename(new_path, old_path)
+                        elif operation == 'copy':
+                            if os.path.exists(new_path):
+                                os.remove(new_path)
+                    except:
+                        pass  # Best effort rollback
+                
+                # Restore database to original state
+                original_songs = [original for _, original in db_changes]
+                save_songs_to_database(original_songs)
+                
+                raise Exception(f"Operation failed, changes rolled back: {str(e)}")
             
             # If new directory was created, switch to it
             if self.new_dir_radio.isChecked():

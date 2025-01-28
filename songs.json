@@ -25,7 +25,7 @@
         "name": "004 New Game - Ame No Chihoshi Zora.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\004 New Game - Ame No Chihoshi Zora.mp3",
         "series": "New Game",
-        "weight": 1
+        "weight": 2
     },
     {
         "id": "ID0004",
@@ -218,9 +218,9 @@
     },
     {
         "id": "ID0031",
-        "name": "032 Flos - Cover.mp3",
-        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\032 Flos - Cover.mp3",
-        "series": "Okayu",
+        "name": "032 Hololive - Okayu Flos Cover.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\032 Hololive - Okayu Flos Cover.mp3",
+        "series": "Hololive",
         "weight": 2
     },
     {
@@ -270,7 +270,7 @@
         "name": "039 Yama No Susume S1 Ed - Sutakkato Days.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\039 Yama No Susume S1 Ed - Sutakkato Days.mp3",
         "series": "Yama No Susume",
-        "weight": 4
+        "weight": 3
     },
     {
         "id": "ID0039",
@@ -865,7 +865,7 @@
         "name": "124 Gochiusa - Tokimeki Loop Ni Notte.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\124 Gochiusa - Tokimeki Loop Ni Notte.mp3",
         "series": "Gochiusa",
-        "weight": 1
+        "weight": 2
     },
     {
         "id": "ID0124",
@@ -949,7 +949,7 @@
         "name": "136 Gochiusa - Kirakira Ala Mode.mp3",
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\136 Gochiusa - Kirakira Ala Mode.mp3",
         "series": "Gochiusa",
-        "weight": 1
+        "weight": 2
     },
     {
         "id": "ID0136",
@@ -2346,9 +2346,9 @@
     },
     {
         "id": "ID0335",
-        "name": "336 Mogumogu Yummy!.mp3",
-        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\336 Mogumogu Yummy!.mp3",
-        "series": "Okayu",
+        "name": "336 Hololive - Okayu Mogumogu Yummy!.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\336 Hololive - Okayu Mogumogu Yummy!.mp3",
+        "series": "Hololive",
         "weight": 3
     },
     {
@@ -2728,5 +2728,3204 @@
         "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\390 Sora Yori Mo Tooi Basho - Haru Ka Tooku.mp3",
         "series": "Sora Yori Mo Tooi Basho",
         "weight": 3
+    },
+    {
+        "id": "ID0780",
+        "name": "391 Aharen-san - AHAREN HEART.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\391 Aharen-san - AHAREN HEART.mp3",
+        "series": "Aharen-san",
+        "weight": 3
+    },
+    {
+        "id": "ID0781",
+        "name": "392 Aot - S3 ED Akatsuki no Requiem.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\392 Aot - S3 ED Akatsuki no Requiem.mp3",
+        "series": "Aot",
+        "weight": 2
+    },
+    {
+        "id": "ID0782",
+        "name": "393 Aot - S3 P2 ED Name of Love.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\393 Aot - S3 P2 ED Name of Love.mp3",
+        "series": "Aot",
+        "weight": 2
+    },
+    {
+        "id": "ID0783",
+        "name": "394 Blue Archive - Shining Summer Days.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\394 Blue Archive - Shining Summer Days.mp3",
+        "series": "Blue Archive",
+        "weight": 3
+    },
+    {
+        "id": "ID0784",
+        "name": "395 Blue Archive - Our Quest.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\395 Blue Archive - Our Quest.mp3",
+        "series": "Blue Archive",
+        "weight": 3
+    },
+    {
+        "id": "ID0785",
+        "name": "396 Danchigai - Ed Gentle Mischief by PRIM\u2606 YOEGi.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\396 Danchigai - Ed Gentle Mischief by PRIM\u2606 YOEGi.mp3",
+        "series": "Danchigai",
+        "weight": 3
+    },
+    {
+        "id": "ID0786",
+        "name": "397 Danchigai - Ed Stream Princess Durandal by PRIM\u2606 YOEGi - Listen online for free on SoundCloud.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\397 Danchigai - Ed Stream Princess Durandal by PRIM\u2606 YOEGi - Listen online for free on SoundCloud.mp3",
+        "series": "Danchigai",
+        "weight": 2
+    },
+    {
+        "id": "ID0787",
+        "name": "398 Eromanga Sensei - ED adrenaline!!!.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\398 Eromanga Sensei - ED adrenaline!!!.mp3",
+        "series": "Eromanga Sensei",
+        "weight": 3
+    },
+    {
+        "id": "ID0788",
+        "name": "399 Eromanga Sensei - OP Hitorigoto.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\399 Eromanga Sensei - OP Hitorigoto.mp3",
+        "series": "Eromanga Sensei",
+        "weight": 3
+    },
+    {
+        "id": "ID0789",
+        "name": "400 Girls Und Panzer - Grand symphony.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\400 Girls Und Panzer - Grand symphony.mp3",
+        "series": "Girls Und Panzer",
+        "weight": 2
+    },
+    {
+        "id": "ID0790",
+        "name": "401 Girls Und Panzer - Mein Weg und Dein Weg ~Watashi no Michi, Omae no Michi.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\401 Girls Und Panzer - Mein Weg und Dein Weg ~Watashi no Michi, Omae no Michi.mp3",
+        "series": "Girls Und Panzer",
+        "weight": 3
+    },
+    {
+        "id": "ID0791",
+        "name": "402 Girls Und Panzer - The sound of a bang.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\402 Girls Und Panzer - The sound of a bang.mp3",
+        "series": "Girls Und Panzer",
+        "weight": 2
+    },
+    {
+        "id": "ID0792",
+        "name": "403 Hololive - Okayu Nekokabur\u012bna.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\403 Hololive - Okayu Nekokabur\u012bna.mp3",
+        "series": "Hololive",
+        "weight": 4
+    },
+    {
+        "id": "ID0793",
+        "name": "404 Katomori - Makuramoto ni Ghost Remix.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\404 Katomori - Makuramoto ni Ghost Remix.mp3",
+        "series": "Single",
+        "weight": 2
+    },
+    {
+        "id": "ID0794",
+        "name": "405 Kinmoza - Shining Star.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\405 Kinmoza - Shining Star.mp3",
+        "series": "Kinmoza",
+        "weight": 3
+    },
+    {
+        "id": "ID0795",
+        "name": "406 Kinmoza - Starring!!.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\406 Kinmoza - Starring!!.mp3",
+        "series": "Kinmoza",
+        "weight": 3
+    },
+    {
+        "id": "ID0796",
+        "name": "407 Konohana Kitan - Kokoro ni Tsubomi.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\407 Konohana Kitan - Kokoro ni Tsubomi.mp3",
+        "series": "Konohana Kitan",
+        "weight": 2
+    },
+    {
+        "id": "ID0798",
+        "name": "408 Maitetsu Pure Station - OP.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\408 Maitetsu Pure Station - OP.mp3",
+        "series": "Rail Romanesque",
+        "weight": 4
+    },
+    {
+        "id": "ID0799",
+        "name": "409 PIKASONIC - feat. nakotanmaru MEGAREX Release.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\409 PIKASONIC - feat. nakotanmaru MEGAREX Release.mp3",
+        "series": "Pikasonic",
+        "weight": 2
+    },
+    {
+        "id": "ID0800",
+        "name": "410 PIKASONIC - Lost My Mind feat. nakotanmaru.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\410 PIKASONIC - Lost My Mind feat. nakotanmaru.mp3",
+        "series": "Pikasonic",
+        "weight": 2
+    },
+    {
+        "id": "ID0801",
+        "name": "411 PIKASONIC - nakotanmaru ver..mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\411 PIKASONIC - nakotanmaru ver..mp3",
+        "series": "Pikasonic",
+        "weight": 2
+    },
+    {
+        "id": "ID0802",
+        "name": "412 PIKASONIC - Tatsunoshin-Euphoria feat. Tsugumi Nagahara.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\412 PIKASONIC - Tatsunoshin-Euphoria feat. Tsugumi Nagahara.mp3",
+        "series": "Pikasonic",
+        "weight": 2
+    },
+    {
+        "id": "ID0803",
+        "name": "413 PIKASONIC - Tatsunoshin-Lockdown ft. NEONA.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\413 PIKASONIC - Tatsunoshin-Lockdown ft. NEONA.mp3",
+        "series": "Pikasonic",
+        "weight": 2
+    },
+    {
+        "id": "ID0804",
+        "name": "414 PIKASONIC - Tatsunoshin-Shizuku ft. NEONA KOTONOHOUSE.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\414 PIKASONIC - Tatsunoshin-Shizuku ft. NEONA KOTONOHOUSE.mp3",
+        "series": "Pikasonic",
+        "weight": 2
+    },
+    {
+        "id": "ID0805",
+        "name": "415 Ro-Kyu-Bu - ED full Party Love Okkiku Naritai.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\415 Ro-Kyu-Bu - ED full Party Love Okkiku Naritai.mp3",
+        "series": "Ro-Kyu-Bu",
+        "weight": 3
+    },
+    {
+        "id": "ID0806",
+        "name": "416 Ro-Kyu-Bu - OP SHOOT.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\416 Ro-Kyu-Bu - OP SHOOT.mp3",
+        "series": "Ro-Kyu-Bu",
+        "weight": 2
+    },
+    {
+        "id": "ID0807",
+        "name": "417 Shiro Jump - Jump.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\417 Shiro Jump - Jump.mp3",
+        "series": "Shiro Jump",
+        "weight": 3
+    },
+    {
+        "id": "ID0808",
+        "name": "418 Shiro Jump - Nyao.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\418 Shiro Jump - Nyao.mp3",
+        "series": "Shiro Jump",
+        "weight": 3
+    },
+    {
+        "id": "ID0809",
+        "name": "419 Yama No Susume - Cocoiro Rainbow.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\419 Yama No Susume - Cocoiro Rainbow.mp3",
+        "series": "Yama No Susume",
+        "weight": 2
+    },
+    {
+        "id": "ID0810",
+        "name": "420 Yunomi - feat. nicamoq Fruit on the Dancefloor.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\420 Yunomi - feat. nicamoq Fruit on the Dancefloor.mp3",
+        "series": "Yunomi",
+        "weight": 2
+    },
+    {
+        "id": "ID0811",
+        "name": "421 Yunomi - ft. Happy Kuru Kuru Jotori Remix.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\421 Yunomi - ft. Happy Kuru Kuru Jotori Remix.mp3",
+        "series": "Yunomi",
+        "weight": 2
+    },
+    {
+        "id": "ID0812",
+        "name": "422 Yunomi - Future Bass Yunomi feat. Rinahamu Fashion.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\422 Yunomi - Future Bass Yunomi feat. Rinahamu Fashion.mp3",
+        "series": "Yunomi",
+        "weight": 2
+    },
+    {
+        "id": "ID0813",
+        "name": "423 Yunomi - Jellyfish.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\423 Yunomi - Jellyfish.mp3",
+        "series": "Yunomi",
+        "weight": 2
+    },
+    {
+        "id": "ID0814",
+        "name": "424 Yunomi - Mentai Cosmic feat. Nicamoq.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\424 Yunomi - Mentai Cosmic feat. Nicamoq.mp3",
+        "series": "Yunomi",
+        "weight": 2
+    },
+    {
+        "id": "ID0815",
+        "name": "425 Yunomi - Yunomi ni Ocha Shite.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\425 Yunomi - Yunomi ni Ocha Shite.mp3",
+        "series": "Yunomi",
+        "weight": 2
+    },
+    {
+        "id": "ID0816",
+        "name": "426 Yunomi - Happy Life.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\426 Yunomi - Happy Life.mp3",
+        "series": "Yunomi",
+        "weight": 2
+    },
+    {
+        "id": "ID0817",
+        "name": "427 Yuru Yuri - Rettsurabu de ikimashou.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\427 Yuru Yuri - Rettsurabu de ikimashou.mp3",
+        "series": "Yuru Yuri",
+        "weight": 2
+    },
+    {
+        "id": "ID0818",
+        "name": "428 Yuyushiki - Yuru Bura Tto Ikou.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\428 Yuyushiki - Yuru Bura Tto Ikou.mp3",
+        "series": "Yuyushiki",
+        "weight": 2
+    },
+    {
+        "id": "ID0819",
+        "name": "429 Yuyushiki - OVA ED Aozora no Tsukurikata.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\429 Yuyushiki - OVA ED Aozora no Tsukurikata.mp3",
+        "series": "Yuyushiki",
+        "weight": 4
+    },
+    {
+        "id": "ID0820",
+        "name": "430 Yuyushiki - OVA OP Kirameki no Hi.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\430 Yuyushiki - OVA OP Kirameki no Hi.mp3",
+        "series": "Yuyushiki",
+        "weight": 2
+    },
+    {
+        "id": "ID0390",
+        "name": "431 Hololive - Fubuki Hi Fine FOX!!.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\431 Hololive - Fubuki Hi Fine FOX!!.mp3",
+        "series": "Hololive",
+        "weight": 2
+    },
+    {
+        "id": "ID0391",
+        "name": "432 Hololive - Fubuki KONKON Beats.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\432 Hololive - Fubuki KONKON Beats.mp3",
+        "series": "Hololive",
+        "weight": 3
+    },
+    {
+        "id": "ID0392",
+        "name": "433 Hololive - Fubuki Say Fan Fare.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\433 Hololive - Fubuki Say Fan Fare.mp3",
+        "series": "Hololive",
+        "weight": 2
+    },
+    {
+        "id": "ID0393",
+        "name": "434 Hololive - Fubuki Silv President.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\434 Hololive - Fubuki Silv President.mp3",
+        "series": "Hololive",
+        "weight": 3
+    },
+    {
+        "id": "ID0394",
+        "name": "435 Hololive - Okayu Planet Loop cover.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\435 Hololive - Okayu Planet Loop cover.mp3",
+        "series": "Hololive",
+        "weight": 3
+    },
+    {
+        "id": "ID0395",
+        "name": "436 Hololive - Fubuki LOVE 2000 cover.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\436 Hololive - Fubuki LOVE 2000 cover.mp3",
+        "series": "Hololive",
+        "weight": 3
+    },
+    {
+        "id": "ID0396",
+        "name": "437 Maitetsu - All Aboard!!.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\437 Maitetsu - All Aboard!!.mp3",
+        "series": "Rail Romanesque",
+        "weight": 3
+    },
+    {
+        "id": "ID0397",
+        "name": "438 Maitetsu - Wherever this Path May Go.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\438 Maitetsu - Wherever this Path May Go.mp3",
+        "series": "Rail Romanesque",
+        "weight": 4
+    },
+    {
+        "id": "ID0398",
+        "name": "439 Maitetsu Pure Station - ED Overlapping Emotions.mp3",
+        "path": "D:/VSCode/playlist-manager/playlist-manager-app-2/self-radio\\439 Maitetsu Pure Station - ED Overlapping Emotions.mp3",
+        "series": "Rail Romanesque",
+        "weight": 4
+    },
+    {
+        "id": "ID0399",
+        "name": "001 Majo no Tabitabi - Op Full.mp3",
+        "path": "D:/Music/Self Radio\\001 Majo no Tabitabi - Op Full.mp3",
+        "series": "Majo no Tabitabi",
+        "weight": 2
+    },
+    {
+        "id": "ID0400",
+        "name": "002 Gochiusa - Everyday Decoration.mp3",
+        "path": "D:/Music/Self Radio\\002 Gochiusa - Everyday Decoration.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0401",
+        "name": "003 Gakkou Gurashi - Afterglow.mp3",
+        "path": "D:/Music/Self Radio\\003 Gakkou Gurashi - Afterglow.mp3",
+        "series": "Gakkou Gurashi",
+        "weight": 2
+    },
+    {
+        "id": "ID0402",
+        "name": "004 New Game - Ame No Chihoshi Zora.mp3",
+        "path": "D:/Music/Self Radio\\004 New Game - Ame No Chihoshi Zora.mp3",
+        "series": "New Game",
+        "weight": 2
+    },
+    {
+        "id": "ID0403",
+        "name": "005 Rail Romanesque - Bon Voyage.mp3",
+        "path": "D:/Music/Self Radio\\005 Rail Romanesque - Bon Voyage.mp3",
+        "series": "Rail Romanesque",
+        "weight": 3
+    },
+    {
+        "id": "ID0404",
+        "name": "006 Gochiusa - Chocolatine De 3 O'Clock.mp3",
+        "path": "D:/Music/Self Radio\\006 Gochiusa - Chocolatine De 3 O'Clock.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0405",
+        "name": "007 Houkago Saikoro Op - Present Moment.mp3",
+        "path": "D:/Music/Self Radio\\007 Houkago Saikoro Op - Present Moment.mp3",
+        "series": "Houkago Saikoro",
+        "weight": 2
+    },
+    {
+        "id": "ID0406",
+        "name": "008 Non Non Biyori - Ed 1.mp3",
+        "path": "D:/Music/Self Radio\\008 Non Non Biyori - Ed 1.mp3",
+        "series": "Non Non Biyori",
+        "weight": 4
+    },
+    {
+        "id": "ID0407",
+        "name": "009 Gochiusa - Glitter Cafe Time.mp3",
+        "path": "D:/Music/Self Radio\\009 Gochiusa - Glitter Cafe Time.mp3",
+        "series": "Gochiusa",
+        "weight": 4
+    },
+    {
+        "id": "ID0408",
+        "name": "010 K-On - U&I.mp3",
+        "path": "D:/Music/Self Radio\\010 K-On - U&I.mp3",
+        "series": "K-On",
+        "weight": 3
+    },
+    {
+        "id": "ID0409",
+        "name": "011 Mikakunin - Neat Patroll.mp3",
+        "path": "D:/Music/Self Radio\\011 Mikakunin - Neat Patroll.mp3",
+        "series": "Mikakunin",
+        "weight": 4
+    },
+    {
+        "id": "ID0410",
+        "name": "012 Gochiusa - So That I Can Rely On You.mp3",
+        "path": "D:/Music/Self Radio\\012 Gochiusa - So That I Can Rely On You.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0411",
+        "name": "013 Wataten - Mugendai Happiness.mp3",
+        "path": "D:/Music/Self Radio\\013 Wataten - Mugendai Happiness.mp3",
+        "series": "Wataten",
+        "weight": 2
+    },
+    {
+        "id": "ID0412",
+        "name": "014 Acchi Kocchi - Op Full.mp3",
+        "path": "D:/Music/Self Radio\\014 Acchi Kocchi - Op Full.mp3",
+        "series": "Acchi Kocchi",
+        "weight": 2
+    },
+    {
+        "id": "ID0413",
+        "name": "015 Centaur No Nayami Op - Oshiete Darwin.mp3",
+        "path": "D:/Music/Self Radio\\015 Centaur No Nayami Op - Oshiete Darwin.mp3",
+        "series": "Centaur No Nayami",
+        "weight": 3
+    },
+    {
+        "id": "ID0414",
+        "name": "016 Sora yori mo Tooi Basho ED - Koko kara, Koko kara.mp3",
+        "path": "D:/Music/Self Radio\\016 Sora yori mo Tooi Basho ED - Koko kara, Koko kara.mp3",
+        "series": "Sora Yori Mo Tooi Basho",
+        "weight": 4
+    },
+    {
+        "id": "ID0415",
+        "name": "017 Aharen-San Op - Wa Narenai Kyori.mp3",
+        "path": "D:/Music/Self Radio\\017 Aharen-San Op - Wa Narenai Kyori.mp3",
+        "series": "Aharen-san",
+        "weight": 4
+    },
+    {
+        "id": "ID0416",
+        "name": "018 Gochiusa - Sentimental Pretend.mp3",
+        "path": "D:/Music/Self Radio\\018 Gochiusa - Sentimental Pretend.mp3",
+        "series": "Gochiusa",
+        "weight": 3
+    },
+    {
+        "id": "ID0417",
+        "name": "019 Urara Meirochou Op - Yumeji Labyrinth.mp3",
+        "path": "D:/Music/Self Radio\\019 Urara Meirochou Op - Yumeji Labyrinth.mp3",
+        "series": "Urara Meirochou",
+        "weight": 4
+    },
+    {
+        "id": "ID0418",
+        "name": "020 ReZero - Wishing.mp3",
+        "path": "D:/Music/Self Radio\\020 ReZero - Wishing.mp3",
+        "series": "ReZero",
+        "weight": 4
+    },
+    {
+        "id": "ID0419",
+        "name": "021 Gochiusa - Lets Say Lets Go Out.mp3",
+        "path": "D:/Music/Self Radio\\021 Gochiusa - Lets Say Lets Go Out.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0420",
+        "name": "022 Inu X Boku Ss - Op Full.mp3",
+        "path": "D:/Music/Self Radio\\022 Inu X Boku Ss - Op Full.mp3",
+        "series": "Inu X Boku SS",
+        "weight": 2
+    },
+    {
+        "id": "ID0421",
+        "name": "023 Kantai Collection - Fubuki.mp3",
+        "path": "D:/Music/Self Radio\\023 Kantai Collection - Fubuki.mp3",
+        "series": "Kantai Collection",
+        "weight": 3
+    },
+    {
+        "id": "ID0422",
+        "name": "024 Slow Start Ed - Kaze No Koe Wo Kikinagara.mp3",
+        "path": "D:/Music/Self Radio\\024 Slow Start Ed - Kaze No Koe Wo Kikinagara.mp3",
+        "series": "Slow Start",
+        "weight": 4
+    },
+    {
+        "id": "ID0423",
+        "name": "025 Gochiusa - Fun!Fun!.mp3",
+        "path": "D:/Music/Self Radio\\025 Gochiusa - Fun!Fun!.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0424",
+        "name": "026 Yuru Camp Op - Seize The Day.mp3",
+        "path": "D:/Music/Self Radio\\026 Yuru Camp Op - Seize The Day.mp3",
+        "series": "Yuru Camp",
+        "weight": 3
+    },
+    {
+        "id": "ID0425",
+        "name": "027 Kobayashi Dragon Maid - O Uchi Kaero.mp3",
+        "path": "D:/Music/Self Radio\\027 Kobayashi Dragon Maid - O Uchi Kaero.mp3",
+        "series": "Kobayashi Dragon Maid",
+        "weight": 3
+    },
+    {
+        "id": "ID0426",
+        "name": "028 Wataten - Delicious Smile!.mp3",
+        "path": "D:/Music/Self Radio\\028 Wataten - Delicious Smile!.mp3",
+        "series": "Wataten",
+        "weight": 3
+    },
+    {
+        "id": "ID0427",
+        "name": "029 Gochiusa - Yakimochi Flavored Chamomile.mp3",
+        "path": "D:/Music/Self Radio\\029 Gochiusa - Yakimochi Flavored Chamomile.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0428",
+        "name": "030 Hololive - Okayu Flos Cover.mp3",
+        "path": "D:/Music/Self Radio\\030 Hololive - Okayu Flos Cover.mp3",
+        "series": "Hololive",
+        "weight": 2
+    },
+    {
+        "id": "ID0429",
+        "name": "031 Yuru Yuri - My Sweet Memory.mp3",
+        "path": "D:/Music/Self Radio\\031 Yuru Yuri - My Sweet Memory.mp3",
+        "series": "Yuru Yuri",
+        "weight": 4
+    },
+    {
+        "id": "ID0430",
+        "name": "032 Non Non Biyori Ed 3 - Im Back.mp3",
+        "path": "D:/Music/Self Radio\\032 Non Non Biyori Ed 3 - Im Back.mp3",
+        "series": "Non Non Biyori",
+        "weight": 4
+    },
+    {
+        "id": "ID0431",
+        "name": "033 Gochiusa - Summer Vacation Page.mp3",
+        "path": "D:/Music/Self Radio\\033 Gochiusa - Summer Vacation Page.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0432",
+        "name": "034 New Game - Rainbow Days!.mp3",
+        "path": "D:/Music/Self Radio\\034 New Game - Rainbow Days!.mp3",
+        "series": "New Game",
+        "weight": 2
+    },
+    {
+        "id": "ID0433",
+        "name": "035 Tamako Market - Principle.mp3",
+        "path": "D:/Music/Self Radio\\035 Tamako Market - Principle.mp3",
+        "series": "Tamako Market",
+        "weight": 2
+    },
+    {
+        "id": "ID0434",
+        "name": "036 Yama No Susume S1 Ed - Sutakkato Days.mp3",
+        "path": "D:/Music/Self Radio\\036 Yama No Susume S1 Ed - Sutakkato Days.mp3",
+        "series": "Yama No Susume",
+        "weight": 3
+    },
+    {
+        "id": "ID0435",
+        "name": "037 Yakunara Mug Cup S2 Op - Muchuu No Saki E.mp3",
+        "path": "D:/Music/Self Radio\\037 Yakunara Mug Cup S2 Op - Muchuu No Saki E.mp3",
+        "series": "Yakunara Mug Cup",
+        "weight": 2
+    },
+    {
+        "id": "ID0436",
+        "name": "038 Gochiusa - Caffeine Fighter.mp3",
+        "path": "D:/Music/Self Radio\\038 Gochiusa - Caffeine Fighter.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0437",
+        "name": "039 Shinryaku! Ika Musume S2 - Op.mp3",
+        "path": "D:/Music/Self Radio\\039 Shinryaku! Ika Musume S2 - Op.mp3",
+        "series": "Shinryaku! Ika Musume",
+        "weight": 2
+    },
+    {
+        "id": "ID0438",
+        "name": "040 Yuru Yuri 10Th Op - Tenyawanya.mp3",
+        "path": "D:/Music/Self Radio\\040 Yuru Yuri 10Th Op - Tenyawanya.mp3",
+        "series": "Yuru Yuri",
+        "weight": 3
+    },
+    {
+        "id": "ID0439",
+        "name": "041 Gj-Bu Ed 4 - Let'S Run!.mp3",
+        "path": "D:/Music/Self Radio\\041 Gj-Bu Ed 4 - Let'S Run!.mp3",
+        "series": "Gj-Bu",
+        "weight": 2
+    },
+    {
+        "id": "ID0440",
+        "name": "042 Gochiusa - Gin No Spoon.mp3",
+        "path": "D:/Music/Self Radio\\042 Gochiusa - Gin No Spoon.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0441",
+        "name": "043 Mikakunin Op.mp3",
+        "path": "D:/Music/Self Radio\\043 Mikakunin Op.mp3",
+        "series": "Mikakunin",
+        "weight": 4
+    },
+    {
+        "id": "ID0442",
+        "name": "044 Gin No Saji S2 Op - Life.mp3",
+        "path": "D:/Music/Self Radio\\044 Gin No Saji S2 Op - Life.mp3",
+        "series": "Gin No Saji",
+        "weight": 2
+    },
+    {
+        "id": "ID0443",
+        "name": "045 Gochiusa - I Want To Be Amazing.mp3",
+        "path": "D:/Music/Self Radio\\045 Gochiusa - I Want To Be Amazing.mp3",
+        "series": "Gochiusa",
+        "weight": 4
+    },
+    {
+        "id": "ID0444",
+        "name": "046 Wataten - Uketsugu Kokoro.mp3",
+        "path": "D:/Music/Self Radio\\046 Wataten - Uketsugu Kokoro.mp3",
+        "series": "Wataten",
+        "weight": 3
+    },
+    {
+        "id": "ID0445",
+        "name": "047 Kaguya-Sama Ed 2 - Kaze Ni Fukarete.mp3",
+        "path": "D:/Music/Self Radio\\047 Kaguya-Sama Ed 2 - Kaze Ni Fukarete.mp3",
+        "series": "Kaguya-Sama",
+        "weight": 2
+    },
+    {
+        "id": "ID0446",
+        "name": "048 Yuru Yuri Nachuyachumi!+ Op - Yuri Shi Yurashushushu.mp3",
+        "path": "D:/Music/Self Radio\\048 Yuru Yuri Nachuyachumi!+ Op - Yuri Shi Yurashushushu.mp3",
+        "series": "Yuru Yuri",
+        "weight": 4
+    },
+    {
+        "id": "ID0447",
+        "name": "049 K-On - Tsubasa Wo Kudasai.mp3",
+        "path": "D:/Music/Self Radio\\049 K-On - Tsubasa Wo Kudasai.mp3",
+        "series": "K-On",
+        "weight": 4
+    },
+    {
+        "id": "ID0448",
+        "name": "050 Hitoribocchi Ed - Ne Issho Ni Kaero.mp3",
+        "path": "D:/Music/Self Radio\\050 Hitoribocchi Ed - Ne Issho Ni Kaero.mp3",
+        "series": "Hitoribocchi",
+        "weight": 4
+    },
+    {
+        "id": "ID0449",
+        "name": "051 Gochiusa - Yume Utsutsu Happy Time.mp3",
+        "path": "D:/Music/Self Radio\\051 Gochiusa - Yume Utsutsu Happy Time.mp3",
+        "series": "Gochiusa",
+        "weight": 4
+    },
+    {
+        "id": "ID0450",
+        "name": "052 Tensei Slime Ed 1 - Another Colony.mp3",
+        "path": "D:/Music/Self Radio\\052 Tensei Slime Ed 1 - Another Colony.mp3",
+        "series": "Tensei Slime",
+        "weight": 2
+    },
+    {
+        "id": "ID0451",
+        "name": "053 Non Non Biyori - Non Non Shimai.mp3",
+        "path": "D:/Music/Self Radio\\053 Non Non Biyori - Non Non Shimai.mp3",
+        "series": "Non Non Biyori",
+        "weight": 3
+    },
+    {
+        "id": "ID0452",
+        "name": "054 Gochiusa - Footsteps Taruto Tatan.mp3",
+        "path": "D:/Music/Self Radio\\054 Gochiusa - Footsteps Taruto Tatan.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0453",
+        "name": "055 Hinako Note - Shiawase Iro.mp3",
+        "path": "D:/Music/Self Radio\\055 Hinako Note - Shiawase Iro.mp3",
+        "series": "Hinako Note",
+        "weight": 2
+    },
+    {
+        "id": "ID0454",
+        "name": "056 Kinmoza - Sakurairo Cherish.mp3",
+        "path": "D:/Music/Self Radio\\056 Kinmoza - Sakurairo Cherish.mp3",
+        "series": "Kinmoza",
+        "weight": 4
+    },
+    {
+        "id": "ID0455",
+        "name": "057 Gochiusa - Popcorn Is Puningu!.mp3",
+        "path": "D:/Music/Self Radio\\057 Gochiusa - Popcorn Is Puningu!.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0456",
+        "name": "058 Tamako Market - Koi No Uta.mp3",
+        "path": "D:/Music/Self Radio\\058 Tamako Market - Koi No Uta.mp3",
+        "series": "Tamako Market",
+        "weight": 3
+    },
+    {
+        "id": "ID0457",
+        "name": "059 Koisuru Asteroid Op Aruite Ikou.mp3",
+        "path": "D:/Music/Self Radio\\059 Koisuru Asteroid Op Aruite Ikou.mp3",
+        "series": "Koisuru Asteroid",
+        "weight": 3
+    },
+    {
+        "id": "ID0458",
+        "name": "060 Yuru Yuri - Watashi, Shuyaku No Akari Akaza Desu.mp3",
+        "path": "D:/Music/Self Radio\\060 Yuru Yuri - Watashi, Shuyaku No Akari Akaza Desu.mp3",
+        "series": "Yuru Yuri",
+        "weight": 2
+    },
+    {
+        "id": "ID0459",
+        "name": "061 Wataten Ed - Happy Happy Friends.mp3",
+        "path": "D:/Music/Self Radio\\061 Wataten Ed - Happy Happy Friends.mp3",
+        "series": "Wataten",
+        "weight": 4
+    },
+    {
+        "id": "ID0460",
+        "name": "062 Houkago Teibou Nisshi - Beginner'S Luck.mp3",
+        "path": "D:/Music/Self Radio\\062 Houkago Teibou Nisshi - Beginner'S Luck.mp3",
+        "series": "Houkago Teibou Nisshi",
+        "weight": 3
+    },
+    {
+        "id": "ID0461",
+        "name": "063 Gochiusa - Paris Player!!.mp3",
+        "path": "D:/Music/Self Radio\\063 Gochiusa - Paris Player!!.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0462",
+        "name": "064 New Game - Improvement High Jump.mp3",
+        "path": "D:/Music/Self Radio\\064 New Game - Improvement High Jump.mp3",
+        "series": "New Game",
+        "weight": 2
+    },
+    {
+        "id": "ID0463",
+        "name": "065 Lucky Star Op - Motteke! Sailor Fuku!.mp3",
+        "path": "D:/Music/Self Radio\\065 Lucky Star Op - Motteke! Sailor Fuku!.mp3",
+        "series": "Lucky Star",
+        "weight": 2
+    },
+    {
+        "id": "ID0464",
+        "name": "066 Wataten - Watashini Sukiga Maiorita.mp3",
+        "path": "D:/Music/Self Radio\\066 Wataten - Watashini Sukiga Maiorita.mp3",
+        "series": "Wataten",
+        "weight": 2
+    },
+    {
+        "id": "ID0465",
+        "name": "067 Tonakyu Ed - Happy!! Strange Friends.mp3",
+        "path": "D:/Music/Self Radio\\067 Tonakyu Ed - Happy!! Strange Friends.mp3",
+        "series": "Tonakyu",
+        "weight": 4
+    },
+    {
+        "id": "ID0466",
+        "name": "068 Gochiusa - Colored Leaves.mp3",
+        "path": "D:/Music/Self Radio\\068 Gochiusa - Colored Leaves.mp3",
+        "series": "Gochiusa",
+        "weight": 4
+    },
+    {
+        "id": "ID0467",
+        "name": "069 Yuru Yuri S2 Ed - 100% Chuugakusei.mp3",
+        "path": "D:/Music/Self Radio\\069 Yuru Yuri S2 Ed - 100% Chuugakusei.mp3",
+        "series": "Yuru Yuri",
+        "weight": 4
+    },
+    {
+        "id": "ID0468",
+        "name": "070 New Game Ed 2 - Jumpin Jump Up!.mp3",
+        "path": "D:/Music/Self Radio\\070 New Game Ed 2 - Jumpin Jump Up!.mp3",
+        "series": "New Game",
+        "weight": 3
+    },
+    {
+        "id": "ID0469",
+        "name": "071 Gochiusa - Payapoya Melody.mp3",
+        "path": "D:/Music/Self Radio\\071 Gochiusa - Payapoya Melody.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0470",
+        "name": "072 Kamisama Ni Natta Hi Op.mp3",
+        "path": "D:/Music/Self Radio\\072 Kamisama Ni Natta Hi Op.mp3",
+        "series": "Kamisama Ni Natta Hi",
+        "weight": 2
+    },
+    {
+        "id": "ID0471",
+        "name": "073 Gochiusa - Kaeri-Michi Skip.mp3",
+        "path": "D:/Music/Self Radio\\073 Gochiusa - Kaeri-Michi Skip.mp3",
+        "series": "Gochiusa",
+        "weight": 4
+    },
+    {
+        "id": "ID0472",
+        "name": "074 Yuru Camp\u25b3 Ed Full\u300cFuru Biyori\u300dBy Eri Sasaki.mp3",
+        "path": "D:/Music/Self Radio\\074 Yuru Camp\u25b3 Ed Full\u300cFuru Biyori\u300dBy Eri Sasaki.mp3",
+        "series": "Yuru Camp",
+        "weight": 3
+    },
+    {
+        "id": "ID0473",
+        "name": "075 Konohana Kitan Ed 1.mp3",
+        "path": "D:/Music/Self Radio\\075 Konohana Kitan Ed 1.mp3",
+        "series": "Konohana Kitan",
+        "weight": 4
+    },
+    {
+        "id": "ID0474",
+        "name": "076 Wataten - Myane!!.mp3",
+        "path": "D:/Music/Self Radio\\076 Wataten - Myane!!.mp3",
+        "series": "Wataten",
+        "weight": 3
+    },
+    {
+        "id": "ID0475",
+        "name": "077 Gochiusa - If You Find A Glitter Mark.mp3",
+        "path": "D:/Music/Self Radio\\077 Gochiusa - If You Find A Glitter Mark.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0476",
+        "name": "078 ReZero S2 Ed2 - Believe In You.mp3",
+        "path": "D:/Music/Self Radio\\078 ReZero S2 Ed2 - Believe In You.mp3",
+        "series": "ReZero",
+        "weight": 3
+    },
+    {
+        "id": "ID0477",
+        "name": "079 Tamako Market Op - Dramatic Market Ride.mp3",
+        "path": "D:/Music/Self Radio\\079 Tamako Market Op - Dramatic Market Ride.mp3",
+        "series": "Tamako Market",
+        "weight": 2
+    },
+    {
+        "id": "ID0478",
+        "name": "080 Gochiusa - Yokan No Pingpong Kikoetara.mp3",
+        "path": "D:/Music/Self Radio\\080 Gochiusa - Yokan No Pingpong Kikoetara.mp3",
+        "series": "Gochiusa",
+        "weight": 3
+    },
+    {
+        "id": "ID0479",
+        "name": "081 Gakkou Gurashi - Sotsugyou Track.mp3",
+        "path": "D:/Music/Self Radio\\081 Gakkou Gurashi - Sotsugyou Track.mp3",
+        "series": "Gakkou Gurashi",
+        "weight": 2
+    },
+    {
+        "id": "ID0480",
+        "name": "082 Wataten - Sugar Court Dream.mp3",
+        "path": "D:/Music/Self Radio\\082 Wataten - Sugar Court Dream.mp3",
+        "series": "Wataten",
+        "weight": 4
+    },
+    {
+        "id": "ID0481",
+        "name": "083 Gochiusa - News From The Wind.mp3",
+        "path": "D:/Music/Self Radio\\083 Gochiusa - News From The Wind.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0482",
+        "name": "084 Kobayashi Dragon Maid S2 Ed - Maids With Dragons.mp3",
+        "path": "D:/Music/Self Radio\\084 Kobayashi Dragon Maid S2 Ed - Maids With Dragons.mp3",
+        "series": "Kobayashi Dragon Maid",
+        "weight": 2
+    },
+    {
+        "id": "ID0483",
+        "name": "085 Yuru Yuri - Majokko Miraclen.mp3",
+        "path": "D:/Music/Self Radio\\085 Yuru Yuri - Majokko Miraclen.mp3",
+        "series": "Yuru Yuri",
+        "weight": 3
+    },
+    {
+        "id": "ID0484",
+        "name": "086 Gabriel Dropout - Hanten Devil & Angel.mp3",
+        "path": "D:/Music/Self Radio\\086 Gabriel Dropout - Hanten Devil & Angel.mp3",
+        "series": "Gabriel Dropout",
+        "weight": 2
+    },
+    {
+        "id": "ID0485",
+        "name": "087 Gochiusa - Zentenko-Gata Irasshaimase.mp3",
+        "path": "D:/Music/Self Radio\\087 Gochiusa - Zentenko-Gata Irasshaimase.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0486",
+        "name": "088 Ai Uta.mp3",
+        "path": "D:/Music/Self Radio\\088 Ai Uta.mp3",
+        "series": "Single",
+        "weight": 3
+    },
+    {
+        "id": "ID0487",
+        "name": "089 New Game - Colorful Fusion.mp3",
+        "path": "D:/Music/Self Radio\\089 New Game - Colorful Fusion.mp3",
+        "series": "New Game",
+        "weight": 3
+    },
+    {
+        "id": "ID0488",
+        "name": "090 Kinmoza - Happy Pretty Clover.mp3",
+        "path": "D:/Music/Self Radio\\090 Kinmoza - Happy Pretty Clover.mp3",
+        "series": "Kinmoza",
+        "weight": 2
+    },
+    {
+        "id": "ID0489",
+        "name": "091 Wataten - Tenshi No Manazashi Prologue.mp3",
+        "path": "D:/Music/Self Radio\\091 Wataten - Tenshi No Manazashi Prologue.mp3",
+        "series": "Wataten",
+        "weight": 2
+    },
+    {
+        "id": "ID0490",
+        "name": "092 Slime Taoshite Ed - Viewtiful Days!.mp3",
+        "path": "D:/Music/Self Radio\\092 Slime Taoshite Ed - Viewtiful Days!.mp3",
+        "series": "Slime Taoshite",
+        "weight": 4
+    },
+    {
+        "id": "ID0491",
+        "name": "093 Gochiusa - Gently Blanket.mp3",
+        "path": "D:/Music/Self Radio\\093 Gochiusa - Gently Blanket.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0492",
+        "name": "094 Yuru Yuri - With Girls Power.mp3",
+        "path": "D:/Music/Self Radio\\094 Yuru Yuri - With Girls Power.mp3",
+        "series": "Yuru Yuri",
+        "weight": 3
+    },
+    {
+        "id": "ID0493",
+        "name": "095 Non Non Biyori Vacation Op - Ao No Raku Ga Ki.mp3",
+        "path": "D:/Music/Self Radio\\095 Non Non Biyori Vacation Op - Ao No Raku Ga Ki.mp3",
+        "series": "Non Non Biyori",
+        "weight": 2
+    },
+    {
+        "id": "ID0494",
+        "name": "096 Gakuen Babysitter Op - Endless Happy World.mp3",
+        "path": "D:/Music/Self Radio\\096 Gakuen Babysitter Op - Endless Happy World.mp3",
+        "series": "Gakuen Babysitter",
+        "weight": 2
+    },
+    {
+        "id": "ID0495",
+        "name": "097 Himouto Umaru-Chan - Unchanging Treasure.mp3",
+        "path": "D:/Music/Self Radio\\097 Himouto Umaru-Chan - Unchanging Treasure.mp3",
+        "series": "Himouto Umaru-Chan",
+        "weight": 3
+    },
+    {
+        "id": "ID0496",
+        "name": "098 Mikakunin - Real Feeling.mp3",
+        "path": "D:/Music/Self Radio\\098 Mikakunin - Real Feeling.mp3",
+        "series": "Mikakunin",
+        "weight": 3
+    },
+    {
+        "id": "ID0497",
+        "name": "099 Konosuba S2 Ed - Wanna Go Home.mp3",
+        "path": "D:/Music/Self Radio\\099 Konosuba S2 Ed - Wanna Go Home.mp3",
+        "series": "Konosuba",
+        "weight": 3
+    },
+    {
+        "id": "ID0498",
+        "name": "100 Gochiusa - Everyday Level Up!.mp3",
+        "path": "D:/Music/Self Radio\\100 Gochiusa - Everyday Level Up!.mp3",
+        "series": "Gochiusa",
+        "weight": 4
+    },
+    {
+        "id": "ID0499",
+        "name": "101 New Game Op - Sakura.mp3",
+        "path": "D:/Music/Self Radio\\101 New Game Op - Sakura.mp3",
+        "series": "New Game",
+        "weight": 2
+    },
+    {
+        "id": "ID0500",
+        "name": "102 Yuru Yuri - Ai No Delusion.mp3",
+        "path": "D:/Music/Self Radio\\102 Yuru Yuri - Ai No Delusion.mp3",
+        "series": "Yuru Yuri",
+        "weight": 4
+    },
+    {
+        "id": "ID0501",
+        "name": "103 Tensei Slime Op 3 - Storyteller.mp3",
+        "path": "D:/Music/Self Radio\\103 Tensei Slime Op 3 - Storyteller.mp3",
+        "series": "Tensei Slime",
+        "weight": 2
+    },
+    {
+        "id": "ID0502",
+        "name": "104 Gochiusa - Magical Girl Chino.mp3",
+        "path": "D:/Music/Self Radio\\104 Gochiusa - Magical Girl Chino.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0503",
+        "name": "105 Wataten - Atashi Kawaii Sengen.mp3",
+        "path": "D:/Music/Self Radio\\105 Wataten - Atashi Kawaii Sengen.mp3",
+        "series": "Wataten",
+        "weight": 3
+    },
+    {
+        "id": "ID0504",
+        "name": "106 Non Non Biyori - Nyanpasu March.mp3",
+        "path": "D:/Music/Self Radio\\106 Non Non Biyori - Nyanpasu March.mp3",
+        "series": "Non Non Biyori",
+        "weight": 3
+    },
+    {
+        "id": "ID0505",
+        "name": "107 Yakunara Mug Cup Yakumo No Hokago - Mawaru Sekaini.mp3",
+        "path": "D:/Music/Self Radio\\107 Yakunara Mug Cup Yakumo No Hokago - Mawaru Sekaini.mp3",
+        "series": "Yakunara Mug Cup",
+        "weight": 2
+    },
+    {
+        "id": "ID0506",
+        "name": "108 Gochiusa - Sugar Star On The Moonlit Night.mp3",
+        "path": "D:/Music/Self Radio\\108 Gochiusa - Sugar Star On The Moonlit Night.mp3",
+        "series": "Gochiusa",
+        "weight": 3
+    },
+    {
+        "id": "ID0507",
+        "name": "109 K-On - Fude Pen Boru Pen.mp3",
+        "path": "D:/Music/Self Radio\\109 K-On - Fude Pen Boru Pen.mp3",
+        "series": "K-On",
+        "weight": 2
+    },
+    {
+        "id": "ID0508",
+        "name": "110 Gj-Bu Ed 1.mp3",
+        "path": "D:/Music/Self Radio\\110 Gj-Bu Ed 1.mp3",
+        "series": "Gj-Bu",
+        "weight": 4
+    },
+    {
+        "id": "ID0509",
+        "name": "111 Yuru Yuri Nachuyachumi Op - Yurinrinrinrin.mp3",
+        "path": "D:/Music/Self Radio\\111 Yuru Yuri Nachuyachumi Op - Yurinrinrinrin.mp3",
+        "series": "Yuru Yuri",
+        "weight": 2
+    },
+    {
+        "id": "ID0510",
+        "name": "112 Gochiusa - Tokimeki Loop Ni Notte.mp3",
+        "path": "D:/Music/Self Radio\\112 Gochiusa - Tokimeki Loop Ni Notte.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0511",
+        "name": "113 Hinako Note Op - Gekidan Hitotose.mp3",
+        "path": "D:/Music/Self Radio\\113 Hinako Note Op - Gekidan Hitotose.mp3",
+        "series": "Hinako Note",
+        "weight": 3
+    },
+    {
+        "id": "ID0512",
+        "name": "114 Gochiusa - Bottleship Trip.mp3",
+        "path": "D:/Music/Self Radio\\114 Gochiusa - Bottleship Trip.mp3",
+        "series": "Gochiusa",
+        "weight": 3
+    },
+    {
+        "id": "ID0513",
+        "name": "115 Kuma Bear Op Full.mp3",
+        "path": "D:/Music/Self Radio\\115 Kuma Bear Op Full.mp3",
+        "series": "Kuma Bear",
+        "weight": 2
+    },
+    {
+        "id": "ID0514",
+        "name": "116 Non Non Biyori - Asahigaoka Bunko Koka.mp3",
+        "path": "D:/Music/Self Radio\\116 Non Non Biyori - Asahigaoka Bunko Koka.mp3",
+        "series": "Non Non Biyori",
+        "weight": 4
+    },
+    {
+        "id": "ID0515",
+        "name": "117 Girls Und Panzer Das Finale Op - Grand Symphony.mp3",
+        "path": "D:/Music/Self Radio\\117 Girls Und Panzer Das Finale Op - Grand Symphony.mp3",
+        "series": "Girls Und Panzer",
+        "weight": 3
+    },
+    {
+        "id": "ID0516",
+        "name": "118 Gochiusa - Teku Teku Marching March.mp3",
+        "path": "D:/Music/Self Radio\\118 Gochiusa - Teku Teku Marching March.mp3",
+        "series": "Gochiusa",
+        "weight": 3
+    },
+    {
+        "id": "ID0517",
+        "name": "119 Shinryaku! Ika Musume S2 Ed.mp3",
+        "path": "D:/Music/Self Radio\\119 Shinryaku! Ika Musume S2 Ed.mp3",
+        "series": "Shinryaku! Ika Musume",
+        "weight": 2
+    },
+    {
+        "id": "ID0518",
+        "name": "120 No Game No Life Op Full.mp3",
+        "path": "D:/Music/Self Radio\\120 No Game No Life Op Full.mp3",
+        "series": "No Game No Life",
+        "weight": 3
+    },
+    {
+        "id": "ID0519",
+        "name": "121 Gochiusa - Kirakira Ala Mode.mp3",
+        "path": "D:/Music/Self Radio\\121 Gochiusa - Kirakira Ala Mode.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0520",
+        "name": "122 Wataten - Youkoso Tenshi No Kunie.mp3",
+        "path": "D:/Music/Self Radio\\122 Wataten - Youkoso Tenshi No Kunie.mp3",
+        "series": "Wataten",
+        "weight": 2
+    },
+    {
+        "id": "ID0521",
+        "name": "123 New Game - Bug Bug Survival!.mp3",
+        "path": "D:/Music/Self Radio\\123 New Game - Bug Bug Survival!.mp3",
+        "series": "New Game",
+        "weight": 3
+    },
+    {
+        "id": "ID0522",
+        "name": "124 Gochiusa - Another Cake.mp3",
+        "path": "D:/Music/Self Radio\\124 Gochiusa - Another Cake.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0523",
+        "name": "125 Slow Loop Ed - Shuwa Shuwa.mp3",
+        "path": "D:/Music/Self Radio\\125 Slow Loop Ed - Shuwa Shuwa.mp3",
+        "series": "Slow Loop",
+        "weight": 3
+    },
+    {
+        "id": "ID0524",
+        "name": "126 Denkigai Op - Kajiri Kake No Ringo.mp3",
+        "path": "D:/Music/Self Radio\\126 Denkigai Op - Kajiri Kake No Ringo.mp3",
+        "series": "Denkigai",
+        "weight": 2
+    },
+    {
+        "id": "ID0525",
+        "name": "127 Gochiusa - A Fluffy Balloon Popped Out!.mp3",
+        "path": "D:/Music/Self Radio\\127 Gochiusa - A Fluffy Balloon Popped Out!.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0526",
+        "name": "128 Gakkou Gurashi Ed 1 - Harmonize Clover.mp3",
+        "path": "D:/Music/Self Radio\\128 Gakkou Gurashi Ed 1 - Harmonize Clover.mp3",
+        "series": "Gakkou Gurashi",
+        "weight": 2
+    },
+    {
+        "id": "ID0527",
+        "name": "129 Tamako Market - Kankan Makimaki.mp3",
+        "path": "D:/Music/Self Radio\\129 Tamako Market - Kankan Makimaki.mp3",
+        "series": "Tamako Market",
+        "weight": 3
+    },
+    {
+        "id": "ID0528",
+        "name": "130 Gochiusa - A Cup Of Happiness.mp3",
+        "path": "D:/Music/Self Radio\\130 Gochiusa - A Cup Of Happiness.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0529",
+        "name": "131 Aot S4 Part 2 Ed - Akuma No Ko.mp3",
+        "path": "D:/Music/Self Radio\\131 Aot S4 Part 2 Ed - Akuma No Ko.mp3",
+        "series": "Aot",
+        "weight": 3
+    },
+    {
+        "id": "ID0530",
+        "name": "132 Hitoribocchi - Dont Lose Aru!.mp3",
+        "path": "D:/Music/Self Radio\\132 Hitoribocchi - Dont Lose Aru!.mp3",
+        "series": "Hitoribocchi",
+        "weight": 2
+    },
+    {
+        "id": "ID0531",
+        "name": "133 Non Non Biyori Op 1.mp3",
+        "path": "D:/Music/Self Radio\\133 Non Non Biyori Op 1.mp3",
+        "series": "Non Non Biyori",
+        "weight": 4
+    },
+    {
+        "id": "ID0532",
+        "name": "134 Gochiusa - Click Here For New Happiness!.mp3",
+        "path": "D:/Music/Self Radio\\134 Gochiusa - Click Here For New Happiness!.mp3",
+        "series": "Gochiusa",
+        "weight": 3
+    },
+    {
+        "id": "ID0533",
+        "name": "135 Sora Yori Mo Tooi Basho Op.mp3",
+        "path": "D:/Music/Self Radio\\135 Sora Yori Mo Tooi Basho Op.mp3",
+        "series": "Sora Yori Mo Tooi Basho",
+        "weight": 3
+    },
+    {
+        "id": "ID0534",
+        "name": "136 Wataten - Sweets Sweets Party.mp3",
+        "path": "D:/Music/Self Radio\\136 Wataten - Sweets Sweets Party.mp3",
+        "series": "Wataten",
+        "weight": 2
+    },
+    {
+        "id": "ID0535",
+        "name": "137 Kobayashi Dragon Maid - Maigo No Kaiju.mp3",
+        "path": "D:/Music/Self Radio\\137 Kobayashi Dragon Maid - Maigo No Kaiju.mp3",
+        "series": "Kobayashi Dragon Maid",
+        "weight": 2
+    },
+    {
+        "id": "ID0536",
+        "name": "138 Gochiusa S2 Op - No Poi.mp3",
+        "path": "D:/Music/Self Radio\\138 Gochiusa S2 Op - No Poi.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0537",
+        "name": "139 Comic Girls Op Memories Full.mp3",
+        "path": "D:/Music/Self Radio\\139 Comic Girls Op Memories Full.mp3",
+        "series": "Comic Girls",
+        "weight": 2
+    },
+    {
+        "id": "ID0538",
+        "name": "140 Yuru Yuri S3 Op - Cho Cho Cho! Yuru Yuri Ka Puritcho!!!.mp3",
+        "path": "D:/Music/Self Radio\\140 Yuru Yuri S3 Op - Cho Cho Cho! Yuru Yuri Ka Puritcho!!!.mp3",
+        "series": "Yuru Yuri",
+        "weight": 2
+    },
+    {
+        "id": "ID0539",
+        "name": "141 Wataten - Special Coordinate.mp3",
+        "path": "D:/Music/Self Radio\\141 Wataten - Special Coordinate.mp3",
+        "series": "Wataten",
+        "weight": 3
+    },
+    {
+        "id": "ID0540",
+        "name": "142 Gochiusa - Miracle Chronicle.mp3",
+        "path": "D:/Music/Self Radio\\142 Gochiusa - Miracle Chronicle.mp3",
+        "series": "Gochiusa",
+        "weight": 3
+    },
+    {
+        "id": "ID0541",
+        "name": "143 Centaur No Nayami Ed - Eidelweiss.mp3",
+        "path": "D:/Music/Self Radio\\143 Centaur No Nayami Ed - Eidelweiss.mp3",
+        "series": "Centaur No Nayami",
+        "weight": 3
+    },
+    {
+        "id": "ID0542",
+        "name": "144 Konohana Kitan Ending 3.mp3",
+        "path": "D:/Music/Self Radio\\144 Konohana Kitan Ending 3.mp3",
+        "series": "Konohana Kitan",
+        "weight": 3
+    },
+    {
+        "id": "ID0543",
+        "name": "145 Aiura Ed - Ichigo Ichie.mp3",
+        "path": "D:/Music/Self Radio\\145 Aiura Ed - Ichigo Ichie.mp3",
+        "series": "Aiura",
+        "weight": 4
+    },
+    {
+        "id": "ID0544",
+        "name": "146 Gochiusa - Kasaneori.mp3",
+        "path": "D:/Music/Self Radio\\146 Gochiusa - Kasaneori.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0545",
+        "name": "147 Kinmoza - Kiramekiiro Summer Rainbow.mp3",
+        "path": "D:/Music/Self Radio\\147 Kinmoza - Kiramekiiro Summer Rainbow.mp3",
+        "series": "Kinmoza",
+        "weight": 3
+    },
+    {
+        "id": "ID0546",
+        "name": "148 Gochiusa - Midnight Party.mp3",
+        "path": "D:/Music/Self Radio\\148 Gochiusa - Midnight Party.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0547",
+        "name": "149 Yuru Camp - The Sunshower (Heya Camp).mp3",
+        "path": "D:/Music/Self Radio\\149 Yuru Camp - The Sunshower (Heya Camp).mp3",
+        "series": "Yuru Camp",
+        "weight": 2
+    },
+    {
+        "id": "ID0548",
+        "name": "150 Mikakunin - Ciao Chao \u2661 Dolce.mp3",
+        "path": "D:/Music/Self Radio\\150 Mikakunin - Ciao Chao \u2661 Dolce.mp3",
+        "series": "Mikakunin",
+        "weight": 2
+    },
+    {
+        "id": "ID0549",
+        "name": "151 Gochiusa - Smile Cafe Wizard.mp3",
+        "path": "D:/Music/Self Radio\\151 Gochiusa - Smile Cafe Wizard.mp3",
+        "series": "Gochiusa",
+        "weight": 3
+    },
+    {
+        "id": "ID0550",
+        "name": "152 Joshikousei No Mudazukai Op - Wa! Moon! Dass! Cry!.mp3",
+        "path": "D:/Music/Self Radio\\152 Joshikousei No Mudazukai Op - Wa! Moon! Dass! Cry!.mp3",
+        "series": "Joshikousei No Mudazukai",
+        "weight": 2
+    },
+    {
+        "id": "ID0551",
+        "name": "153 Yuru Yuri S1 Ed.mp3",
+        "path": "D:/Music/Self Radio\\153 Yuru Yuri S1 Ed.mp3",
+        "series": "Yuru Yuri",
+        "weight": 3
+    },
+    {
+        "id": "ID0552",
+        "name": "154 Gochiusa - Exciting Diary.mp3",
+        "path": "D:/Music/Self Radio\\154 Gochiusa - Exciting Diary.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0553",
+        "name": "155 New Game Ed - Now Loading!.mp3",
+        "path": "D:/Music/Self Radio\\155 New Game Ed - Now Loading!.mp3",
+        "series": "New Game",
+        "weight": 3
+    },
+    {
+        "id": "ID0554",
+        "name": "156 Non Non Biyori - Summer Colored Landscape.mp3",
+        "path": "D:/Music/Self Radio\\156 Non Non Biyori - Summer Colored Landscape.mp3",
+        "series": "Non Non Biyori",
+        "weight": 4
+    },
+    {
+        "id": "ID0555",
+        "name": "157 Gochiusa - Sunshine Days.mp3",
+        "path": "D:/Music/Self Radio\\157 Gochiusa - Sunshine Days.mp3",
+        "series": "Gochiusa",
+        "weight": 4
+    },
+    {
+        "id": "ID0556",
+        "name": "158 Wataten - Ketsui.mp3",
+        "path": "D:/Music/Self Radio\\158 Wataten - Ketsui.mp3",
+        "series": "Wataten",
+        "weight": 2
+    },
+    {
+        "id": "ID0557",
+        "name": "159 My Senpai Is Annoying Op - Annoying! San San Week!.mp3",
+        "path": "D:/Music/Self Radio\\159 My Senpai Is Annoying Op - Annoying! San San Week!.mp3",
+        "series": "My Senpai Is Annoying",
+        "weight": 3
+    },
+    {
+        "id": "ID0558",
+        "name": "160 Kobayashi Dragon Maid - I Love Your Love, My Love.mp3",
+        "path": "D:/Music/Self Radio\\160 Kobayashi Dragon Maid - I Love Your Love, My Love.mp3",
+        "series": "Kobayashi Dragon Maid",
+        "weight": 2
+    },
+    {
+        "id": "ID0559",
+        "name": "161 Gakkou Gurashi - Yummy Yappy Recipe.mp3",
+        "path": "D:/Music/Self Radio\\161 Gakkou Gurashi - Yummy Yappy Recipe.mp3",
+        "series": "Gakkou Gurashi",
+        "weight": 3
+    },
+    {
+        "id": "ID0560",
+        "name": "162 Yuru Yuri - Read Mirakurun!.mp3",
+        "path": "D:/Music/Self Radio\\162 Yuru Yuri - Read Mirakurun!.mp3",
+        "series": "Yuru Yuri",
+        "weight": 3
+    },
+    {
+        "id": "ID0561",
+        "name": "163 Gochiusa - Hbd Song.mp3",
+        "path": "D:/Music/Self Radio\\163 Gochiusa - Hbd Song.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0562",
+        "name": "164 Maoujou De Oyasumi Full Op.mp3",
+        "path": "D:/Music/Self Radio\\164 Maoujou De Oyasumi Full Op.mp3",
+        "series": "Maoujou De Oyasumi",
+        "weight": 3
+    },
+    {
+        "id": "ID0563",
+        "name": "165 ReZero Ed 2 Full - Stay Alive.mp3",
+        "path": "D:/Music/Self Radio\\165 ReZero Ed 2 Full - Stay Alive.mp3",
+        "series": "ReZero",
+        "weight": 3
+    },
+    {
+        "id": "ID0564",
+        "name": "166 Gochiusa - Treasure Chest Jet Coaster.mp3",
+        "path": "D:/Music/Self Radio\\166 Gochiusa - Treasure Chest Jet Coaster.mp3",
+        "series": "Gochiusa",
+        "weight": 3
+    },
+    {
+        "id": "ID0565",
+        "name": "167 Koisuru Asteroid - Kimi To Mita Hoshi.mp3",
+        "path": "D:/Music/Self Radio\\167 Koisuru Asteroid - Kimi To Mita Hoshi.mp3",
+        "series": "Koisuru Asteroid",
+        "weight": 2
+    },
+    {
+        "id": "ID0566",
+        "name": "168 New Game - Goodbye Airplane Cloud.mp3",
+        "path": "D:/Music/Self Radio\\168 New Game - Goodbye Airplane Cloud.mp3",
+        "series": "New Game",
+        "weight": 2
+    },
+    {
+        "id": "ID0567",
+        "name": "169 Urara Meirochou Ed - Go To Romance.mp3",
+        "path": "D:/Music/Self Radio\\169 Urara Meirochou Ed - Go To Romance.mp3",
+        "series": "Urara Meirochou",
+        "weight": 4
+    },
+    {
+        "id": "ID0568",
+        "name": "170 Gochiusa - Exciting Magical Power.mp3",
+        "path": "D:/Music/Self Radio\\170 Gochiusa - Exciting Magical Power.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0569",
+        "name": "171 Yuru Yuri 10Th Ed - Lipi Is A Chime.mp3",
+        "path": "D:/Music/Self Radio\\171 Yuru Yuri 10Th Ed - Lipi Is A Chime.mp3",
+        "series": "Yuru Yuri",
+        "weight": 3
+    },
+    {
+        "id": "ID0570",
+        "name": "172 I Want To Be A Girl.mp3",
+        "path": "D:/Music/Self Radio\\172 I Want To Be A Girl.mp3",
+        "series": "Single",
+        "weight": 3
+    },
+    {
+        "id": "ID0571",
+        "name": "173 Wataten - Koisuru Okashiyasan.mp3",
+        "path": "D:/Music/Self Radio\\173 Wataten - Koisuru Okashiyasan.mp3",
+        "series": "Wataten",
+        "weight": 2
+    },
+    {
+        "id": "ID0572",
+        "name": "174 Gochiusa - Present Leisure \u2661.mp3",
+        "path": "D:/Music/Self Radio\\174 Gochiusa - Present Leisure \u2661.mp3",
+        "series": "Gochiusa",
+        "weight": 3
+    },
+    {
+        "id": "ID0573",
+        "name": "175 K-On Movie Op - Ichiban Ippai.mp3",
+        "path": "D:/Music/Self Radio\\175 K-On Movie Op - Ichiban Ippai.mp3",
+        "series": "K-On",
+        "weight": 2
+    },
+    {
+        "id": "ID0574",
+        "name": "176 Tensei Slime Op 2 - Megurumono.mp3",
+        "path": "D:/Music/Self Radio\\176 Tensei Slime Op 2 - Megurumono.mp3",
+        "series": "Tensei Slime",
+        "weight": 3
+    },
+    {
+        "id": "ID0575",
+        "name": "177 Non Non Biyori - Issho Ni Kaerou.mp3",
+        "path": "D:/Music/Self Radio\\177 Non Non Biyori - Issho Ni Kaerou.mp3",
+        "series": "Non Non Biyori",
+        "weight": 3
+    },
+    {
+        "id": "ID0576",
+        "name": "178 Gochiusa - Fancy Sweet Time.mp3",
+        "path": "D:/Music/Self Radio\\178 Gochiusa - Fancy Sweet Time.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0577",
+        "name": "179 Nichijou - Everyday Town-Mai Pace.mp3",
+        "path": "D:/Music/Self Radio\\179 Nichijou - Everyday Town-Mai Pace.mp3",
+        "series": "Nichijou",
+        "weight": 2
+    },
+    {
+        "id": "ID0578",
+        "name": "180 Yuru Yuri S3 Ed - Atchi Yu Ma Seishun!.mp3",
+        "path": "D:/Music/Self Radio\\180 Yuru Yuri S3 Ed - Atchi Yu Ma Seishun!.mp3",
+        "series": "Yuru Yuri",
+        "weight": 3
+    },
+    {
+        "id": "ID0579",
+        "name": "181 Houkago Teibou Nisshi Op - Sea Horizon.mp3",
+        "path": "D:/Music/Self Radio\\181 Houkago Teibou Nisshi Op - Sea Horizon.mp3",
+        "series": "Houkago Teibou Nisshi",
+        "weight": 3
+    },
+    {
+        "id": "ID0580",
+        "name": "182 Gochiusa - Everyday To Look For E.mp3",
+        "path": "D:/Music/Self Radio\\182 Gochiusa - Everyday To Look For E.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0581",
+        "name": "183 Dr Stone S2 Op Rakuen.mp3",
+        "path": "D:/Music/Self Radio\\183 Dr Stone S2 Op Rakuen.mp3",
+        "series": "Dr Stone",
+        "weight": 2
+    },
+    {
+        "id": "ID0582",
+        "name": "184 Tamako Market - Girlfriend.mp3",
+        "path": "D:/Music/Self Radio\\184 Tamako Market - Girlfriend.mp3",
+        "series": "Tamako Market",
+        "weight": 4
+    },
+    {
+        "id": "ID0583",
+        "name": "185 Wataten - Akairo Little Leader.mp3",
+        "path": "D:/Music/Self Radio\\185 Wataten - Akairo Little Leader.mp3",
+        "series": "Wataten",
+        "weight": 2
+    },
+    {
+        "id": "ID0584",
+        "name": "186 Gochiusa - I'M Fine Tomorrow.mp3",
+        "path": "D:/Music/Self Radio\\186 Gochiusa - I'M Fine Tomorrow.mp3",
+        "series": "Gochiusa",
+        "weight": 3
+    },
+    {
+        "id": "ID0585",
+        "name": "187 Yakunara Mug Cup Op - Tobira Wo Aketara.mp3",
+        "path": "D:/Music/Self Radio\\187 Yakunara Mug Cup Op - Tobira Wo Aketara.mp3",
+        "series": "Yakunara Mug Cup",
+        "weight": 3
+    },
+    {
+        "id": "ID0586",
+        "name": "188 Uchiagehanabi.mp3",
+        "path": "D:/Music/Self Radio\\188 Uchiagehanabi.mp3",
+        "series": "Single",
+        "weight": 3
+    },
+    {
+        "id": "ID0587",
+        "name": "189 New Game - Dreaming Stars.mp3",
+        "path": "D:/Music/Self Radio\\189 New Game - Dreaming Stars.mp3",
+        "series": "New Game",
+        "weight": 2
+    },
+    {
+        "id": "ID0588",
+        "name": "190 Gochiusa - Let'S Go To Rabbit House.mp3",
+        "path": "D:/Music/Self Radio\\190 Gochiusa - Let'S Go To Rabbit House.mp3",
+        "series": "Gochiusa",
+        "weight": 3
+    },
+    {
+        "id": "ID0589",
+        "name": "191 Yuru Yuri - Traveling.mp3",
+        "path": "D:/Music/Self Radio\\191 Yuru Yuri - Traveling.mp3",
+        "series": "Yuru Yuri",
+        "weight": 2
+    },
+    {
+        "id": "ID0590",
+        "name": "192 Sora Yori Mo Tooi Basho - Mata Ne.mp3",
+        "path": "D:/Music/Self Radio\\192 Sora Yori Mo Tooi Basho - Mata Ne.mp3",
+        "series": "Sora Yori Mo Tooi Basho",
+        "weight": 3
+    },
+    {
+        "id": "ID0591",
+        "name": "193 Gin No Saji S1 Op - Kiss You.mp3",
+        "path": "D:/Music/Self Radio\\193 Gin No Saji S1 Op - Kiss You.mp3",
+        "series": "Gin No Saji",
+        "weight": 2
+    },
+    {
+        "id": "ID0592",
+        "name": "194 Gochiusa S3 Op - Tenkuu Cafeteria.mp3",
+        "path": "D:/Music/Self Radio\\194 Gochiusa S3 Op - Tenkuu Cafeteria.mp3",
+        "series": "Gochiusa",
+        "weight": 3
+    },
+    {
+        "id": "ID0593",
+        "name": "195 K-On Utauyo Miracle.mp3",
+        "path": "D:/Music/Self Radio\\195 K-On Utauyo Miracle.mp3",
+        "series": "K-On",
+        "weight": 3
+    },
+    {
+        "id": "ID0594",
+        "name": "196 Slow Start Op - Ne! Ne! Ne!.mp3",
+        "path": "D:/Music/Self Radio\\196 Slow Start Op - Ne! Ne! Ne!.mp3",
+        "series": "Slow Start",
+        "weight": 3
+    },
+    {
+        "id": "ID0595",
+        "name": "197 Wataten - My Canon.mp3",
+        "path": "D:/Music/Self Radio\\197 Wataten - My Canon.mp3",
+        "series": "Wataten",
+        "weight": 2
+    },
+    {
+        "id": "ID0596",
+        "name": "198 Gochiusa - Little Treasure Hunt.mp3",
+        "path": "D:/Music/Self Radio\\198 Gochiusa - Little Treasure Hunt.mp3",
+        "series": "Gochiusa",
+        "weight": 4
+    },
+    {
+        "id": "ID0597",
+        "name": "199 Yuru Yuri - Ambiguous Self.mp3",
+        "path": "D:/Music/Self Radio\\199 Yuru Yuri - Ambiguous Self.mp3",
+        "series": "Yuru Yuri",
+        "weight": 2
+    },
+    {
+        "id": "ID0598",
+        "name": "200 Hitoribocchi Op - Bocchi And Friends.mp3",
+        "path": "D:/Music/Self Radio\\200 Hitoribocchi Op - Bocchi And Friends.mp3",
+        "series": "Hitoribocchi",
+        "weight": 4
+    },
+    {
+        "id": "ID0599",
+        "name": "201 Yama No Susume S2 Op - Natsuiro Purezento.mp3",
+        "path": "D:/Music/Self Radio\\201 Yama No Susume S2 Op - Natsuiro Purezento.mp3",
+        "series": "Yama No Susume",
+        "weight": 2
+    },
+    {
+        "id": "ID0600",
+        "name": "202 Gochiusa - It \u2019S A Heart-Pulling Case.mp3",
+        "path": "D:/Music/Self Radio\\202 Gochiusa - It \u2019S A Heart-Pulling Case.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0601",
+        "name": "203 Ryuuo Oshi Op - Korekara.mp3",
+        "path": "D:/Music/Self Radio\\203 Ryuuo Oshi Op - Korekara.mp3",
+        "series": "Ryuuo Oshi",
+        "weight": 2
+    },
+    {
+        "id": "ID0602",
+        "name": "204 Konohana Kitan Ending 2.mp3",
+        "path": "D:/Music/Self Radio\\204 Konohana Kitan Ending 2.mp3",
+        "series": "Konohana Kitan",
+        "weight": 4
+    },
+    {
+        "id": "ID0603",
+        "name": "205 Sewayaki Kitsune No Senko-San Op - Koyoi Mofumofu.mp3",
+        "path": "D:/Music/Self Radio\\205 Sewayaki Kitsune No Senko-San Op - Koyoi Mofumofu.mp3",
+        "series": "Senko-san",
+        "weight": 4
+    },
+    {
+        "id": "ID0604",
+        "name": "206 Gochiusa - Ten Takaku O Tomeko Yuru Aki.mp3",
+        "path": "D:/Music/Self Radio\\206 Gochiusa - Ten Takaku O Tomeko Yuru Aki.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0605",
+        "name": "207 Rail Romanesque - Singing Wheel.mp3",
+        "path": "D:/Music/Self Radio\\207 Rail Romanesque - Singing Wheel.mp3",
+        "series": "Rail Romanesque",
+        "weight": 3
+    },
+    {
+        "id": "ID0606",
+        "name": "208 New Game - Connect.mp3",
+        "path": "D:/Music/Self Radio\\208 New Game - Connect.mp3",
+        "series": "New Game",
+        "weight": 3
+    },
+    {
+        "id": "ID0607",
+        "name": "209 Gochiusa S1 Ed - Poppin Jump.mp3",
+        "path": "D:/Music/Self Radio\\209 Gochiusa S1 Ed - Poppin Jump.mp3",
+        "series": "Gochiusa",
+        "weight": 3
+    },
+    {
+        "id": "ID0608",
+        "name": "210 Non Non Biyori Ed 2 - Okaeri.mp3",
+        "path": "D:/Music/Self Radio\\210 Non Non Biyori Ed 2 - Okaeri.mp3",
+        "series": "Non Non Biyori",
+        "weight": 3
+    },
+    {
+        "id": "ID0609",
+        "name": "211 Yuru Yuri - Minna Daisuki No Uta.mp3",
+        "path": "D:/Music/Self Radio\\211 Yuru Yuri - Minna Daisuki No Uta.mp3",
+        "series": "Yuru Yuri",
+        "weight": 3
+    },
+    {
+        "id": "ID0610",
+        "name": "212 Gakuen Babysitter Ed - Oshiete Yo.mp3",
+        "path": "D:/Music/Self Radio\\212 Gakuen Babysitter Ed - Oshiete Yo.mp3",
+        "series": "Gakuen Babysitter",
+        "weight": 2
+    },
+    {
+        "id": "ID0611",
+        "name": "213 Gochiusa - Pajama Planetarium.mp3",
+        "path": "D:/Music/Self Radio\\213 Gochiusa - Pajama Planetarium.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0612",
+        "name": "214 Yuyushiki Op - Seeno!.mp3",
+        "path": "D:/Music/Self Radio\\214 Yuyushiki Op - Seeno!.mp3",
+        "series": "Yuyushiki",
+        "weight": 4
+    },
+    {
+        "id": "ID0613",
+        "name": "215 Wataten - Hareruya.mp3",
+        "path": "D:/Music/Self Radio\\215 Wataten - Hareruya.mp3",
+        "series": "Wataten",
+        "weight": 2
+    },
+    {
+        "id": "ID0614",
+        "name": "216 Gochiusa - Tiny Christmas Party.mp3",
+        "path": "D:/Music/Self Radio\\216 Gochiusa - Tiny Christmas Party.mp3",
+        "series": "Gochiusa",
+        "weight": 3
+    },
+    {
+        "id": "ID0615",
+        "name": "217 Chiisana Koi No Uta.mp3",
+        "path": "D:/Music/Self Radio\\217 Chiisana Koi No Uta.mp3",
+        "series": "Single",
+        "weight": 3
+    },
+    {
+        "id": "ID0616",
+        "name": "218 Non Non Biyori Op 2 - Kodama Kotoda Ma.mp3",
+        "path": "D:/Music/Self Radio\\218 Non Non Biyori Op 2 - Kodama Kotoda Ma.mp3",
+        "series": "Non Non Biyori",
+        "weight": 3
+    },
+    {
+        "id": "ID0617",
+        "name": "219 Mitsuboshi Colors Op - Colors Power Ni Omakasero.mp3",
+        "path": "D:/Music/Self Radio\\219 Mitsuboshi Colors Op - Colors Power Ni Omakasero.mp3",
+        "series": "Mitsuboshi Colors",
+        "weight": 3
+    },
+    {
+        "id": "ID0618",
+        "name": "220 Gochiusa - Candy Color Days.mp3",
+        "path": "D:/Music/Self Radio\\220 Gochiusa - Candy Color Days.mp3",
+        "series": "Gochiusa",
+        "weight": 4
+    },
+    {
+        "id": "ID0619",
+        "name": "221 K-On - Fuwa-Fuwa Time.mp3",
+        "path": "D:/Music/Self Radio\\221 K-On - Fuwa-Fuwa Time.mp3",
+        "series": "K-On",
+        "weight": 3
+    },
+    {
+        "id": "ID0620",
+        "name": "222 Wataten - Issho Ni Otete O Tsunago Ne.mp3",
+        "path": "D:/Music/Self Radio\\222 Wataten - Issho Ni Otete O Tsunago Ne.mp3",
+        "series": "Wataten",
+        "weight": 2
+    },
+    {
+        "id": "ID0621",
+        "name": "223 Yuru Yuri - Happy Time Never Ends.mp3",
+        "path": "D:/Music/Self Radio\\223 Yuru Yuri - Happy Time Never Ends.mp3",
+        "series": "Yuru Yuri",
+        "weight": 4
+    },
+    {
+        "id": "ID0622",
+        "name": "224 Gochiusa - Im Near My Heart.mp3",
+        "path": "D:/Music/Self Radio\\224 Gochiusa - Im Near My Heart.mp3",
+        "series": "Gochiusa",
+        "weight": 4
+    },
+    {
+        "id": "ID0623",
+        "name": "225 New Game Op 2 - Step By Step Up.mp3",
+        "path": "D:/Music/Self Radio\\225 New Game Op 2 - Step By Step Up.mp3",
+        "series": "New Game",
+        "weight": 3
+    },
+    {
+        "id": "ID0624",
+        "name": "226 Konosuba S1 Ed - Chiisana Bakuensha.mp3",
+        "path": "D:/Music/Self Radio\\226 Konosuba S1 Ed - Chiisana Bakuensha.mp3",
+        "series": "Konosuba",
+        "weight": 3
+    },
+    {
+        "id": "ID0625",
+        "name": "227 Gochiusa - Welcome Back.mp3",
+        "path": "D:/Music/Self Radio\\227 Gochiusa - Welcome Back.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0626",
+        "name": "228 Aharen-san  Ed - Kyori kan.mp3",
+        "path": "D:/Music/Self Radio\\228 Aharen-san  Ed - Kyori kan.mp3",
+        "series": "Aharen-san",
+        "weight": 4
+    },
+    {
+        "id": "ID0627",
+        "name": "229 Gakkou Gurashi Op - Friend Shitai Gakuen Seikatsubu.mp3",
+        "path": "D:/Music/Self Radio\\229 Gakkou Gurashi Op - Friend Shitai Gakuen Seikatsubu.mp3",
+        "series": "Gakkou Gurashi",
+        "weight": 3
+    },
+    {
+        "id": "ID0628",
+        "name": "230 Tensei Slime Ed 3 - Storyseeker.mp3",
+        "path": "D:/Music/Self Radio\\230 Tensei Slime Ed 3 - Storyseeker.mp3",
+        "series": "Tensei Slime",
+        "weight": 3
+    },
+    {
+        "id": "ID0629",
+        "name": "231 Gochiusa - Today Is Truly Larry Rain.mp3",
+        "path": "D:/Music/Self Radio\\231 Gochiusa - Today Is Truly Larry Rain.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0630",
+        "name": "232 Rail Romanesque - Wonderful Rail.mp3",
+        "path": "D:/Music/Self Radio\\232 Rail Romanesque - Wonderful Rail.mp3",
+        "series": "Rail Romanesque",
+        "weight": 3
+    },
+    {
+        "id": "ID0631",
+        "name": "233 Stella No Mahou Ed.mp3",
+        "path": "D:/Music/Self Radio\\233 Stella No Mahou Ed.mp3",
+        "series": "Stella No Mahou",
+        "weight": 2
+    },
+    {
+        "id": "ID0632",
+        "name": "234 Yuru Yuri S3 Ending - Kimi Ga Kureta Shiny Story.mp3",
+        "path": "D:/Music/Self Radio\\234 Yuru Yuri S3 Ending - Kimi Ga Kureta Shiny Story.mp3",
+        "series": "Yuru Yuri",
+        "weight": 2
+    },
+    {
+        "id": "ID0633",
+        "name": "235 Gochiusa - Sing A Song!!!!!.mp3",
+        "path": "D:/Music/Self Radio\\235 Gochiusa - Sing A Song!!!!!.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0634",
+        "name": "236 New Game - Green Leaves.mp3",
+        "path": "D:/Music/Self Radio\\236 New Game - Green Leaves.mp3",
+        "series": "New Game",
+        "weight": 2
+    },
+    {
+        "id": "ID0635",
+        "name": "237 Hinako Note Ed Curtain Call!.mp3",
+        "path": "D:/Music/Self Radio\\237 Hinako Note Ed Curtain Call!.mp3",
+        "series": "Hinako Note",
+        "weight": 3
+    },
+    {
+        "id": "ID0636",
+        "name": "238 Kinmoza - Promise Of Shirotsumekusa.mp3",
+        "path": "D:/Music/Self Radio\\238 Kinmoza - Promise Of Shirotsumekusa.mp3",
+        "series": "Kinmoza",
+        "weight": 3
+    },
+    {
+        "id": "ID0637",
+        "name": "239 Gochiusa - Sky Blue Salon.mp3",
+        "path": "D:/Music/Self Radio\\239 Gochiusa - Sky Blue Salon.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0638",
+        "name": "240 Tonakyu Op - Kyuutie Ladies.mp3",
+        "path": "D:/Music/Self Radio\\240 Tonakyu Op - Kyuutie Ladies.mp3",
+        "series": "Tonakyu",
+        "weight": 4
+    },
+    {
+        "id": "ID0639",
+        "name": "241 Non Non Biyori - Hon Waka Humming.mp3",
+        "path": "D:/Music/Self Radio\\241 Non Non Biyori - Hon Waka Humming.mp3",
+        "series": "Non Non Biyori",
+        "weight": 3
+    },
+    {
+        "id": "ID0640",
+        "name": "242 Yuru Yuri - Koi No Bakkin Buckingham!.mp3",
+        "path": "D:/Music/Self Radio\\242 Yuru Yuri - Koi No Bakkin Buckingham!.mp3",
+        "series": "Yuru Yuri",
+        "weight": 2
+    },
+    {
+        "id": "ID0641",
+        "name": "243 Gochiusa - Secret Hospitality.mp3",
+        "path": "D:/Music/Self Radio\\243 Gochiusa - Secret Hospitality.mp3",
+        "series": "Gochiusa",
+        "weight": 3
+    },
+    {
+        "id": "ID0642",
+        "name": "244 Gabriel Dropout - Original Bible.mp3",
+        "path": "D:/Music/Self Radio\\244 Gabriel Dropout - Original Bible.mp3",
+        "series": "Gabriel Dropout",
+        "weight": 2
+    },
+    {
+        "id": "ID0643",
+        "name": "245 Cheat Kusushi No Slow Life Ed - Mainichi Kashimashi Pharmacy.mp3",
+        "path": "D:/Music/Self Radio\\245 Cheat Kusushi No Slow Life Ed - Mainichi Kashimashi Pharmacy.mp3",
+        "series": "Cheat Kusushi No Slow Life",
+        "weight": 2
+    },
+    {
+        "id": "ID0644",
+        "name": "246 Wataten - Watashi Wo Yobukoe.mp3",
+        "path": "D:/Music/Self Radio\\246 Wataten - Watashi Wo Yobukoe.mp3",
+        "series": "Wataten",
+        "weight": 2
+    },
+    {
+        "id": "ID0645",
+        "name": "247 Gochiusa - A Spoonful Of Princess Story.mp3",
+        "path": "D:/Music/Self Radio\\247 Gochiusa - A Spoonful Of Princess Story.mp3",
+        "series": "Gochiusa",
+        "weight": 3
+    },
+    {
+        "id": "ID0646",
+        "name": "248 ReZero S2 Op - Realize.mp3",
+        "path": "D:/Music/Self Radio\\248 ReZero S2 Op - Realize.mp3",
+        "series": "ReZero",
+        "weight": 3
+    },
+    {
+        "id": "ID0647",
+        "name": "249 Koisuru Asteroid - Ano Hoshi No Muko Ni.mp3",
+        "path": "D:/Music/Self Radio\\249 Koisuru Asteroid - Ano Hoshi No Muko Ni.mp3",
+        "series": "Koisuru Asteroid",
+        "weight": 2
+    },
+    {
+        "id": "ID0648",
+        "name": "250 Wataten - Sweets Land Paradox.mp3",
+        "path": "D:/Music/Self Radio\\250 Wataten - Sweets Land Paradox.mp3",
+        "series": "Wataten",
+        "weight": 4
+    },
+    {
+        "id": "ID0649",
+        "name": "251 Gochiusa - Komorebi Seishunfu-Sunlight Through The Trees.mp3",
+        "path": "D:/Music/Self Radio\\251 Gochiusa - Komorebi Seishunfu-Sunlight Through The Trees.mp3",
+        "series": "Gochiusa",
+        "weight": 4
+    },
+    {
+        "id": "ID0650",
+        "name": "252 Yakunara Mug Cup Ed - Pale Blue.mp3",
+        "path": "D:/Music/Self Radio\\252 Yakunara Mug Cup Ed - Pale Blue.mp3",
+        "series": "Yakunara Mug Cup",
+        "weight": 3
+    },
+    {
+        "id": "ID0651",
+        "name": "253 Yuru Yuri - The Theme of Love, Courage, Hope, and Friendship.mp3",
+        "path": "D:/Music/Self Radio\\253 Yuru Yuri - The Theme of Love, Courage, Hope, and Friendship.mp3",
+        "series": "Yuru Yuri",
+        "weight": 2
+    },
+    {
+        "id": "ID0652",
+        "name": "254 Gochiusa - No Peace My Pace.mp3",
+        "path": "D:/Music/Self Radio\\254 Gochiusa - No Peace My Pace.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0653",
+        "name": "255 Gj-Bu Ed 3.mp3",
+        "path": "D:/Music/Self Radio\\255 Gj-Bu Ed 3.mp3",
+        "series": "Gj-Bu",
+        "weight": 3
+    },
+    {
+        "id": "ID0654",
+        "name": "256 Mikakunin De Shinkoukei - Houkago Vacation.mp3",
+        "path": "D:/Music/Self Radio\\256 Mikakunin De Shinkoukei - Houkago Vacation.mp3",
+        "series": "Mikakunin",
+        "weight": 3
+    },
+    {
+        "id": "ID0655",
+        "name": "257 Gochiusa - Naisho'S Story Is In A Dream.mp3",
+        "path": "D:/Music/Self Radio\\257 Gochiusa - Naisho'S Story Is In A Dream.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0656",
+        "name": "258 Yuru Camp Op - Shiny Days.mp3",
+        "path": "D:/Music/Self Radio\\258 Yuru Camp Op - Shiny Days.mp3",
+        "series": "Yuru Camp",
+        "weight": 2
+    },
+    {
+        "id": "ID0657",
+        "name": "259 Houkago Saikoro Ed - On The Board.mp3",
+        "path": "D:/Music/Self Radio\\259 Houkago Saikoro Ed - On The Board.mp3",
+        "series": "Houkago Saikoro",
+        "weight": 2
+    },
+    {
+        "id": "ID0658",
+        "name": "260 Non Non Biyori - Oyuugi Surun Aware Ponpokobushi.mp3",
+        "path": "D:/Music/Self Radio\\260 Non Non Biyori - Oyuugi Surun Aware Ponpokobushi.mp3",
+        "series": "Non Non Biyori",
+        "weight": 3
+    },
+    {
+        "id": "ID0659",
+        "name": "261 Gochiusa - Pipopapo People!.mp3",
+        "path": "D:/Music/Self Radio\\261 Gochiusa - Pipopapo People!.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0660",
+        "name": "262 Tensei Slime - Boku No Nakanokimi E.mp3",
+        "path": "D:/Music/Self Radio\\262 Tensei Slime - Boku No Nakanokimi E.mp3",
+        "series": "Tensei Slime",
+        "weight": 3
+    },
+    {
+        "id": "ID0661",
+        "name": "263 Yuru Yuri - The Maiden In Love Is Yuruyuri.mp3",
+        "path": "D:/Music/Self Radio\\263 Yuru Yuri - The Maiden In Love Is Yuruyuri.mp3",
+        "series": "Yuru Yuri",
+        "weight": 3
+    },
+    {
+        "id": "ID0662",
+        "name": "264 Gochiusa - Future Puzzle.mp3",
+        "path": "D:/Music/Self Radio\\264 Gochiusa - Future Puzzle.mp3",
+        "series": "Gochiusa",
+        "weight": 4
+    },
+    {
+        "id": "ID0663",
+        "name": "265 Girls Und Panzer - Sore Yuke! Otome No Senshadou!!.mp3",
+        "path": "D:/Music/Self Radio\\265 Girls Und Panzer - Sore Yuke! Otome No Senshadou!!.mp3",
+        "series": "Girls Und Panzer",
+        "weight": 4
+    },
+    {
+        "id": "ID0664",
+        "name": "266 Konohana Kitan Ed 4.mp3",
+        "path": "D:/Music/Self Radio\\266 Konohana Kitan Ed 4.mp3",
+        "series": "Konohana Kitan",
+        "weight": 3
+    },
+    {
+        "id": "ID0665",
+        "name": "267 Gochiusa S1 Op - Daydream Cafe.mp3",
+        "path": "D:/Music/Self Radio\\267 Gochiusa S1 Op - Daydream Cafe.mp3",
+        "series": "Gochiusa",
+        "weight": 3
+    },
+    {
+        "id": "ID0666",
+        "name": "268 K-On Tenshi Ni Fureta Yo!.mp3",
+        "path": "D:/Music/Self Radio\\268 K-On Tenshi Ni Fureta Yo!.mp3",
+        "series": "K-On",
+        "weight": 3
+    },
+    {
+        "id": "ID0667",
+        "name": "269 Wataten Op - Kimamana Tenshitachi.mp3",
+        "path": "D:/Music/Self Radio\\269 Wataten Op - Kimamana Tenshitachi.mp3",
+        "series": "Wataten",
+        "weight": 3
+    },
+    {
+        "id": "ID0668",
+        "name": "270 Mikakunin - Love \u2661 Specialty.mp3",
+        "path": "D:/Music/Self Radio\\270 Mikakunin - Love \u2661 Specialty.mp3",
+        "series": "Mikakunin",
+        "weight": 4
+    },
+    {
+        "id": "ID0669",
+        "name": "271 Gochiusa - Tobikiri Summer Time.mp3",
+        "path": "D:/Music/Self Radio\\271 Gochiusa - Tobikiri Summer Time.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0670",
+        "name": "272 Slime Taoshite Op - Gudafuwa Every Day.mp3",
+        "path": "D:/Music/Self Radio\\272 Slime Taoshite Op - Gudafuwa Every Day.mp3",
+        "series": "Slime Taoshite",
+        "weight": 3
+    },
+    {
+        "id": "ID0671",
+        "name": "273 My Senpai Is Annoying Ed - Niji Ga Kakaru Made No Hanashi.mp3",
+        "path": "D:/Music/Self Radio\\273 My Senpai Is Annoying Ed - Niji Ga Kakaru Made No Hanashi.mp3",
+        "series": "My Senpai Is Annoying",
+        "weight": 2
+    },
+    {
+        "id": "ID0672",
+        "name": "274 Gochiusa - Escort With A Coffee Cup.mp3",
+        "path": "D:/Music/Self Radio\\274 Gochiusa - Escort With A Coffee Cup.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0673",
+        "name": "275 Yuru Yuri Nachuyachumi Ed - After School Days.mp3",
+        "path": "D:/Music/Self Radio\\275 Yuru Yuri Nachuyachumi Ed - After School Days.mp3",
+        "series": "Yuru Yuri",
+        "weight": 4
+    },
+    {
+        "id": "ID0674",
+        "name": "276 Gin No Saji S2 Ed - Oto No Naru Hou E.mp3",
+        "path": "D:/Music/Self Radio\\276 Gin No Saji S2 Ed - Oto No Naru Hou E.mp3",
+        "series": "Gin No Saji",
+        "weight": 4
+    },
+    {
+        "id": "ID0675",
+        "name": "277 Koisuru Asteroid - Kokoro Atras.mp3",
+        "path": "D:/Music/Self Radio\\277 Koisuru Asteroid - Kokoro Atras.mp3",
+        "series": "Koisuru Asteroid",
+        "weight": 4
+    },
+    {
+        "id": "ID0676",
+        "name": "278 Gochiusa - Winter Gift.mp3",
+        "path": "D:/Music/Self Radio\\278 Gochiusa - Winter Gift.mp3",
+        "series": "Gochiusa",
+        "weight": 3
+    },
+    {
+        "id": "ID0677",
+        "name": "279 Non Non Biyori Op 3 - Tsugihagi Moyou.mp3",
+        "path": "D:/Music/Self Radio\\279 Non Non Biyori Op 3 - Tsugihagi Moyou.mp3",
+        "series": "Non Non Biyori",
+        "weight": 3
+    },
+    {
+        "id": "ID0678",
+        "name": "280 Tamako Market - Tomorou.mp3",
+        "path": "D:/Music/Self Radio\\280 Tamako Market - Tomorou.mp3",
+        "series": "Tamako Market",
+        "weight": 2
+    },
+    {
+        "id": "ID0679",
+        "name": "281 Kobayashi Dragon Maid - Peaceful Days.mp3",
+        "path": "D:/Music/Self Radio\\281 Kobayashi Dragon Maid - Peaceful Days.mp3",
+        "series": "Kobayashi Dragon Maid",
+        "weight": 3
+    },
+    {
+        "id": "ID0680",
+        "name": "282 Gochiusa S3 Ed - Nakayoshi O Nakayoshi!.mp3",
+        "path": "D:/Music/Self Radio\\282 Gochiusa S3 Ed - Nakayoshi O Nakayoshi!.mp3",
+        "series": "Gochiusa",
+        "weight": 4
+    },
+    {
+        "id": "ID0681",
+        "name": "283 Wataten - Sanjo! Koakuma Angel.mp3",
+        "path": "D:/Music/Self Radio\\283 Wataten - Sanjo! Koakuma Angel.mp3",
+        "series": "Wataten",
+        "weight": 3
+    },
+    {
+        "id": "ID0682",
+        "name": "284 Yuru Yuri - Easy And Easy Days.mp3",
+        "path": "D:/Music/Self Radio\\284 Yuru Yuri - Easy And Easy Days.mp3",
+        "series": "Yuru Yuri",
+        "weight": 3
+    },
+    {
+        "id": "ID0683",
+        "name": "285 Gochiusa - Sentence.mp3",
+        "path": "D:/Music/Self Radio\\285 Gochiusa - Sentence.mp3",
+        "series": "Gochiusa",
+        "weight": 3
+    },
+    {
+        "id": "ID0684",
+        "name": "286 Yuyushiki Ed -  Affection.mp3",
+        "path": "D:/Music/Self Radio\\286 Yuyushiki Ed -  Affection.mp3",
+        "series": "Yuyushiki",
+        "weight": 4
+    },
+    {
+        "id": "ID0685",
+        "name": "287 Houkago Teibou Nisshi - Run & Gun!.mp3",
+        "path": "D:/Music/Self Radio\\287 Houkago Teibou Nisshi - Run & Gun!.mp3",
+        "series": "Houkago Teibou Nisshi",
+        "weight": 3
+    },
+    {
+        "id": "ID0686",
+        "name": "288 New Game - Sweet Everyday.mp3",
+        "path": "D:/Music/Self Radio\\288 New Game - Sweet Everyday.mp3",
+        "series": "New Game",
+        "weight": 3
+    },
+    {
+        "id": "ID0687",
+        "name": "289 Gakkou Gurashi - Sweet Violet.mp3",
+        "path": "D:/Music/Self Radio\\289 Gakkou Gurashi - Sweet Violet.mp3",
+        "series": "Gakkou Gurashi",
+        "weight": 2
+    },
+    {
+        "id": "ID0688",
+        "name": "290 Slow Loop Op - Arrow.mp3",
+        "path": "D:/Music/Self Radio\\290 Slow Loop Op - Arrow.mp3",
+        "series": "Slow Loop",
+        "weight": 2
+    },
+    {
+        "id": "ID0689",
+        "name": "291 Kaguya-Sama Wa Kokurasetai Ed Sentimental Crisis.mp3",
+        "path": "D:/Music/Self Radio\\291 Kaguya-Sama Wa Kokurasetai Ed Sentimental Crisis.mp3",
+        "series": "Kaguya-Sama",
+        "weight": 2
+    },
+    {
+        "id": "ID0690",
+        "name": "292 Gochiusa - La La La! La Morning.mp3",
+        "path": "D:/Music/Self Radio\\292 Gochiusa - La La La! La Morning.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0691",
+        "name": "293 Aot S4 Part 1 Ed - Shock.mp3",
+        "path": "D:/Music/Self Radio\\293 Aot S4 Part 1 Ed - Shock.mp3",
+        "series": "Aot",
+        "weight": 3
+    },
+    {
+        "id": "ID0692",
+        "name": "294 Himouto Umaru-Chan - T S F In Nippon.mp3",
+        "path": "D:/Music/Self Radio\\294 Himouto Umaru-Chan - T S F In Nippon.mp3",
+        "series": "Himouto Umaru-Chan",
+        "weight": 4
+    },
+    {
+        "id": "ID0693",
+        "name": "295 K-On Gohan Wa Okazu.mp3",
+        "path": "D:/Music/Self Radio\\295 K-On Gohan Wa Okazu.mp3",
+        "series": "K-On",
+        "weight": 3
+    },
+    {
+        "id": "ID0694",
+        "name": "296 Mikakunin Ed - Masshiro World.mp3",
+        "path": "D:/Music/Self Radio\\296 Mikakunin Ed - Masshiro World.mp3",
+        "series": "Mikakunin",
+        "weight": 4
+    },
+    {
+        "id": "ID0695",
+        "name": "297 Non Non Biyori - Happy Parade.mp3",
+        "path": "D:/Music/Self Radio\\297 Non Non Biyori - Happy Parade.mp3",
+        "series": "Non Non Biyori",
+        "weight": 3
+    },
+    {
+        "id": "ID0696",
+        "name": "298 Gochiusa - Tiny Heart.mp3",
+        "path": "D:/Music/Self Radio\\298 Gochiusa - Tiny Heart.mp3",
+        "series": "Gochiusa",
+        "weight": 3
+    },
+    {
+        "id": "ID0697",
+        "name": "299 New Game - Runway.mp3",
+        "path": "D:/Music/Self Radio\\299 New Game - Runway.mp3",
+        "series": "New Game",
+        "weight": 2
+    },
+    {
+        "id": "ID0698",
+        "name": "300 Wataten - Tenshi No Manazashi Epilogue.mp3",
+        "path": "D:/Music/Self Radio\\300 Wataten - Tenshi No Manazashi Epilogue.mp3",
+        "series": "Wataten",
+        "weight": 2
+    },
+    {
+        "id": "ID0699",
+        "name": "301 Mitsuboshi Colors Ed - Miracle Colors Honjitsu Mo Ijou Nashi.mp3",
+        "path": "D:/Music/Self Radio\\301 Mitsuboshi Colors Ed - Miracle Colors Honjitsu Mo Ijou Nashi.mp3",
+        "series": "Mitsuboshi Colors",
+        "weight": 3
+    },
+    {
+        "id": "ID0700",
+        "name": "302 Gochiusa - Mieru Yo Mieru.mp3",
+        "path": "D:/Music/Self Radio\\302 Gochiusa - Mieru Yo Mieru.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0701",
+        "name": "303 Yuru Yuri Nachuyacumi!+ Ed - Ohirune Universe.mp3",
+        "path": "D:/Music/Self Radio\\303 Yuru Yuri Nachuyacumi!+ Ed - Ohirune Universe.mp3",
+        "series": "Yuru Yuri",
+        "weight": 4
+    },
+    {
+        "id": "ID0702",
+        "name": "304 Wataten - Anoko Ni Aitai.mp3",
+        "path": "D:/Music/Self Radio\\304 Wataten - Anoko Ni Aitai.mp3",
+        "series": "Wataten",
+        "weight": 2
+    },
+    {
+        "id": "ID0703",
+        "name": "305 Tamako Market Ed - Neguse.mp3",
+        "path": "D:/Music/Self Radio\\305 Tamako Market Ed - Neguse.mp3",
+        "series": "Tamako Market",
+        "weight": 2
+    },
+    {
+        "id": "ID0704",
+        "name": "306 Gochiusa - Otetsudai No Rararan Soe Wa Ikagadesu Ka.mp3",
+        "path": "D:/Music/Self Radio\\306 Gochiusa - Otetsudai No Rararan Soe Wa Ikagadesu Ka.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0705",
+        "name": "307 Koisuru Asteroid - Chippoke Na Negaigoto.mp3",
+        "path": "D:/Music/Self Radio\\307 Koisuru Asteroid - Chippoke Na Negaigoto.mp3",
+        "series": "Koisuru Asteroid",
+        "weight": 2
+    },
+    {
+        "id": "ID0706",
+        "name": "308 New Game - Piece Of Peace.mp3",
+        "path": "D:/Music/Self Radio\\308 New Game - Piece Of Peace.mp3",
+        "series": "New Game",
+        "weight": 2
+    },
+    {
+        "id": "ID0707",
+        "name": "309 Aiura Ed - Zutto Ne.mp3",
+        "path": "D:/Music/Self Radio\\309 Aiura Ed - Zutto Ne.mp3",
+        "series": "Aiura",
+        "weight": 3
+    },
+    {
+        "id": "ID0708",
+        "name": "310 Gochiusa - Sekai Has Become A Cafe!.mp3",
+        "path": "D:/Music/Self Radio\\310 Gochiusa - Sekai Has Become A Cafe!.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0709",
+        "name": "311 Hololive - Okayu Mogumogu Yummy!.mp3",
+        "path": "D:/Music/Self Radio\\311 Hololive - Okayu Mogumogu Yummy!.mp3",
+        "series": "Hololive",
+        "weight": 3
+    },
+    {
+        "id": "ID0710",
+        "name": "312 Yuru Yuri - Its Happy Day!.mp3",
+        "path": "D:/Music/Self Radio\\312 Yuru Yuri - Its Happy Day!.mp3",
+        "series": "Yuru Yuri",
+        "weight": 4
+    },
+    {
+        "id": "ID0711",
+        "name": "313 Gochiusa - Chess Match Cafe Check Ole.mp3",
+        "path": "D:/Music/Self Radio\\313 Gochiusa - Chess Match Cafe Check Ole.mp3",
+        "series": "Gochiusa",
+        "weight": 3
+    },
+    {
+        "id": "ID0712",
+        "name": "314 Kobayashi Dragon Maid - Wisper Wizuyu.mp3",
+        "path": "D:/Music/Self Radio\\314 Kobayashi Dragon Maid - Wisper Wizuyu.mp3",
+        "series": "Kobayashi Dragon Maid",
+        "weight": 2
+    },
+    {
+        "id": "ID0713",
+        "name": "315 Non Non Biyori Vacation Ed - Omoide.mp3",
+        "path": "D:/Music/Self Radio\\315 Non Non Biyori Vacation Ed - Omoide.mp3",
+        "series": "Non Non Biyori",
+        "weight": 2
+    },
+    {
+        "id": "ID0714",
+        "name": "316 Gochiusa - Sentimental Button.mp3",
+        "path": "D:/Music/Self Radio\\316 Gochiusa - Sentimental Button.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0715",
+        "name": "317 Yuru Yuri - Akaza Theater.mp3",
+        "path": "D:/Music/Self Radio\\317 Yuru Yuri - Akaza Theater.mp3",
+        "series": "Yuru Yuri",
+        "weight": 3
+    },
+    {
+        "id": "ID0716",
+        "name": "318 Gochiusa - Barista Who Became A Rabbit.mp3",
+        "path": "D:/Music/Self Radio\\318 Gochiusa - Barista Who Became A Rabbit.mp3",
+        "series": "Gochiusa",
+        "weight": 3
+    },
+    {
+        "id": "ID0717",
+        "name": "319 Tensei Slime Ed 2 - Little Soldier.mp3",
+        "path": "D:/Music/Self Radio\\319 Tensei Slime Ed 2 - Little Soldier.mp3",
+        "series": "Tensei Slime",
+        "weight": 2
+    },
+    {
+        "id": "ID0718",
+        "name": "320 Yuru  Camp Ed - Haru No Tonari.mp3",
+        "path": "D:/Music/Self Radio\\320 Yuru  Camp Ed - Haru No Tonari.mp3",
+        "series": "Yuru Camp",
+        "weight": 3
+    },
+    {
+        "id": "ID0719",
+        "name": "321 Dr Stone S2 Ed Hatena-Koe.mp3",
+        "path": "D:/Music/Self Radio\\321 Dr Stone S2 Ed Hatena-Koe.mp3",
+        "series": "Dr Stone",
+        "weight": 3
+    },
+    {
+        "id": "ID0720",
+        "name": "322 Machizoku Ed - Yoimachi Cantare.mp3",
+        "path": "D:/Music/Self Radio\\322 Machizoku Ed - Yoimachi Cantare.mp3",
+        "series": "Machizoku",
+        "weight": 3
+    },
+    {
+        "id": "ID0721",
+        "name": "323 Gin No Saji S1 Ed - Hello Especially.mp3",
+        "path": "D:/Music/Self Radio\\323 Gin No Saji S1 Ed - Hello Especially.mp3",
+        "series": "Gin No Saji",
+        "weight": 2
+    },
+    {
+        "id": "ID0722",
+        "name": "324 Gochiusa - Pyon'S Purinpurun.mp3",
+        "path": "D:/Music/Self Radio\\324 Gochiusa - Pyon'S Purinpurun.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0723",
+        "name": "325 Comic Girls Ed - Namida Wa Misenai.mp3",
+        "path": "D:/Music/Self Radio\\325 Comic Girls Ed - Namida Wa Misenai.mp3",
+        "series": "Comic Girls",
+        "weight": 2
+    },
+    {
+        "id": "ID0724",
+        "name": "326 Gochiusa - Put Your Hands Up \u2606 Universe.mp3",
+        "path": "D:/Music/Self Radio\\326 Gochiusa - Put Your Hands Up \u2606 Universe.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0725",
+        "name": "327 Konohana Kitan - 4 O'Clock, The Edge Of The Grass.mp3",
+        "path": "D:/Music/Self Radio\\327 Konohana Kitan - 4 O'Clock, The Edge Of The Grass.mp3",
+        "series": "Konohana Kitan",
+        "weight": 3
+    },
+    {
+        "id": "ID0726",
+        "name": "328 Gochiusa - Happiness Angkor.mp3",
+        "path": "D:/Music/Self Radio\\328 Gochiusa - Happiness Angkor.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0727",
+        "name": "329 Yuru Yuri - I Love You.mp3",
+        "path": "D:/Music/Self Radio\\329 Yuru Yuri - I Love You.mp3",
+        "series": "Yuru Yuri",
+        "weight": 3
+    },
+    {
+        "id": "ID0728",
+        "name": "330 Stella No Mahou Op - God Save The Girls.mp3",
+        "path": "D:/Music/Self Radio\\330 Stella No Mahou Op - God Save The Girls.mp3",
+        "series": "Stella No Mahou",
+        "weight": 3
+    },
+    {
+        "id": "ID0729",
+        "name": "331 Gochiusa - Wow Wow Try! - Chino Ver.mp3",
+        "path": "D:/Music/Self Radio\\331 Gochiusa - Wow Wow Try! - Chino Ver.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0730",
+        "name": "332 Yakunara Mug Cup S2 Ed - Canary Yellow.mp3",
+        "path": "D:/Music/Self Radio\\332 Yakunara Mug Cup S2 Ed - Canary Yellow.mp3",
+        "series": "Yakunara Mug Cup",
+        "weight": 3
+    },
+    {
+        "id": "ID0731",
+        "name": "333 Wataten - Totteoki No Kotoba.mp3",
+        "path": "D:/Music/Self Radio\\333 Wataten - Totteoki No Kotoba.mp3",
+        "series": "Wataten",
+        "weight": 2
+    },
+    {
+        "id": "ID0732",
+        "name": "334 Gochiusa - Longing Pleats \u2661.mp3",
+        "path": "D:/Music/Self Radio\\334 Gochiusa - Longing Pleats \u2661.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0733",
+        "name": "335 New Game Ed 3 - Yumeiro Compass.mp3",
+        "path": "D:/Music/Self Radio\\335 New Game Ed 3 - Yumeiro Compass.mp3",
+        "series": "New Game",
+        "weight": 2
+    },
+    {
+        "id": "ID0734",
+        "name": "336 Kinmoza - Sei Shun Iro Mimoza.mp3",
+        "path": "D:/Music/Self Radio\\336 Kinmoza - Sei Shun Iro Mimoza.mp3",
+        "series": "Kinmoza",
+        "weight": 4
+    },
+    {
+        "id": "ID0735",
+        "name": "337 Wataten - Yappari Myaanei Number1.mp3",
+        "path": "D:/Music/Self Radio\\337 Wataten - Yappari Myaanei Number1.mp3",
+        "series": "Wataten",
+        "weight": 4
+    },
+    {
+        "id": "ID0736",
+        "name": "338 Gochiusa - Glitter Everyday.mp3",
+        "path": "D:/Music/Self Radio\\338 Gochiusa - Glitter Everyday.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0737",
+        "name": "339 Yuru Yuri - Mirakuru Yuru Kuru 1 2 3.mp3",
+        "path": "D:/Music/Self Radio\\339 Yuru Yuri - Mirakuru Yuru Kuru 1 2 3.mp3",
+        "series": "Yuru Yuri",
+        "weight": 2
+    },
+    {
+        "id": "ID0738",
+        "name": "340 Majo no Tabitabi - Ed Full.mp3",
+        "path": "D:/Music/Self Radio\\340 Majo no Tabitabi - Ed Full.mp3",
+        "series": "Majo no Tabitabi",
+        "weight": 2
+    },
+    {
+        "id": "ID0739",
+        "name": "341 Sewayaki Kitsune No Senko-San Ed - Moffumoffu.mp3",
+        "path": "D:/Music/Self Radio\\341 Sewayaki Kitsune No Senko-San Ed - Moffumoffu.mp3",
+        "series": "Senko-san",
+        "weight": 4
+    },
+    {
+        "id": "ID0740",
+        "name": "342 Gochiusa S2 Ed - Tokimeki Poporon.mp3",
+        "path": "D:/Music/Self Radio\\342 Gochiusa S2 Ed - Tokimeki Poporon.mp3",
+        "series": "Gochiusa",
+        "weight": 4
+    },
+    {
+        "id": "ID0741",
+        "name": "343 Non Non Biyori - Pika Pika Nanon.mp3",
+        "path": "D:/Music/Self Radio\\343 Non Non Biyori - Pika Pika Nanon.mp3",
+        "series": "Non Non Biyori",
+        "weight": 4
+    },
+    {
+        "id": "ID0742",
+        "name": "344 New Game - Continue.mp3",
+        "path": "D:/Music/Self Radio\\344 New Game - Continue.mp3",
+        "series": "New Game",
+        "weight": 2
+    },
+    {
+        "id": "ID0743",
+        "name": "345 Houkago Teibou Nisshi Ed - To The World Of Fishing.mp3",
+        "path": "D:/Music/Self Radio\\345 Houkago Teibou Nisshi Ed - To The World Of Fishing.mp3",
+        "series": "Houkago Teibou Nisshi",
+        "weight": 4
+    },
+    {
+        "id": "ID0744",
+        "name": "346 Gochiusa - Paper Hikoki Letter.mp3",
+        "path": "D:/Music/Self Radio\\346 Gochiusa - Paper Hikoki Letter.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0745",
+        "name": "347 K-On Kira Kira Days.mp3",
+        "path": "D:/Music/Self Radio\\347 K-On Kira Kira Days.mp3",
+        "series": "K-On",
+        "weight": 2
+    },
+    {
+        "id": "ID0746",
+        "name": "348 Rail Romanesque - Starlight Rail Hana Kiritani.mp3",
+        "path": "D:/Music/Self Radio\\348 Rail Romanesque - Starlight Rail Hana Kiritani.mp3",
+        "series": "Rail Romanesque",
+        "weight": 4
+    },
+    {
+        "id": "ID0747",
+        "name": "349 Yuru Yuri S1 Op.mp3",
+        "path": "D:/Music/Self Radio\\349 Yuru Yuri S1 Op.mp3",
+        "series": "Yuru Yuri",
+        "weight": 2
+    },
+    {
+        "id": "ID0748",
+        "name": "350 Kobayashi Dragon Maid - Tsuke Ma Sho.mp3",
+        "path": "D:/Music/Self Radio\\350 Kobayashi Dragon Maid - Tsuke Ma Sho.mp3",
+        "series": "Kobayashi Dragon Maid",
+        "weight": 2
+    },
+    {
+        "id": "ID0749",
+        "name": "351 Kuma Bear Ed Full.mp3",
+        "path": "D:/Music/Self Radio\\351 Kuma Bear Ed Full.mp3",
+        "series": "Kuma Bear",
+        "weight": 2
+    },
+    {
+        "id": "ID0750",
+        "name": "352 Gochiusa - Nantonaku Mirai.mp3",
+        "path": "D:/Music/Self Radio\\352 Gochiusa - Nantonaku Mirai.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0751",
+        "name": "353 Koisuru Asteroid Ed Yozora.mp3",
+        "path": "D:/Music/Self Radio\\353 Koisuru Asteroid Ed Yozora.mp3",
+        "series": "Koisuru Asteroid",
+        "weight": 2
+    },
+    {
+        "id": "ID0752",
+        "name": "354 Tamako Market - I'M Sure, Forever, Thank You.mp3",
+        "path": "D:/Music/Self Radio\\354 Tamako Market - I'M Sure, Forever, Thank You.mp3",
+        "series": "Tamako Market",
+        "weight": 2
+    },
+    {
+        "id": "ID0753",
+        "name": "355 Gochiusa - Ochakai Monogatari.mp3",
+        "path": "D:/Music/Self Radio\\355 Gochiusa - Ochakai Monogatari.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0754",
+        "name": "356 Wataten - Go! Go! Go!.mp3",
+        "path": "D:/Music/Self Radio\\356 Wataten - Go! Go! Go!.mp3",
+        "series": "Wataten",
+        "weight": 3
+    },
+    {
+        "id": "ID0755",
+        "name": "357 Maoujou De Oyasumi Ed Full.mp3",
+        "path": "D:/Music/Self Radio\\357 Maoujou De Oyasumi Ed Full.mp3",
+        "series": "Maoujou De Oyasumi",
+        "weight": 2
+    },
+    {
+        "id": "ID0756",
+        "name": "358 Gochiusa - Toy Box Hapism.mp3",
+        "path": "D:/Music/Self Radio\\358 Gochiusa - Toy Box Hapism.mp3",
+        "series": "Gochiusa",
+        "weight": 2
+    },
+    {
+        "id": "ID0757",
+        "name": "359 Sora Yori Mo Tooi Basho - Haru Ka Tooku.mp3",
+        "path": "D:/Music/Self Radio\\359 Sora Yori Mo Tooi Basho - Haru Ka Tooku.mp3",
+        "series": "Sora Yori Mo Tooi Basho",
+        "weight": 3
+    },
+    {
+        "id": "ID0758",
+        "name": "360 Aharen-san - AHAREN HEART.mp3",
+        "path": "D:/Music/Self Radio\\360 Aharen-san - AHAREN HEART.mp3",
+        "series": "Aharen-san",
+        "weight": 3
+    },
+    {
+        "id": "ID0759",
+        "name": "361 Aot - S3 ED Akatsuki no Requiem.mp3",
+        "path": "D:/Music/Self Radio\\361 Aot - S3 ED Akatsuki no Requiem.mp3",
+        "series": "Aot",
+        "weight": 2
+    },
+    {
+        "id": "ID0760",
+        "name": "362 Aot - S3 P2 ED Name of Love.mp3",
+        "path": "D:/Music/Self Radio\\362 Aot - S3 P2 ED Name of Love.mp3",
+        "series": "Aot",
+        "weight": 2
+    },
+    {
+        "id": "ID0761",
+        "name": "363 Blue Archive - Shining Summer Days.mp3",
+        "path": "D:/Music/Self Radio\\363 Blue Archive - Shining Summer Days.mp3",
+        "series": "Blue Archive",
+        "weight": 3
+    },
+    {
+        "id": "ID0762",
+        "name": "364 Blue Archive - Our Quest.mp3",
+        "path": "D:/Music/Self Radio\\364 Blue Archive - Our Quest.mp3",
+        "series": "Blue Archive",
+        "weight": 3
+    },
+    {
+        "id": "ID0763",
+        "name": "365 Danchigai - Ed Gentle Mischief by PRIM\u2606 YOEGi.mp3",
+        "path": "D:/Music/Self Radio\\365 Danchigai - Ed Gentle Mischief by PRIM\u2606 YOEGi.mp3",
+        "series": "Danchigai",
+        "weight": 3
+    },
+    {
+        "id": "ID0764",
+        "name": "366 Danchigai - Ed Stream Princess Durandal by PRIM\u2606 YOEGi - Listen online for free on SoundCloud.mp3",
+        "path": "D:/Music/Self Radio\\366 Danchigai - Ed Stream Princess Durandal by PRIM\u2606 YOEGi - Listen online for free on SoundCloud.mp3",
+        "series": "Danchigai",
+        "weight": 2
+    },
+    {
+        "id": "ID0765",
+        "name": "367 Eromanga Sensei - ED adrenaline!!!.mp3",
+        "path": "D:/Music/Self Radio\\367 Eromanga Sensei - ED adrenaline!!!.mp3",
+        "series": "Eromanga Sensei",
+        "weight": 3
+    },
+    {
+        "id": "ID0766",
+        "name": "368 Eromanga Sensei - OP Hitorigoto.mp3",
+        "path": "D:/Music/Self Radio\\368 Eromanga Sensei - OP Hitorigoto.mp3",
+        "series": "Eromanga Sensei",
+        "weight": 3
+    },
+    {
+        "id": "ID0767",
+        "name": "369 Girls Und Panzer - Grand symphony.mp3",
+        "path": "D:/Music/Self Radio\\369 Girls Und Panzer - Grand symphony.mp3",
+        "series": "Girls Und Panzer",
+        "weight": 2
+    },
+    {
+        "id": "ID0768",
+        "name": "370 Girls Und Panzer - Mein Weg und Dein Weg ~Watashi no Michi, Omae no Michi.mp3",
+        "path": "D:/Music/Self Radio\\370 Girls Und Panzer - Mein Weg und Dein Weg ~Watashi no Michi, Omae no Michi.mp3",
+        "series": "Girls Und Panzer",
+        "weight": 3
+    },
+    {
+        "id": "ID0769",
+        "name": "371 Girls Und Panzer - The sound of a bang.mp3",
+        "path": "D:/Music/Self Radio\\371 Girls Und Panzer - The sound of a bang.mp3",
+        "series": "Girls Und Panzer",
+        "weight": 2
+    },
+    {
+        "id": "ID0770",
+        "name": "372 Hololive - Okayu Nekokabur\u012bna.mp3",
+        "path": "D:/Music/Self Radio\\372 Hololive - Okayu Nekokabur\u012bna.mp3",
+        "series": "Hololive",
+        "weight": 4
+    },
+    {
+        "id": "ID0771",
+        "name": "373 Katomori - Makuramoto ni Ghost Remix.mp3",
+        "path": "D:/Music/Self Radio\\373 Katomori - Makuramoto ni Ghost Remix.mp3",
+        "series": "Single",
+        "weight": 2
+    },
+    {
+        "id": "ID0772",
+        "name": "374 Kinmoza - Shining Star.mp3",
+        "path": "D:/Music/Self Radio\\374 Kinmoza - Shining Star.mp3",
+        "series": "Kinmoza",
+        "weight": 3
+    },
+    {
+        "id": "ID0773",
+        "name": "375 Kinmoza - Starring!!.mp3",
+        "path": "D:/Music/Self Radio\\375 Kinmoza - Starring!!.mp3",
+        "series": "Kinmoza",
+        "weight": 3
+    },
+    {
+        "id": "ID0774",
+        "name": "376 Konohana Kitan - Kokoro ni Tsubomi.mp3",
+        "path": "D:/Music/Self Radio\\376 Konohana Kitan - Kokoro ni Tsubomi.mp3",
+        "series": "Konohana Kitan",
+        "weight": 2
+    },
+    {
+        "id": "ID0775",
+        "name": "377 Maitetsu Pure Station - OP.mp3",
+        "path": "D:/Music/Self Radio\\377 Maitetsu Pure Station - OP.mp3",
+        "series": "Rail Romanesque",
+        "weight": 4
+    },
+    {
+        "id": "ID0776",
+        "name": "378 PIKASONIC - feat. nakotanmaru MEGAREX Release.mp3",
+        "path": "D:/Music/Self Radio\\378 PIKASONIC - feat. nakotanmaru MEGAREX Release.mp3",
+        "series": "Pikasonic",
+        "weight": 2
+    },
+    {
+        "id": "ID0777",
+        "name": "379 PIKASONIC - Lost My Mind feat. nakotanmaru.mp3",
+        "path": "D:/Music/Self Radio\\379 PIKASONIC - Lost My Mind feat. nakotanmaru.mp3",
+        "series": "Pikasonic",
+        "weight": 2
+    },
+    {
+        "id": "ID0778",
+        "name": "380 PIKASONIC - nakotanmaru ver..mp3",
+        "path": "D:/Music/Self Radio\\380 PIKASONIC - nakotanmaru ver..mp3",
+        "series": "Pikasonic",
+        "weight": 2
+    },
+    {
+        "id": "ID0779",
+        "name": "381 PIKASONIC - Tatsunoshin-Euphoria feat. Tsugumi Nagahara.mp3",
+        "path": "D:/Music/Self Radio\\381 PIKASONIC - Tatsunoshin-Euphoria feat. Tsugumi Nagahara.mp3",
+        "series": "Pikasonic",
+        "weight": 2
+    },
+    {
+        "id": "ID0797",
+        "name": "382 PIKASONIC - Tatsunoshin-Lockdown ft. NEONA.mp3",
+        "path": "D:/Music/Self Radio\\382 PIKASONIC - Tatsunoshin-Lockdown ft. NEONA.mp3",
+        "series": "Pikasonic",
+        "weight": 2
+    },
+    {
+        "id": "ID0821",
+        "name": "383 PIKASONIC - Tatsunoshin-Shizuku ft. NEONA KOTONOHOUSE.mp3",
+        "path": "D:/Music/Self Radio\\383 PIKASONIC - Tatsunoshin-Shizuku ft. NEONA KOTONOHOUSE.mp3",
+        "series": "Pikasonic",
+        "weight": 2
+    },
+    {
+        "id": "ID0822",
+        "name": "384 Ro-Kyu-Bu - ED full Party Love Okkiku Naritai.mp3",
+        "path": "D:/Music/Self Radio\\384 Ro-Kyu-Bu - ED full Party Love Okkiku Naritai.mp3",
+        "series": "Ro-Kyu-Bu",
+        "weight": 3
+    },
+    {
+        "id": "ID0823",
+        "name": "385 Ro-Kyu-Bu - OP SHOOT.mp3",
+        "path": "D:/Music/Self Radio\\385 Ro-Kyu-Bu - OP SHOOT.mp3",
+        "series": "Ro-Kyu-Bu",
+        "weight": 2
+    },
+    {
+        "id": "ID0824",
+        "name": "386 Shiro Jump - Jump.mp3",
+        "path": "D:/Music/Self Radio\\386 Shiro Jump - Jump.mp3",
+        "series": "Shiro Jump",
+        "weight": 3
+    },
+    {
+        "id": "ID0825",
+        "name": "387 Shiro Jump - Nyao.mp3",
+        "path": "D:/Music/Self Radio\\387 Shiro Jump - Nyao.mp3",
+        "series": "Shiro Jump",
+        "weight": 3
+    },
+    {
+        "id": "ID0826",
+        "name": "388 Yama No Susume - Cocoiro Rainbow.mp3",
+        "path": "D:/Music/Self Radio\\388 Yama No Susume - Cocoiro Rainbow.mp3",
+        "series": "Yama No Susume",
+        "weight": 2
+    },
+    {
+        "id": "ID0827",
+        "name": "389 Yunomi - feat. nicamoq Fruit on the Dancefloor.mp3",
+        "path": "D:/Music/Self Radio\\389 Yunomi - feat. nicamoq Fruit on the Dancefloor.mp3",
+        "series": "Yunomi",
+        "weight": 2
+    },
+    {
+        "id": "ID0828",
+        "name": "390 Yunomi - ft. Happy Kuru Kuru Jotori Remix.mp3",
+        "path": "D:/Music/Self Radio\\390 Yunomi - ft. Happy Kuru Kuru Jotori Remix.mp3",
+        "series": "Yunomi",
+        "weight": 2
+    },
+    {
+        "id": "ID0829",
+        "name": "391 Yunomi - Future Bass Yunomi feat. Rinahamu Fashion.mp3",
+        "path": "D:/Music/Self Radio\\391 Yunomi - Future Bass Yunomi feat. Rinahamu Fashion.mp3",
+        "series": "Yunomi",
+        "weight": 2
+    },
+    {
+        "id": "ID0830",
+        "name": "392 Yunomi - Jellyfish.mp3",
+        "path": "D:/Music/Self Radio\\392 Yunomi - Jellyfish.mp3",
+        "series": "Yunomi",
+        "weight": 2
+    },
+    {
+        "id": "ID0831",
+        "name": "393 Yunomi - Mentai Cosmic feat. Nicamoq.mp3",
+        "path": "D:/Music/Self Radio\\393 Yunomi - Mentai Cosmic feat. Nicamoq.mp3",
+        "series": "Yunomi",
+        "weight": 2
+    },
+    {
+        "id": "ID0832",
+        "name": "394 Yunomi - Yunomi ni Ocha Shite.mp3",
+        "path": "D:/Music/Self Radio\\394 Yunomi - Yunomi ni Ocha Shite.mp3",
+        "series": "Yunomi",
+        "weight": 2
+    },
+    {
+        "id": "ID0833",
+        "name": "395 Yunomi - Happy Life.mp3",
+        "path": "D:/Music/Self Radio\\395 Yunomi - Happy Life.mp3",
+        "series": "Yunomi",
+        "weight": 2
+    },
+    {
+        "id": "ID0834",
+        "name": "396 Yuru Yuri - Rettsurabu de ikimashou.mp3",
+        "path": "D:/Music/Self Radio\\396 Yuru Yuri - Rettsurabu de ikimashou.mp3",
+        "series": "Yuru Yuri",
+        "weight": 2
+    },
+    {
+        "id": "ID0835",
+        "name": "397 Yuyushiki - Yuru Bura Tto Ikou.mp3",
+        "path": "D:/Music/Self Radio\\397 Yuyushiki - Yuru Bura Tto Ikou.mp3",
+        "series": "Yuyushiki",
+        "weight": 2
+    },
+    {
+        "id": "ID0836",
+        "name": "398 Yuyushiki - OVA ED Aozora no Tsukurikata.mp3",
+        "path": "D:/Music/Self Radio\\398 Yuyushiki - OVA ED Aozora no Tsukurikata.mp3",
+        "series": "Yuyushiki",
+        "weight": 4
+    },
+    {
+        "id": "ID0837",
+        "name": "399 Yuyushiki - OVA OP Kirameki no Hi.mp3",
+        "path": "D:/Music/Self Radio\\399 Yuyushiki - OVA OP Kirameki no Hi.mp3",
+        "series": "Yuyushiki",
+        "weight": 2
+    },
+    {
+        "id": "ID0838",
+        "name": "400 Hololive - Fubuki Hi Fine FOX!!.mp3",
+        "path": "D:/Music/Self Radio\\400 Hololive - Fubuki Hi Fine FOX!!.mp3",
+        "series": "Hololive",
+        "weight": 2
+    },
+    {
+        "id": "ID0839",
+        "name": "401 Hololive - Fubuki KONKON Beats.mp3",
+        "path": "D:/Music/Self Radio\\401 Hololive - Fubuki KONKON Beats.mp3",
+        "series": "Hololive",
+        "weight": 3
+    },
+    {
+        "id": "ID0840",
+        "name": "402 Hololive - Fubuki Say Fan Fare.mp3",
+        "path": "D:/Music/Self Radio\\402 Hololive - Fubuki Say Fan Fare.mp3",
+        "series": "Hololive",
+        "weight": 2
+    },
+    {
+        "id": "ID0841",
+        "name": "403 Hololive - Fubuki Silv President.mp3",
+        "path": "D:/Music/Self Radio\\403 Hololive - Fubuki Silv President.mp3",
+        "series": "Hololive",
+        "weight": 3
+    },
+    {
+        "id": "ID0842",
+        "name": "404 Hololive - Okayu Planet Loop cover.mp3",
+        "path": "D:/Music/Self Radio\\404 Hololive - Okayu Planet Loop cover.mp3",
+        "series": "Hololive",
+        "weight": 3
+    },
+    {
+        "id": "ID0843",
+        "name": "405 Hololive - Fubuki LOVE 2000 cover.mp3",
+        "path": "D:/Music/Self Radio\\405 Hololive - Fubuki LOVE 2000 cover.mp3",
+        "series": "Hololive",
+        "weight": 3
+    },
+    {
+        "id": "ID0844",
+        "name": "406 Maitetsu - All Aboard!!.mp3",
+        "path": "D:/Music/Self Radio\\406 Maitetsu - All Aboard!!.mp3",
+        "series": "Rail Romanesque",
+        "weight": 3
+    },
+    {
+        "id": "ID0845",
+        "name": "407 Maitetsu - Wherever this Path May Go.mp3",
+        "path": "D:/Music/Self Radio\\407 Maitetsu - Wherever this Path May Go.mp3",
+        "series": "Rail Romanesque",
+        "weight": 4
+    },
+    {
+        "id": "ID0846",
+        "name": "408 Maitetsu Pure Station - ED Overlapping Emotions.mp3",
+        "path": "D:/Music/Self Radio\\408 Maitetsu Pure Station - ED Overlapping Emotions.mp3",
+        "series": "Rail Romanesque",
+        "weight": 4
     }
 ]
